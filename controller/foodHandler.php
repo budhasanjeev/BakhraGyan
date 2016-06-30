@@ -53,13 +53,9 @@ if($_POST["mode"]=="delete"){
 
     $id = $_POST['id'];
 
-    $result = $objCommon->deleteNews($id);
+    $result = array();
 
-    if($result){
-        $responseArray['message'] ="success";
-    } else {
-        $responseArray['message'] ="error";
-    }
+    $result = $objCommon->deleteFood($connection,$id);
 
-    echo json_encode($responseArray);
+    echo json_encode($result);
 }
