@@ -17,6 +17,7 @@ if(!$_SESSION['email']){
 <html>
 <head>
     <title>कृषि सुझाब</title>
+    <script src="../js/breed.js"></script>
 </head>
 
 <body>
@@ -31,10 +32,10 @@ require('../views/Layout/header.php');
 
     $breedList = array();
     $objCommon = new Common();
-    $breedList = $objCommon->getBreed($connection);
+    $breedList = $objCommon->getBreed($connection)?>
 
 
-    echo '
+
                 <table class="table table-striped table-responsive">
                         <thead>
                             <tr>
@@ -46,37 +47,27 @@ require('../views/Layout/header.php');
                             </tr>
                         </thead>
 
-                        <tbody>';
+                        <tbody>
+<?php
+    foreach($breedList as $breed){?>
 
-    foreach($userList as $user){
 
-        if($user['status']==0){
-            $status = "Inactive";
-        }
-        else {
-            $status = "Active";
-        }
-
-        echo '
                     <tr>
-                        <td><img class="img-circle" src="../images/profile_pictures/' .$user["profile_picture"].'" style="height: 70px;width:70px;" onclick="profileView('.$user["id"].')"></td>
-                        <td style="vertical-align: middle;">'.$user["first_name"].'&nbsp;'.$user["last_name"].'</td>
-                        <td style="vertical-align: middle;">'.$user["mobile_number"].'</td>
-                        <td style="vertical-align: middle;">'.$user["phone_number"].'</td>
-                        <td style="vertical-align: middle;">'.$user["email_address"].'</td>
-                        <td style="vertical-align: middle;">'.$user["role"].'</td>
-                        <td style="vertical-align: middle;">'.$status.'</td>
+                        <td><img class="img-circle" src="../images/<?php echo $breed["image"] ?>" style="height: 70px;width:70px;"></td>
+                        <td style="vertical-align: middle;"><?php echo $breed["breed_name"] ?></td>
+                        <td style="vertical-align: middle;"><?php echo $breed["description"]?></td>
+                        <td style="vertical-align: middle;"><?php echo $breed["category"]?></td>
+                        <td style="vertical-align: middle;">
+                            <button class="btn btn-danger" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
+                            <a href="../controller/breedHandler.php?mode=edit&id=<?php echo $breed['id']?>" <button class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button>
+                        </td>
                     </tr>
+<?php
 
-                ';
     }
-
-    echo'
+?>
                     </tbody>
                 </table>
-            ';
-
-    ?>
 </div>
 
 <?php
