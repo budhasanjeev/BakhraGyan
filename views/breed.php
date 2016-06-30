@@ -152,7 +152,10 @@ require('../views/Layout/footer.php');
 
     $(document).ready(function(){
         $('#breed-table').DataTable({
-
+            "info":true,
+            "paging":true,
+            "ordering":false,
+            "lengthMenu":[[2,4,6,-1],[2,4,6,"All"]]
         })
     })
 </script>
