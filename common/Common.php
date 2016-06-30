@@ -6,8 +6,6 @@
  * Time: 9:24 PM
  */
 
-session_start();
-
 class Common {
 
     public function login($connection,$email,$pwd){
@@ -32,9 +30,8 @@ class Common {
 
     }
 
-    public function getUser(){
+    public function getUser($connection){
 
-        global $connection;
         $result = mysqli_query($connection,"SELECT  *FROM user");
         $data = array();
         $i = 0;
@@ -55,33 +52,47 @@ class Common {
         return $data;
     }
 
-    public function createUser($fName,$lName,$mNumber,$pNumber,$address,$role,$status,$email_address,$profile_picture){
+    public function getBreed($connection){
 
-        global $connection;
+        $result = mysqli_query($connection,"SELECT  *FROM breed");
+        $data = array();
+        $i = 0;
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['email_address'] = $row["email_address"];
+            $data[$i]['status'] = $row["status"];
+            $data[$i]['role'] = $row["role"];
+            $data[$i]['first_name'] = $row["first_name"];
+            $data[$i]['last_name'] = $row["last_name"];
+            $data[$i]['mobile_number'] = $row["mobile_number"];
+            $data[$i]['phone_number'] = $row["phone_number"];
+            $data[$i]['address'] = $row["address"];
+            $data[$i]['profile_picture'] = $row["profile_picture"];
+            $i++;
+        }
+        return $data;
 
-        $pwd = md5('123');
+    }
+
+    public function createBreed($connection,$category,$breed_name,$description,$image,$searchKeyword){
+
         $created_date = date("Y-m-d");
-        if($status=='active'){
-            $status=1;
-        }
-        else{
-            $status=0;
-        }
 
-        $create_user = "INSERT INTO user VALUES(null,'$fName','$lName','$mNumber','$pNumber','$address','$role','$status','$email_address','$profile_picture','$pwd','$created_date')";
+        $create_breed = "insert into breed(category,breed_name,description,image,created_date,search_words) VALUES('$category','$breed_name','$description','$image','$created_date','$searchKeyword')";
 
 
-        $result = mysqli_query($connection,$create_user);
+        $result = mysqli_query($connection,$create_breed);
 
         $data = array();
 
-        if($result){
+        if(mysqli_num_rows($result)>0){
             $data['message']='success';
         }else{
             $data['message']='error';
         }
 
-        return $data;
+        return $create_breed;
     }
 
     public function editUser($id){
