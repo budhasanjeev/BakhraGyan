@@ -6,23 +6,24 @@
  * Time: 9:24 PM
  */
 
-require('../config/databaseConnection.php');
 class Common {
 
+    public function login($connection,$email,$pwd){
 
-//    public $connection;
+        $login_query = "SELECT *FROM user WHERE email_address = '$email' and password='$pwd' ";
 
-//    function __construct()
-//    {
-//        global $connection;
-//        $this->connection = $connection;
-//    }
+        $result = mysqli_query($connection,$login_query);
 
-    public function login($email,$pwd){
-
-        global $connection;
-        $result = mysqli_query($connection,"SELECT *FROM user WHERE email_address = '$email' and password='$pwd' ");
         $data = array();
+
+        if($result){
+            $data['message']='success';
+        }
+        else{
+            $data['message']='fail';
+        }
+
+        return $data;
 
     }
 
