@@ -124,4 +124,41 @@ class Common {
         return $data;
     }
 
+
+    public function getFood($connection){
+
+        $result = mysqli_query($connection,"SELECT  *FROM feed");
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['title'] = $row["title"];
+            $data[$i]['description'] = $row["description"];
+            $data[$i]['image'] = $row["image"];
+            $i++;
+        }
+        return $data;
+    }
+
+    public function createFood($connection,$foodName,$description,$image){
+
+        $created_date = date("Y-m-d");
+
+        $create_food = "INSERT INTO feed(title,description,image,created_date) VALUES('$foodName','$description','$image','$created_date')";
+
+        $result = mysqli_query($connection,$create_food);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }
+        else{
+            $data['message']='fail';
+        }
+
+        return $data;
+    }
 }
