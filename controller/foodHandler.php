@@ -7,6 +7,7 @@
  */
 
 require('../common/Common.php');
+require('../config/databaseConnection.php');
 
 $objCommon = new Common();
 
@@ -25,10 +26,9 @@ if($_POST["mode"]=="add"){
 
     if($result['message']=='success'){
        header("Location:../views/food.php");
-    }else{
-        header("Location:../views/breed.php");
     }
 
+    echo $result;
 }
 
 if($_POST["mode"]=="edit"){
