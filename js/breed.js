@@ -6,7 +6,6 @@ function deleteBreed(id){
 
     var mode ='delete';
 
-    alert(window.location.href);
     var n = noty({
         layout: 'center',
         text: "Are you sure you want delete? ",
@@ -27,7 +26,7 @@ function deleteBreed(id){
                             customReloadWindow(2000)
                         }
                     },error: function (er) {
-                        alert("Error while Creating" +er.responseText);
+                       console.log(er);
                     }
                 });
                 return false;
