@@ -67,29 +67,22 @@ class Common {
         return $data;
     }
 
-    public function editBreed($id){
+    public function editBreed($connection,$id){
 
-        global $connection;
-
-        $select_query = "SELECT *FROM user WHERE id ='$id'; ";
+        $select_query = "SELECT *FROM breed WHERE id ='$id'; ";
 
         $result = mysqli_query($connection,$select_query);
 
         $data = array();
-        $i = 0;
+
         while($row = mysqli_fetch_assoc($result))
         {
-            $data[$i]['id'] = $row["id"];
-            $data[$i]['email_address'] = $row["email_address"];
-            $data[$i]['status'] = $row["status"];
-            $data[$i]['role'] = $row["role"];
-            $data[$i]['first_name'] = $row["first_name"];
-            $data[$i]['last_name'] = $row["last_name"];
-            $data[$i]['mobile_number'] = $row["mobile_number"];
-            $data[$i]['phone_number'] = $row["phone_number"];
-            $data[$i]['address'] = $row["address"];
-            $data[$i]['profile_picture'] = $row["profile_picture"];
-            $i++;
+            $data['id'] = $row["id"];
+            $data['image'] = $row["image"];
+            $data['breed_name'] = $row["breed_name"];
+            $data['description'] = $row["description"];
+            $data['category'] = $row["category"];
+            $data['search_words'] = $row["search_words"];
         }
         return $data;
 
@@ -113,28 +106,19 @@ class Common {
 
     }
 
-    public function updateBreed($fName,$lName,$mNumber,$pNumber,$address,$role,$status,$email_address,$id){
-
-        global $connection;
-
-        $password = md5('123');
+    public function updateBreed($connection,$category,$breed_name,$description,$image,$searchKeyword,$b_id){
 
         $update_date = date("Y-m-d");
-        if($status=='active'){
-            $status=1;
-        }
-        else{
-            $status=0;
-        }
-        $update_user = "UPDATE user SET first_name = '$fName',last_name='$lName',mobile_number='$mNumber',phone_number='$pNumber',address='$address',role='$role',email_address='$email_address',status='$status',last_updated='$update_date' WHERE id='$id'; ";
-        $result = mysqli_query($connection,$update_user);
+
+        $update_breed = "UPDATE breed SET category = '$category',breed_name='$breed_name',description='$description',image='$image',updated_date='$update_date',search_words='$searchKeyword' WHERE id='$b_id' ";
+        $result = mysqli_query($connection,$update_breed);
 
         $data = array();
 
         if($result){
             $data['message']='success';
         }else{
-            $data['message']='error';
+            $data['message']='fail';
         }
 
         return $data;
