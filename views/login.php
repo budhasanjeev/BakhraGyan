@@ -6,27 +6,6 @@
  * Time: 11:25 PM
  */
 
-require("../config/databaseConnection.php");
-
-session_start();
-
-if($_POST['']){
-
-    $objCommon = new Common();
-
-    $email = addslashes($_POST['email']);
-    $password = addslashes($_POST['password']);
-
-    $result = array();
-
-    $result = $objCommon->login($connection,$email,$password);
-
-    if($result['message']='success'){
-        $_SESSION['id']= 'id';
-    }
-    echo json_encode($result);
-
-}
 
 ?>
 <!DOCTYPE html>
@@ -69,8 +48,9 @@ if($_POST['']){
 
     <fieldset>
     <legend style="margin-left: 10%">लग-इन गारनुहोस</legend>
-    <form class="form-horizontal" role="form" id="login-form">
+    <form class="form-horizontal" role="form" id="login-form" action="../controller/auth.php" method="post">
 
+        <input type="hidden" name="login" value="login">
         <div class="form-group">
             <label class="control-label col-sm-2" for="email"><span class="glyphicon glyphicon-envelope"/></label>
             <div class="col-sm-10">
@@ -85,7 +65,7 @@ if($_POST['']){
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button class="btn btn-default" onclick="return loginCheck()"><span class="glyphicon glyphicon-check"/>थिच्नुहोस</button>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-check"/>थिच्नुहोस</button>
             </div>
         </div>
     </form>
