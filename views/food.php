@@ -34,7 +34,7 @@ require('../views/Layout/header.php');
     $foodList = $objCommon->getFood($connection);?>
 
 
-    <table class="table table-striped table-responsive">
+    <table class="table table-striped table-responsive" id="food-table">
         <thead>
         <tr>
             <th>खानाको नाम </th>
@@ -131,8 +131,11 @@ require('../views/Layout/footer.php');
 
 
     $(document).ready(function(){
-        $('#breed-table').DataTable({
-
+        $('#food-table').DataTable({
+            "info":true,
+            "paging":true,
+            "ordering":false,
+            "lengthMenu":[[3,6,9,-1],[3,6,9,"All"]]
         })
     })
 
