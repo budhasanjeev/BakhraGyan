@@ -39,15 +39,10 @@ class Common {
         while($row = mysqli_fetch_assoc($result))
         {
             $data[$i]['id'] = $row["id"];
-            $data[$i]['email_address'] = $row["email_address"];
-            $data[$i]['status'] = $row["status"];
-            $data[$i]['role'] = $row["role"];
-            $data[$i]['first_name'] = $row["first_name"];
-            $data[$i]['last_name'] = $row["last_name"];
-            $data[$i]['mobile_number'] = $row["mobile_number"];
-            $data[$i]['phone_number'] = $row["phone_number"];
-            $data[$i]['address'] = $row["address"];
-            $data[$i]['profile_picture'] = $row["profile_picture"];
+            $data[$i]['image'] = $row["image"];
+            $data[$i]['breed_name'] = $row["breed_name"];
+            $data[$i]['description'] = $row["description"];
+            $data[$i]['category'] = $row["category"];
             $i++;
         }
         return $data;
@@ -100,13 +95,11 @@ class Common {
 
     }
 
-    public function deleteBreed($id){
+    public function deleteBreed($connection,$id){
 
-        global $connection;
+        $delete_breed = "DELETE FROM breed WHERE id='$id' ";
 
-        $delete_user = "DELETE FROM user WHERE id='$id' ";
-
-        $result = mysqli_query($connection,$delete_user);
+        $result = mysqli_query($connection,$delete_breed);
 
         $data = array();
 
