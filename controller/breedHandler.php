@@ -37,39 +37,35 @@ if($_POST["mode"]=="add"){
 
 else if($_POST["mode"]=="edit"){
 
-    $id = $_POST['user_id'];
-    $first_name = $_POST['firstName'];
-    $last_name = $_POST['lastName'];
-    $mobile_number = $_POST['mobileNumber'];
-    $phone_number = $_POST['phoneNumber'];
-    $address = $_POST['addresses'];
-    $role = $_POST['role'];
-    $status = $_POST['status'];
-    $email_address = $_POST['emailAddress'];
-
-    $result = array();
-    $result = $objCommon->updateUser($first_name,$last_name,$mobile_number,$phone_number,$address,$role,$status,$email_address,$id);
-
-    if($result['message']=='success'){
-        $_SESSION['edit'] ="success";
-    } else {
-        $_SESSION['edit'] ="error";
-    }
-
-    header('Location:../views/user.php');
-}
-
-else if($_POST["mode"]=="view"){
-
     $id = $_POST['id'];
 
-    $responseArray = array();
+    $result = array();
+    $result = $objCommon->editBreed($connection,$id);
 
-    $responseArray["user"] = $objCommon->viewProfile($id);
+    echo json_encode($result);
+}
 
-    $responseArray["news"] = $objCommon->selectNewsByUser($id);
+else if($_POST["mode"]=="update"){
 
-    echo json_encode($responseArray);
+    $b_id = $_POST['breed_id'];
+    $breed_name = $_POST['breedName'];
+    $description = $_POST['description'];
+    $category = $_POST['category'];
+    $searchKeyword = $_POST['searchKeyword'];
+
+    $image = $_FILES['image']['name'];
+    $image_tmp = $_FILES['image']['tmp_name'];
+
+    move_uploaded_file($image_tmp,"../images/$image");
+
+    $result = array();
+
+    $result = $objCommon->updateBreed($connection,$category,$breed_name,$description,$image,$searchKeyword,$b_id);
+
+    if($result['message']=='success'){
+
+        header("Location:../views/breed.php");
+    }
 
 }
 
