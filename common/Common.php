@@ -10,13 +10,15 @@ class Common {
 
     public function login($connection,$email,$pwd){
 
+        $pwd = md5($pwd);
+
         $login_query = "SELECT *FROM user WHERE email_address = '$email' and password='$pwd' ";
 
         $result = mysqli_query($connection,$login_query);
 
         $data = array();
 
-        if($result){
+        if(mysqli_num_rows($result)>0){
             $data['message']='success';
         }
         else{
