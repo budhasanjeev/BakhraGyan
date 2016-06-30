@@ -178,4 +178,44 @@ class Common {
 
         return $data;
     }
+
+    public function editFood($connection,$id){
+
+        $select_query = "SELECT *FROM feed WHERE id ='$id'; ";
+
+        $result = mysqli_query($connection,$select_query);
+
+        $data = array();
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data['id'] = $row["id"];
+            $data['title'] = $row["title"];
+            $data['description'] = $row["description"];
+            $data['image'] = $row["image"];
+        }
+
+        return $data;
+    }
+
+    public function updateFood($connection,$food_name,$description,$image,$f_id){
+
+        $update_date = date("Y-m-d");
+
+        $update_feed = "UPDATE feed SET title = '$food_name',description='$description',image='$image',updated_date='$update_date' WHERE id='$f_id' ";
+
+        $result = mysqli_query($connection,$update_feed);
+
+        $data = array();
+
+        if($result){
+            $data['message'] = 'success';
+        }
+        else{
+            $data['message'] = 'fail';
+        }
+
+        return $data;
+
+    }
 }

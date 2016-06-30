@@ -83,11 +83,11 @@ require('../views/Layout/footer.php');
 
                 <form class="form-horizontal" role="form" id="food-form" method="post" action="" enctype="multipart/form-data">
                     <input type="hidden" name="mode" id="mode">
-                    <input type="hidden" name="breed_id" id="breed_id">
+                    <input type="hidden" name="food_id" id="food_id">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="breedName">Feed Name</label>
+                        <label class="control-label col-sm-4" for="feedName">Feed Name</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="breedName" name="feedName">
+                            <input type="text" class="form-control" id="feedName" name="feedName">
                         </div>
                     </div>
                     <div class="form-group">
@@ -122,7 +122,7 @@ require('../views/Layout/footer.php');
     $('#add-food').on('click',function(){
 
         $('#insert-food').modal('show');
-        $('#insert-food .modal-title').html("Food");
+        $('#insert-food .modal-title').html("Add Food");
         $('#insert-food button[type=submit]').html("Add");
         $('#food-form').attr('action','../controller/foodHandler.php');
         $('#mode').attr('value','add');

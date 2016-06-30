@@ -47,25 +47,21 @@ function editFood(id){
 
     $.ajax({
         type:"POST",
-        url:'../controller/breedHandler.php',
+        url:'../controller/foodHandler.php',
         data:"mode="+mode+"&id="+id,
         success:function(data){
             var data = JSON.parse(data);
 
-            var b_id = data['id'];
-            $("#breedName").val(data['breed_name']);
+            var f_id = data['id'];
+            $("#feedName").val(data['title']);
             $("#description").val(data['description']);
-            $('#category').val(data['category']);
-            $('#search_keyword').val(data['search_words']);
-//                $('#image').val(data['image']);
-//
 
-            $('#insert-breed').modal('show');
-            $('#insert-breed .modal-title').html("Edit Breed");
-            $('#insert-breed button[type=submit]').html("Save Changes");
-            $('#breed-form').attr('action','../controller/breedHandler.php');
+            $('#insert-food').modal('show');
+            $('#insert-food .modal-title').html("Edit Food");
+            $('#insert-food button[type=submit]').html("Save Changes");
+            $('#food-form').attr('action','../controller/foodHandler.php');
             $('#mode').attr('value','update');
-            $('#breed_id').attr('value',b_id);
+            $('#food_id').attr('value',f_id);
 
             $('.modal').on('hidden.bs.modal', function(){
                 $(this).find('form')[0].reset();
