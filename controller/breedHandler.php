@@ -35,7 +35,7 @@ if($_POST["mode"]=="add"){
     header('Location:../views/breed.php');
 }
 
-if($_POST["mode"]=="edit"){
+else if($_POST["mode"]=="edit"){
 
     $id = $_POST['user_id'];
     $first_name = $_POST['firstName'];
@@ -59,7 +59,7 @@ if($_POST["mode"]=="edit"){
     header('Location:../views/user.php');
 }
 
-if($_POST["mode"]=="delete"){
+else if($_POST["mode"]=="delete"){
 
     $id = $_POST['id'];
 
@@ -75,7 +75,7 @@ if($_POST["mode"]=="delete"){
 
     echo json_encode($responseArray);
 }
-if($_POST["mode"]=="view"){
+else if($_POST["mode"]=="view"){
 
     $id = $_POST['id'];
 
@@ -87,4 +87,15 @@ if($_POST["mode"]=="view"){
 
     echo json_encode($responseArray);
 
+}
+
+else if($_POST['mode']=='delete'){
+
+    $id= $_POST['id'];
+
+    $result = array();
+
+    $result = $objCommon->deleteBreed($connection,$id);
+
+    echo json_encode($result);
 }
