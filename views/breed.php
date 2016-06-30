@@ -36,7 +36,7 @@ require('../views/Layout/header.php');
 
 
 
-    <table class="table table-striped table-responsive">
+    <table class="table table-striped table-responsive" id="breed-table">
         <thead>
         <tr>
             <th>फोटो</th>
@@ -147,6 +147,13 @@ require('../views/Layout/footer.php');
         $('#breed-form').attr('action','../controller/breedHandler.php');
         $('#mode').attr('value','add');
 
+    })
+
+
+    $(document).ready(function(){
+        $('#breed-table').DataTable({
+
+        })
     })
 </script>
 </body>
