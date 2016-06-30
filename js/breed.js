@@ -6,6 +6,7 @@ function deleteBreed(id){
 
     var mode ='delete';
 
+    alert(window.location.href);
     var n = noty({
         layout: 'center',
         text: "Are you sure you want delete? ",
