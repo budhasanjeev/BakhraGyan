@@ -25,139 +25,117 @@ require('../views/Layout/header.php');
 ?>
 
 <div id="content">
-    <button class="btn btn-primary" id="add-breed">आहारा बारेमा थप्नुहोस </button>
+    <button class="btn btn-primary" id="add-food">आहारा बारेमा थप्नुहोस </button>
     <?php
 
-    $userList = array();
+    $foodList = array();
     $objCommon = new Common();
-    $userList = $objCommon->getBreed($connection);
+    $foodList = $objCommon->getFood($connection);?>
 
 
-    echo '
-                <table class="table table-striped table-responsive">
-                        <thead>
-                            <tr>
-                                <th>खानाको नाम </th>
-                                <th>विवरण</th>
-                                <th>फोटो</th>
+    <table class="table table-striped table-responsive">
+        <thead>
+        <tr>
+            <th>खानाको नाम </th>
+            <th>विवरण</th>
+            <th>फोटो</th>
 
-                            </tr>
-                        </thead>
+        </tr>
+        </thead>
 
-                        <tbody>';
+        <tbody>
 
-    foreach($userList as $user){
+        <?php
+        foreach($foodList as $food){?>
 
-        if($user['status']==0){
-            $status = "Inactive";
+        <tr>
+            <td><img class="img-circle" src="../images/<?php echo $food["image"] ?>" style="height: 70px;width:70px;" ></td>
+            <td style="vertical-align: middle;"><?php echo $food["title"]?></td>
+            <td style="vertical-align: middle;"><?php echo $food["description"]?></td>
+            <td style="vertical-align: middle;">
+                <button class="btn btn-danger" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
+                <button class="btn btn-success" onclick="return editBreed(<?php echo $breed['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
+            </td>
+        </tr>
+
+        <?php
         }
-        else {
-            $status = "Active";
-        }
-
-        echo '
-                    <tr>
-                        <td><img class="img-circle" src="../images/profile_pictures/' .$user["profile_picture"].'" style="height: 70px;width:70px;" onclick="profileView('.$user["id"].')"></td>
-                        <td style="vertical-align: middle;">'.$user["first_name"].'&nbsp;'.$user["last_name"].'</td>
-                        <td style="vertical-align: middle;">'.$user["mobile_number"].'</td>
-                        <td style="vertical-align: middle;">'.$user["phone_number"].'</td>
-                        <td style="vertical-align: middle;">'.$user["email_address"].'</td>
-                        <td style="vertical-align: middle;">'.$user["role"].'</td>
-                        <td style="vertical-align: middle;">'.$status.'</td>
-                    </tr>
-
-                ';
-    }
-
-    echo'
-                    </tbody>
-                </table>
-            ';
-
-    ?>
+?>
+        </tbody>
+    </table>
 </div>
 
 <?php
 require('../views/Layout/footer.php');
 ?>
 
-<div class="modal fade" id="view_profile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-    <div class="modal-dialog" style="width: auto">
+<div class="modal fade" id="insert-food" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
 
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h3 class="modal-title"></h3>
+                <h2 class="modal-title"></h2>
             </div>
 
             <div class="modal-body">
 
-                <div class="container">
-
-                    <div class="col-md-3" style="border-right: 1px solid #226CB5;" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-                        <div class="row profile-pic">
-                            <img style="width: 60%; height: 40%" src="">
+                <form class="form-horizontal" role="form" id="food-form" method="post" action="" enctype="multipart/form-data">
+                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="breed_id" id="breed_id">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="breedName">Feed Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="breedName" name="feedName">
                         </div>
-                        <div class="row profile-table">
-                            <h2 id="fullName"></h2>
-                            <hr/>
-                            <table cellpadding="1">
-                                <tr>
-                                    <td><span class="glyphicon glyphicon-home"></span></td>
-                                    <td><h5 id="address"></h5></td>
-                                </tr>
-
-                                <tr>
-                                    <td><span class="glyphicon glyphicon-earphone"></span></td>
-                                    <td><h5 id="mobileNumber"></h5></td>
-                                </tr>
-
-                                <tr>
-                                    <td><span class="glyphicon glyphicon-phone-alt"></span></td>
-                                    <td><h5 id="phoneNumber"></h5></td>
-                                </tr>
-
-                                <tr>
-                                    <td><span class="glyphicon glyphicon-envelope"></span></td>
-                                    <td><h5 id="emailAddress"></h5></td>
-                                </tr>
-                            </table>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="description">Description</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
                         </div>
                     </div>
 
-                    <div class="col-md-8" style="float: right;">
+                    <div id="news-img" class="form-group">
+                        <label class="control-label col-sm-4" for="image">image</label>
 
-                        <div class="tab-content">
-                            <div id="history" class="tab-pane fade in active">
-                                <h3>News History</h3>
-                                <table id="newsList" style="text-align: left;" class="table table-bordered table-responsive">
-                                    <thead>
-                                    <tr>
-                                        <td>S.N</td>
-                                        <th>News headline</th>
-                                        <th>Created Date</th>
-                                        <th>Last Updated Date</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody id="newsListBody">
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <input type="file" id="image" name="image" >
                     </div>
 
-                </div>
+                    <div id="news-img" class="form-group">
+                        <label class="control-label col-sm-4"></label>
+                        <button type="submit" class="btn btn-default" id="save-food"></button>
+                    </div>
+                </form>
 
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
 
         </div>
     </div>
 </div>
+
+<script>
+    $('#add-food').on('click',function(){
+
+        $('#insert-food').modal('show');
+        $('#insert-food .modal-title').html("Food");
+        $('#insert-food button[type=submit]').html("Add");
+        $('#food-form').attr('action','../controller/foodHandler.php');
+        $('#mode').attr('value','add');
+
+    });
+
+
+    $(document).ready(function(){
+        $('#breed-table').DataTable({
+
+        })
+    })
+
+</script>
 </body>
 </html>
 
