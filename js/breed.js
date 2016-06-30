@@ -41,3 +41,41 @@ function deleteBreed(id){
     })
 
 }
+
+function editBreed(id){
+
+    var mode ='edit';
+
+    $.ajax({
+        type:"POST",
+        url:'../controller/breedHandler.php',
+        data:"mode="+mode+"&id="+id,
+        success:function(data){
+            var data = JSON.parse(data);
+
+            var b_id = data['id'];
+            $("#breedName").val(data['breed_name']);
+            $("#description").val(data['description']);
+            $('#category').val(data['category']);
+            $('#search_keyword').val(data['search_words']);
+            $('#image').val(data['image']);
+
+
+            $('#insert-breed').modal('show');
+            $('#insert-breed .modal-title').html("Edit Breed");
+            $('#insert-breed button[type=submit]').html("Save Changes");
+            $('#breed-form').attr('action','../controller/breedHandler.php');
+            $('#mode').attr('value','update');
+            $('#breed_id').attr('value','b_id');
+
+            $('.modal').on('hidden.bs.modal', function(){
+                $(this).find('form')[0].reset();
+            });
+
+        },error: function (er) {
+            alert("Error while Creating" +er);
+        }
+    });
+
+    return false;
+}

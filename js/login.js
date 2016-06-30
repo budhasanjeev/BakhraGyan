@@ -6,23 +6,23 @@ function loginCheck(){
 
     var data = $('#login-form').serialize();
 
-    alert(data);
     $.ajax({
         type:"POST",
-        url:'controller/login.php',
+        url:'../controller/auth.php',
         data:data,
         success:function(data){
             var data = JSON.parse(data)
 
+            alert(data.message);
             if(data.success){
-                alert(data);
-                document.location = "../views/dashboard";
+                window.location = "../views/dashboard";
 
             }else{
-                alert("Unable to login");
+                //displayLoginMessage("incorrect username or password","error")
+
             }
-        },error: function (er) {
-            alert("Error while Creating" +er);
+        },error: function (err) {
+          alert("Error"+Parse.error(err))
         }
     });
     return false;
