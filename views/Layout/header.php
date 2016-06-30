@@ -15,6 +15,7 @@
         <link href="../css/news.css" type="text/css" rel="stylesheet">
 
         <script src="../js/jquery-1.12.0.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.noty.packaged.min.js" type="text/javascript"></script>
         <script src="../js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../js/news.js" type="text/javascript"></script>
         <script src="../js/login.js" type="text/javascript"></script>
