@@ -17,6 +17,7 @@ if(!$_SESSION['email']){
 <html>
 <head>
     <title>कृषि सुझाब</title>
+    <script src="../js/feed.js"></script>
 </head>
 
 <body>
@@ -53,8 +54,8 @@ require('../views/Layout/header.php');
             <td style="vertical-align: middle;"><?php echo $food["title"]?></td>
             <td style="vertical-align: middle;"><?php echo $food["description"]?></td>
             <td style="vertical-align: middle;">
-                <button class="btn btn-danger" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
-                <button class="btn btn-success" onclick="return editBreed(<?php echo $breed['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
+                <button class="btn btn-danger" onclick="return deleteFood(<?php echo $food['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
+                <button class="btn btn-success" onclick="return editFood(<?php echo $food['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
             </td>
         </tr>
 
