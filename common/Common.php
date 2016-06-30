@@ -57,8 +57,7 @@ class Common {
 
         $created_date = date("Y-m-d");
 
-        $create_breed = "insert into breed(category,breed_name,description,image,created_date,search_words) VALUES('$category','$breed_name','$description','$image','$created_date','$searchKeyword')";
-
+        $create_breed = "INSERT INTO breed(category,breed_name,description,image,created_date,search_words) VALUES('$category','$breed_name','$description','$image','$created_date','$searchKeyword')";
 
         $result = mysqli_query($connection,$create_breed);
 
@@ -70,7 +69,7 @@ class Common {
             $data['message']='error';
         }
 
-        return $create_breed;
+        return $data;
     }
 
     public function editBreed($id){
