@@ -23,18 +23,16 @@ if($_POST["mode"]=="add"){
 
     move_uploaded_file($image_tmp,"../images/$image");
 
-    $result;
 
     $result = $objCommon->createBreed($connection,$category,$breed_name,$description,$image,$searchKeyword);
 
-    if($result['message']='success'){
+    if($result['message']=='success'){
         $_SESSION['add'] ="success";
     } else {
         $_SESSION['add'] ="error";
     }
 
-    echo $result;
-    /*header('Location:../views/breed.php');*/
+    header('Location:../views/breed.php');
 }
 
 if($_POST["mode"]=="edit"){

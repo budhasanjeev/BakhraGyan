@@ -10,7 +10,7 @@ require("../common/Common.php");
 
 session_start();
 
-if(isset($_POST['login'])){ header('Location:../views/user.php');
+if(isset($_POST['login'])){
 
     $objCommon = new Common();
 
@@ -28,6 +28,7 @@ if(isset($_POST['login'])){ header('Location:../views/user.php');
     else{
         header('Location:../views/login.php');
     }
+
 }
 else{
 
