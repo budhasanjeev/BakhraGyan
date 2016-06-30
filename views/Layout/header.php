@@ -28,8 +28,8 @@ session_start();
         <a href="../home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="DWIT NEWS"></a>
         <ul style="list-style: none; float: right; padding-top: 2%; position: relative; margin-right: 2%;">
             <?php
-                if($_SESSION['id']){?>
-                    <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="../../controller/logout.php">बाहिर निस्कनुहोस</a> </li>
+                if($_SESSION['email']){?>
+                    <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="logout.php">बाहिर निस्कनुहोस</a> </li>
                <?php }
             else{?>
                 <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="login.php">लग-इन गारनुहोस</a> </li>
@@ -50,22 +50,21 @@ session_start();
 
             <div class="collapse navbar-collapse" id="menu">
                 <?php
-                    if($_SESSION['id']){?>
+                    if($_SESSION['email']){?>
 
                             <ul class="nav navbar-nav">
-                                <li><a href="../views/dashboard.php">Home</a></li>
-                                <li>
-                                    <a href="../views/user.php">User Management</a>
-                                </li>
-
-                                <li>
-                                    <a href="../views/news.php">News Management</a>
-                                </li>
+                                <li><a href="dashboard.php"><span class="glyphicon glyphicon-home"></span></a></li>
+                                <li><a href="breed.php">प्रजाति</a></li>
+                                <li><a href="food.php">आहारा </a></li>
+                                <li><a href="disease.php">रोग </a></li>
+                                <li><a href="cure.php">उपचार </a></li>
+                                <li><a href="shed.php">खोर </a></li>
+                                <li><a href="query.php">जिज्ञास</a></li>
 
                             </ul>
 
                             <ul class="nav navbar-nav pull-right">
-                                <li><a>Welcome &nbsp;<?php echo $_SESSION["first_name"]?>&nbsp<?php echo $_SESSION["last_name"]?></a></li>
+                                <li><a>Welcome &nbsp;<?php echo $_SESSION["email"]?></a></li>
                             </ul>
                 <?php
                     }
