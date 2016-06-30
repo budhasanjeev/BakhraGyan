@@ -51,6 +51,7 @@ session_start();
             <div class="collapse navbar-collapse" id="menu">
                 <?php
                     if($_SESSION['id']){?>
+
                             <ul class="nav navbar-nav">
                                 <li><a href="../views/dashboard.php">Home</a></li>
                                 <li>
