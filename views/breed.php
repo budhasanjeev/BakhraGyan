@@ -36,38 +36,38 @@ require('../views/Layout/header.php');
 
 
 
-                <table class="table table-striped table-responsive">
-                        <thead>
-                            <tr>
-                                <th>फोटो</th>
-                                <th>प्रजाति नाम</th>
-                                <th>विवरण</th>
-                                <th>वर्ग</th>
-                                <th>कार्यहरू</th>
-                            </tr>
-                        </thead>
+    <table class="table table-striped table-responsive">
+        <thead>
+        <tr>
+            <th>फोटो</th>
+            <th>प्रजाति नाम</th>
+            <th>विवरण</th>
+            <th>वर्ग</th>
+            <th>कार्यहरू</th>
+        </tr>
+        </thead>
 
-                        <tbody>
-<?php
-    foreach($breedList as $breed){?>
+        <tbody>
+        <?php
+        foreach($breedList as $breed){?>
 
 
-                    <tr>
-                        <td><img class="img-circle" src="../images/<?php echo $breed["image"] ?>" style="height: 70px;width:70px;"></td>
-                        <td style="vertical-align: middle;"><?php echo $breed["breed_name"] ?></td>
-                        <td style="vertical-align: middle;"><?php echo $breed["description"]?></td>
-                        <td style="vertical-align: middle;"><?php echo $breed["category"]?></td>
-                        <td style="vertical-align: middle;">
-                            <button class="btn btn-danger" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
-                            <a href="../controller/breedHandler.php?mode=edit&id=<?php echo $breed['id']?>" <button class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button>
-                        </td>
-                    </tr>
-<?php
+            <tr>
+                <td><img class="img-circle" src="../images/<?php echo $breed["image"] ?>" style="height: 70px;width:70px;"></td>
+                <td style="vertical-align: middle;"><?php echo $breed["breed_name"] ?></td>
+                <td style="vertical-align: middle;"><?php echo $breed["description"]?></td>
+                <td style="vertical-align: middle;"><?php echo $breed["category"]?></td>
+                <td style="vertical-align: middle;">
+                    <button class="btn btn-danger" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button class="btn btn-success" onclick="return editBreed(<?php echo $breed['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
+                </td>
+            </tr>
+        <?php
 
-    }
-?>
-                    </tbody>
-                </table>
+        }
+        ?>
+        </tbody>
+    </table>
 </div>
 
 <?php
@@ -125,7 +125,7 @@ require('../views/Layout/footer.php');
 
                     <div id="news-img" class="form-group">
                         <label class="control-label col-sm-4" for="image"></label>
-                        <button type="submit" class="btn btn-default" id="save-user"></button>
+                        <button type="submit" class="btn btn-default" id="save-breed"></button>
                     </div>
                 </form>
 
