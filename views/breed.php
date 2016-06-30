@@ -29,9 +29,9 @@ require('../views/Layout/header.php');
     <button class="btn btn-primary" id="add-breed">प्रजाति बारेमा  थप्नुहोस</button>
     <?php
 
-    $userList = array();
+    $breedList = array();
     $objCommon = new Common();
-    $userList = $objCommon->getBreed($connection);
+    $breedList = $objCommon->getBreed($connection);
 
 
     echo '
@@ -42,6 +42,7 @@ require('../views/Layout/header.php');
                                 <th>प्रजाति नाम</th>
                                 <th>विवरण</th>
                                 <th>वर्ग</th>
+                                <th>कार्यहरू</th>
                             </tr>
                         </thead>
 
@@ -56,9 +57,9 @@ require('../views/Layout/header.php');
             $status = "Active";
         }
 
-        echo'
+        echo '
                     <tr>
-                        <td><img class="img-circle" src="../Images/profile_pictures/'.$user["profile_picture"].'" style="height: 70px;width:70px;" onclick="profileView('.$user["id"].')"></td>
+                        <td><img class="img-circle" src="../images/profile_pictures/' .$user["profile_picture"].'" style="height: 70px;width:70px;" onclick="profileView('.$user["id"].')"></td>
                         <td style="vertical-align: middle;">'.$user["first_name"].'&nbsp;'.$user["last_name"].'</td>
                         <td style="vertical-align: middle;">'.$user["mobile_number"].'</td>
                         <td style="vertical-align: middle;">'.$user["phone_number"].'</td>

@@ -55,9 +55,9 @@ require('../views/Layout/header.php');
             $status = "Active";
         }
 
-        echo'
+        echo '
                     <tr>
-                        <td><img class="img-circle" src="../Images/profile_pictures/'.$user["profile_picture"].'" style="height: 70px;width:70px;" onclick="profileView('.$user["id"].')"></td>
+                        <td><img class="img-circle" src="../images/profile_pictures/' .$user["profile_picture"].'" style="height: 70px;width:70px;" onclick="profileView('.$user["id"].')"></td>
                         <td style="vertical-align: middle;">'.$user["first_name"].'&nbsp;'.$user["last_name"].'</td>
                         <td style="vertical-align: middle;">'.$user["mobile_number"].'</td>
                         <td style="vertical-align: middle;">'.$user["phone_number"].'</td>

@@ -43,7 +43,7 @@ if($_SESSION['email']){
                     <div id="left-news-content" class="row">
 
                         <div class="col-sm-4">
-                            <img id="news-image" src="../Images/news_images/' .$news["image"].'" style="width: 50%">
+                            <img id="news-image" src="../images/news_images/' .$news["image"].'" style="width: 50%">
                         </div>
 
                         <div class="col-md-8">
