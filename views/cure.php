@@ -25,24 +25,23 @@ require('../views/Layout/header.php');
 ?>
 
 <div id="content">
+    <button class="btn btn-primary" id="add-breed"> उपचार बारेमा थप्नुहोस </button>
     <?php
 
     $userList = array();
     $objCommon = new Common();
-    $userList = $objCommon->getUser();
+    $userList = $objCommon->getBreed($connection);
 
 
     echo '
                 <table class="table table-striped table-responsive">
                         <thead>
                             <tr>
-                                <th>Photo</th>
-                                <th>Full Name</th>
-                                <th>Mobile Number</th>
-                                <th>Phone Number</th>
-                                <th>Email Address</th>
-                                <th>Role</th>
-                                <th>Status</th>
+                                <th>रोगको नाम </th>
+                                <th>विवरण तथा लक्षण </th>
+                                <th>निवारक हेरविचार</th>
+                           
+
                             </tr>
                         </thead>
 

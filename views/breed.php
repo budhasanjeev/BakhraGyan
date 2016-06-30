@@ -26,7 +26,7 @@ require('../views/Layout/header.php');
 
 <div id="content">
 
-    <button class="btn btn-primary" id="add-breed">Add Breed</button>
+    <button class="btn btn-primary" id="add-breed">प्रजाति बारेमा  थप्नुहोस</button>
     <?php
 
     $userList = array();
@@ -38,13 +38,10 @@ require('../views/Layout/header.php');
                 <table class="table table-striped table-responsive">
                         <thead>
                             <tr>
-                                <th>Photo</th>
-                                <th>Full Name</th>
-                                <th>Mobile Number</th>
-                                <th>Phone Number</th>
-                                <th>Email Address</th>
-                                <th>Role</th>
-                                <th>Status</th>
+                                <th>फोटो</th>
+                                <th>प्रजाति नाम</th>
+                                <th>विवरण</th>
+                                <th>वर्ग</th>
                             </tr>
                         </thead>
 

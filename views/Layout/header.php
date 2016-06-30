@@ -58,7 +58,7 @@
                                 <li><a href="disease.php">रोग </a></li>
                                 <li><a href="cure.php">उपचार </a></li>
                                 <li><a href="shed.php">खोर </a></li>
-                                <li><a href="query.php">जिज्ञास</a></li>
+                                <li><a href="query.php"> जिज्ञासा  </a></li>
 
                             </ul>
 
