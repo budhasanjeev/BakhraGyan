@@ -7,7 +7,7 @@
  */
 
 session_start();
-unset($_SESSION['id']);
+unset($_SESSION['email']);
 session_destroy();
 
-header('Location:../views/home.php');
+header('Location:home.php');

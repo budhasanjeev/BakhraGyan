@@ -8,20 +8,19 @@
 
 require('../config/databaseConnection.php');
 require('../common/Common.php');
+
+
+if($_SESSION['email']){
+    header("Location:dashboard.php");
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>कृषि सुझाब</title>
-
-        <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
-        <link href="../css/news.css" type="text/css" rel="stylesheet">
-
-        <script src="../js/jquery-1.12.0.min.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="../js/news.js" type="text/javascript"></script>
-        <script src="../js/login.js" type="text/javascript"></script>
     </head>
 
     <body>

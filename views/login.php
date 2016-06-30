@@ -28,7 +28,7 @@
 
 
 <header class="container-fluid">
-    <img src="../images/krishisujhab.png" style="height: 70px;" title="DWIT NEWS">
+    <a href="home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="DWIT NEWS"></a>
 </header>
 
 <nav class="navbar navbar-inverse" style="border: none;">
