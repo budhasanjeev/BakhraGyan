@@ -10,7 +10,7 @@ require("../common/Common.php");
 
 session_start();
 
-if(isset($_POST['login'])){
+if(isset($_POST['login'])){ header('Location:../views/user.php');
 
     $objCommon = new Common();
 
@@ -22,6 +22,7 @@ if(isset($_POST['login'])){
     $result = $objCommon->login($connection,$email,$password);
 
     if($result['message']=='success'){
+        $_SESSION['email']=$email;
         header('Location:../views/dashboard.php');
     }
     else{
