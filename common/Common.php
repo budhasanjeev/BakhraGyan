@@ -56,7 +56,7 @@ class Common {
 
         $result = mysqli_query($connection,"SELECT  *FROM breed");
         $data = array();
-        $i = 0;
+       $i = 0;
         while($row = mysqli_fetch_assoc($result))
         {
             $data[$i]['id'] = $row["id"];
