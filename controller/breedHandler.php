@@ -7,42 +7,34 @@
  */
 
 require('../common/Common.php');
+require('../config/databaseConnection.php');
 
 $objCommon = new Common();
 
-if($_POST["mode"]=="login"){
-
-    $email = $_POST['email'];
-    $password = md5($_POST['password']);
-
-    $result = $objCommon->login($email,$password);
-
-}
 if($_POST["mode"]=="add"){
 
-    $first_name = $_POST['firstName'];
-    $last_name = $_POST['lastName'];
-    $mobile_number = $_POST['mobileNumber'];
-    $phone_number = $_POST['phoneNumber'];
-    $address = $_POST['addresses'];
-    $role = $_POST['role'];
-    $status = $_POST['status'];
-    $email_address = $_POST['emailAddress'];
+    $breed_name = $_POST['breedName'];
+    $description = $_POST['description'];
+    $category = $_POST['category'];
+    $searchKeyword = $_POST['searchKeyword'];
 
-    $profile_picture = $_FILES['profileImg']['name'];
-    $profile_picture_tmp = $_FILES['profileImg']['tmp_name'];
+    $image = $_FILES['image']['name'];
+    $image_tmp = $_FILES['image']['tmp_name'];
 
-    move_uploaded_file($profile_picture_tmp,"../Images/profile_pictures/$profile_picture");
+    move_uploaded_file($image_tmp,"../images/$image");
 
-    $result = $objCommon->createUser($first_name,$last_name,$mobile_number,$phone_number,$address,$role,$status,$email_address,$profile_picture);
+    $result;
 
-    if($result){
+    $result = $objCommon->createBreed($connection,$category,$breed_name,$description,$image,$searchKeyword);
+
+    if($result['message']='success'){
         $_SESSION['add'] ="success";
     } else {
         $_SESSION['add'] ="error";
     }
 
-    header('Location:../views/user.php');
+    echo $result;
+    /*header('Location:../views/breed.php');*/
 }
 
 if($_POST["mode"]=="edit"){
