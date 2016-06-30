@@ -21,6 +21,9 @@ if($_POST['']){
 
     $result = $objCommon->login($connection,$email,$password);
 
+    if($result['message']='success'){
+        $_SESSION['id']= 'id';
+    }
     echo json_encode($result);
 
 }
