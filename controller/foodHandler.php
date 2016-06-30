@@ -12,26 +12,23 @@ $objCommon = new Common();
 
 if($_POST["mode"]=="add"){
 
-    $news_headline = $_POST['newsHeadline'];
-    $news_body = addslashes($_POST['newsBody']);
-    $category = $_POST['category'];
-    $search_keyword = $_POST['searchKeyword'];
+    $food_name = $_POST['feedName'];
+    $description = $_POST['description'];
 
-    $news_image = $_FILES['newsImage']['name'];
-    $news_image_tmp = $_FILES['newsImage']['tmp_name'];
+    $image = $_FILES['image']['name'];
+    $image_tmp = $_FILES['image']['tmp_name'];
 
-    move_uploaded_file($news_image_tmp,"../Images/news_images/$news_image");
+    move_uploaded_file($image_tmp,"../images/$image");
 
     $result = array();
-    $result = $objCommon->createNews($news_headline,$news_body,$category,$search_keyword,$news_image);
+    $result = $objCommon->createFood($connection,$food_name,$description,$image);
 
     if($result['message']=='success'){
-        $_SESSION['add'] ="success";
-    } else {
-        $_SESSION['add'] ="error";
+       header("Location:../views/food.php");
+    }else{
+        header("Location:../views/breed.php");
     }
 
-    header('Location:../views/news.php');
 }
 
 if($_POST["mode"]=="edit"){
