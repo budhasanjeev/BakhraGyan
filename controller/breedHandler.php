@@ -59,22 +59,6 @@ else if($_POST["mode"]=="edit"){
     header('Location:../views/user.php');
 }
 
-else if($_POST["mode"]=="delete"){
-
-    $id = $_POST['id'];
-
-    $responseArray = array();
-
-    $responseArray = $objCommon->deleteUser($id);
-
-   /* if($result){
-        $responseArray['message'] ="success";
-    } else {
-        $responseArray['message'] ="error";
-    }*/
-
-    echo json_encode($responseArray);
-}
 else if($_POST["mode"]=="view"){
 
     $id = $_POST['id'];
