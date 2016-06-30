@@ -161,4 +161,21 @@ class Common {
 
         return $data;
     }
+
+    public function deleteFood($connection,$id){
+
+        $delete_food = "DELETE FROM feed WHERE id='$id' ";
+
+        $result = mysqli_query($connection,$delete_food);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='error';
+        }
+
+        return $data;
+    }
 }
