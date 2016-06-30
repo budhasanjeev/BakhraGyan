@@ -6,6 +6,8 @@
  * Time: 9:24 PM
  */
 
+session_start();
+
 class Common {
 
     public function login($connection,$email,$pwd){
@@ -19,6 +21,7 @@ class Common {
         $data = array();
 
         if(mysqli_num_rows($result)>0){
+
             $data['message']='success';
         }
         else{
