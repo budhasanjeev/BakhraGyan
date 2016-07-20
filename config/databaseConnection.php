@@ -8,7 +8,7 @@
 
     $server_name = "localhost";
     $username    = "root";
-    $password    = "";
+    $password    = "clockme";
     $db_name     = "krishi_sujhab";
 
     /*Create Connection*/

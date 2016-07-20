@@ -6,7 +6,6 @@
  * Time: 11:50 PM
  */
 session_start();
-require('../config/databaseConnection.php');
 require('../common/Common.php');
 
 if(!$_SESSION['email']){

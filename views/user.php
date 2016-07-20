@@ -7,7 +7,6 @@
  */
 
 session_start();
-require('../config/databaseConnection.php');
 require('../common/Common.php');
 ?>
 <!DOCTYPE html>
@@ -73,7 +72,7 @@ require('../common/Common.php');
 
             echo'
                     <tr id="'.$id.'">
-                        <td style="vertical-align: middle;"><img class="img-circle" src="../Images/profile_pictures/'.$user["profile_picture"].'" style="height: 70px;width:70px;"></td>
+                        <td style="vertical-align: middle;"><img class="img-circle" src="../images/profile_pictures/'.$user["profile_picture"].'" style="height: 70px;width:70px;"></td>
                         <td style="vertical-align: middle;" id="first-name">'.$user["first_name"].'</td>
                         <td style="vertical-align: middle;" id="last-name">'.$user["last_name"].'</td>
                         <td style="vertical-align: middle;" id="mobile-number">'.$user["mobile_number"].'</td>

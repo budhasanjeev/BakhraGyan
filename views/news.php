@@ -7,7 +7,6 @@
  */
 
 session_start();
-require('../config/databaseConnection.php');
 require('../common/Common.php');
 ?>
 <!DOCTYPE html>
@@ -62,7 +61,7 @@ require('../common/Common.php');
             $id = $news["id"];
             echo'
                     <tr id="'.$id.'">
-                                <td><img class="img-thumbnail" src="../Images/news_images/'.$news["image"].'" style="height: 70px;width:80px;"></td>
+                                <td><img class="img-thumbnail" src="../images/news_images/'.$news["image"].'" style="height: 70px;width:80px;"></td>
                                 <td id="news-headline">'.$news["news_headline"].'</td>
                                 <td id="news-body">'.$news["news_body"].'</td>
                                 <td id="created-date">'.$news["created_date"].'</td>
