@@ -6,7 +6,6 @@
  * Time: 11:50 PM
  */
 session_start();
-require('../config/databaseConnection.php');
 require('../common/Common.php');
 
 if(!$_SESSION['email']){
@@ -32,7 +31,7 @@ require('../views/Layout/header.php');
 
     $breedList = array();
     $objCommon = new Common();
-    $breedList = $objCommon->getBreed($connection)?>
+    $breedList = $objCommon->getBreed()?>
 
 
 

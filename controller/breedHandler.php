@@ -7,7 +7,6 @@
  */
 
 require('../common/Common.php');
-require('../config/databaseConnection.php');
 
 $objCommon = new Common();
 
@@ -24,7 +23,7 @@ if($_POST["mode"]=="add"){
     move_uploaded_file($image_tmp,"../images/$image");
 
 
-    $result = $objCommon->createBreed($connection,$category,$breed_name,$description,$image,$searchKeyword);
+    $result = $objCommon->createBreed($category,$breed_name,$description,$image,$searchKeyword);
 
     if($result['message']=='success'){
         $_SESSION['add'] ="success";
@@ -40,7 +39,7 @@ else if($_POST["mode"]=="edit"){
     $id = $_POST['id'];
 
     $result = array();
-    $result = $objCommon->editBreed($connection,$id);
+    $result = $objCommon->editBreed($id);
 
     echo json_encode($result);
 }
@@ -60,7 +59,7 @@ else if($_POST["mode"]=="update"){
 
     $result = array();
 
-    $result = $objCommon->updateBreed($connection,$category,$breed_name,$description,$image,$searchKeyword,$b_id);
+    $result = $objCommon->updateBreed($category,$breed_name,$description,$image,$searchKeyword,$b_id);
 
     if($result['message']=='success'){
 
@@ -75,7 +74,7 @@ else if($_POST['mode']=='delete'){
 
     $result = array();
 
-    $result = $objCommon->deleteBreed($connection,$id);
+    $result = $objCommon->deleteBreed($id);
 
     echo json_encode($result);
 }

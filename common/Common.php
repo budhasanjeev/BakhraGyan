@@ -6,9 +6,13 @@
  * Time: 9:24 PM
  */
 
+require('../config/databaseConnection.php');
+
 class Common {
 
-    public function login($connection,$email,$pwd){
+    public function login($email,$pwd){
+
+        global $connection;
 
         $pwd = md5($pwd);
 
@@ -30,7 +34,9 @@ class Common {
 
     }
 
-    public function getBreed($connection){
+    public function getBreed(){
+
+        global $connection;
 
         $result = mysqli_query($connection,"SELECT  *FROM breed");
         $data = array();
@@ -48,7 +54,9 @@ class Common {
         return $data;
     }
 
-    public function createBreed($connection,$category,$breed_name,$description,$image,$searchKeyword){
+    public function createBreed($category,$breed_name,$description,$image,$searchKeyword){
+
+        global $connection;
 
         $created_date = date("Y-m-d");
 
@@ -67,7 +75,9 @@ class Common {
         return $data;
     }
 
-    public function editBreed($connection,$id){
+    public function editBreed($id){
+
+        global $connection;
 
         $select_query = "SELECT *FROM breed WHERE id ='$id'; ";
 
@@ -88,7 +98,9 @@ class Common {
 
     }
 
-    public function deleteBreed($connection,$id){
+    public function deleteBreed($id){
+
+        global $connection;
 
         $delete_breed = "DELETE FROM breed WHERE id='$id' ";
 
@@ -106,7 +118,9 @@ class Common {
 
     }
 
-    public function updateBreed($connection,$category,$breed_name,$description,$image,$searchKeyword,$b_id){
+    public function updateBreed($category,$breed_name,$description,$image,$searchKeyword,$b_id){
+
+        global $connection;
 
         $update_date = date("Y-m-d");
 
@@ -125,7 +139,9 @@ class Common {
     }
 
 
-    public function getFood($connection){
+    public function getFood(){
+
+        global $connection;
 
         $result = mysqli_query($connection,"SELECT  *FROM feed");
         $data = array();
@@ -142,7 +158,9 @@ class Common {
         return $data;
     }
 
-    public function createFood($connection,$foodName,$description,$image){
+    public function createFood($foodName,$description,$image){
+
+        global $connection;
 
         $created_date = date("Y-m-d");
 
@@ -162,7 +180,9 @@ class Common {
         return $data;
     }
 
-    public function deleteFood($connection,$id){
+    public function deleteFood($id){
+
+        global $connection;
 
         $delete_food = "DELETE FROM feed WHERE id='$id' ";
 
@@ -179,7 +199,9 @@ class Common {
         return $data;
     }
 
-    public function editFood($connection,$id){
+    public function editFood($id){
+
+        global $connection;
 
         $select_query = "SELECT *FROM feed WHERE id ='$id'; ";
 
@@ -198,7 +220,9 @@ class Common {
         return $data;
     }
 
-    public function updateFood($connection,$food_name,$description,$image,$f_id){
+    public function updateFood($food_name,$description,$image,$f_id){
+
+        global $connection;
 
         $update_date = date("Y-m-d");
 
@@ -218,4 +242,67 @@ class Common {
         return $data;
 
     }
+
+    public function getDisease(){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM disease");
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['disease_name'] = $row["disease_name"];
+            $data[$i]['description'] = $row["description"];
+            $data[$i]['picture'] = $row["picture"];
+            $i++;
+        }
+        return $data;
+
+    }
+
+    public function createDisease($disease_name,$description,$image){
+
+        global $connection;
+
+        $created_date = date("Y-m-d");
+
+        $create_disease = "INSERT INTO disease(disease_name,description,picture,created_date) VALUES('$disease_name','$description','$image','$created_date')";
+
+        $result = mysqli_query($connection,$create_disease);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }
+        else{
+            $data['message']='fail';
+        }
+
+        return $data;
+    }
+
+    public function getCure(){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM disease");
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['disease_name'] = $row["disease_name"];
+            $data[$i]['description'] = $row["description"];
+            $data[$i]['picture'] = $row["picture"];
+            $i++;
+        }
+        return $data;
+
+    }
+
 }
