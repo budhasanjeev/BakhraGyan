@@ -6,7 +6,6 @@
  * Time: 11:50 PM
  */
 session_start();
-require('../config/databaseConnection.php');
 require('../common/Common.php');
 
 if(!$_SESSION['email']){
@@ -31,7 +30,7 @@ require('../views/Layout/header.php');
 
     $foodList = array();
     $objCommon = new Common();
-    $foodList = $objCommon->getFood($connection);?>
+    $foodList = $objCommon->getFood();?>
 
 
     <table class="table table-striped table-responsive" id="food-table">
@@ -40,7 +39,7 @@ require('../views/Layout/header.php');
             <th>खानाको नाम </th>
             <th>विवरण</th>
             <th>फोटो</th>
-
+            <th>कार्यहरू</th>
         </tr>
         </thead>
 

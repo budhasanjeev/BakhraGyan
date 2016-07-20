@@ -6,7 +6,6 @@
  * Time: 9:36 PM
  */
 
-require('../config/databaseConnection.php');
 require('../common/Common.php');
 
 

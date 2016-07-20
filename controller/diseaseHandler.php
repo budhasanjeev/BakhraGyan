@@ -1,18 +1,17 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: sanjeev-budha
- * Date: 4/24/16
- * Time: 2:31 AM
+ * User: sanjeevbudha
+ * Date: 7/1/16
+ * Time: 2:13 AM
  */
-
 require('../common/Common.php');
 
 $objCommon = new Common();
 
 if($_POST["mode"]=="add"){
 
-    $food_name = $_POST['feedName'];
+    $disease_name = $_POST['diseaseName'];
     $description = $_POST['description'];
 
     $image = $_FILES['image']['name'];
@@ -21,13 +20,12 @@ if($_POST["mode"]=="add"){
     move_uploaded_file($image_tmp,"../images/$image");
 
     $result = array();
-    $result = $objCommon->createFood($food_name,$description,$image);
+    $result = $objCommon->createDisease($disease_name,$description,$image);
 
     if($result['message']=='success'){
-       header("Location:../views/food.php");
+        header("Location:../views/disease.php");
     }
 
-    echo $result;
 }
 
 else if($_POST["mode"]=="edit"){
