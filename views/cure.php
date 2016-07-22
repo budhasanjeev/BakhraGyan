@@ -28,31 +28,30 @@ require('../views/Layout/header.php');
     <button class="btn btn-primary" id="add-cure"> उपचार बारेमा थप्नुहोस </button>
     <?php
 
-        $cureList = array();
-        $objCommon = new Common();
-        $cureList = $objCommon->getCure();
+    $cureList = array();
+    $objCommon = new Common();
+    $cureList = $objCommon->getCure();
     ?>
 
 
     <table class="table table-striped table-responsive" id="cure-table">
         <thead>
         <tr>
-            <th>रोगको नाम </th>
-            <th>विवरण तथा लक्षण </th>
+            <th>रोगको नाम</th>
             <th>निवारक हेरविचार</th>
-
 
         </tr>
         </thead>
 
         <tbody>
         <?php
-        foreach($cureList as $cure){?>
+        foreach($cureList as $cure){
+            $disease = $objCommon->getdiseaseNameById($cure['disease_id']);
 
+        ?>
 
             <tr>
-                <td style="vertical-align: middle;"><?php echo $cure["disease_name"] ?></td>
-                <td style="vertical-align: middle;"><?php echo $cure["description_symptom"]?></td>
+                <td style="vertical-align: middle;"><?php echo $disease['disease_name'] ?><span class="glyphicon glyphicon-info-sign pull-right" onclick="detail(<?php echo $cure['disease_id'] ?>)"></span> </td>
                 <td style="vertical-align: middle;"><?php echo $cure["preventive_care"]?></td>
                 <td style="vertical-align: middle;">
                     <button class="btn btn-danger" onclick="return deleteCure(<?php echo $cure['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
@@ -88,22 +87,27 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="breedName">Disease Name</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="breedName" name="breedName">
+                            <select class="form-control" id="diseaseName" name="disease_id">
+                                <?php
+
+                                $diseaseList = $objCommon->getDisease();
+
+                                foreach($diseaseList as $disease){
+                                    ?>
+
+                                    <option value="<?php echo $disease['id']?>" ><?php echo $disease['disease_name']?></option>
+
+                                <?php } ?>
+
+                            </select>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="description">Description and Symptoms</label>
-                        <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-4" for="image">Preventive measures</label>
+                        <label class="control-label col-sm-4" for="preventive">Preventive measures</label>
 
                         <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
+                            <textarea type="text" class="form-control" id="preventive" name="preventive" style="width: 100%;height:250px"></textarea>
                         </div>
                     </div>
 

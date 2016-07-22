@@ -17,7 +17,7 @@ function deleteCure(id){
                 n.close();
                 $.ajax({
                     type:"POST",
-                    url:'../controller/breedHandler.php',
+                    url:'../controller/cureHandler.php',
                     data:"mode="+mode+"&id="+id,
                     success:function(data){
                         var data = JSON.parse(data);
@@ -49,25 +49,21 @@ function editCure(id){
 
     $.ajax({
         type:"POST",
-        url:'../controller/breedHandler.php',
+        url:'../controller/cureHandler.php',
         data:"mode="+mode+"&id="+id,
         success:function(data){
             var data = JSON.parse(data);
 
-            var b_id = data['id'];
-            $("#breedName").val(data['breed_name']);
-            $("#description").val(data['description']);
-            $('#category').val(data['category']);
-            $('#search_keyword').val(data['search_words']);
-//                $('#image').val(data['image']);
-//
+            var c_id = data['id'];
+            $("#preventive").val(data['preventive_care']);
+            $('#diseaseName').val(data['disease_id']);
 
-            $('#insert-breed').modal('show');
-            $('#insert-breed .modal-title').html("Edit Breed");
-            $('#insert-breed button[type=submit]').html("Save Changes");
-            $('#breed-form').attr('action','../controller/breedHandler.php');
+            $('#insert-cure').modal('show');
+            $('#insert-cure .modal-title').html("Edit Cure");
+            $('#insert-cure button[type=submit]').html("Save Changes");
+            $('#cure-form').attr('action','../controller/cureHandler.php');
             $('#mode').attr('value','update');
-            $('#breed_id').attr('value',b_id);
+            $('#cure_id').attr('value',c_id);
 
             $('.modal').on('hidden.bs.modal', function(){
                 $(this).find('form')[0].reset();
@@ -79,4 +75,10 @@ function editCure(id){
     });
 
     return false;
+}
+
+function detail(id){
+
+    alert(id);
+
 }
