@@ -296,13 +296,114 @@ class Common {
         while($row = mysqli_fetch_assoc($result))
         {
             $data[$i]['id'] = $row["id"];
-            $data[$i]['disease_name'] = $row["disease_name"];
-            $data[$i]['description_symptom'] = $row["description_symptom"];
+            $data[$i]['disease_id'] = $row["disease_id"];
             $data[$i]['preventive_care'] = $row["preventive_care"];
             $i++;
         }
         return $data;
 
+    }
+
+    public function createCure($id,$preventive){
+
+        global $connection;
+
+        $created_date = date("Y-m-d");
+
+        $create_cure = "INSERT INTO cure(disease_id,preventive_care,created_date) VALUES('$id','$preventive','$created_date') ";
+
+        $result = mysqli_query($connection,$create_cure);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }
+        else{
+            $data['message']='fail';
+        }
+
+        return $data;
+
+    }
+
+    public function getDiseaseNameById($id){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT disease_name from disease WHERE id = '$id' ");
+
+        $data = array();
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data['disease_name'] = $row["disease_name"];
+        }
+
+        return $data;
+
+    }
+
+    public function deleteCure($id){
+
+        global $connection;
+
+        $delete_cure = "DELETE FROM cure WHERE id='$id' ";
+
+        $result = mysqli_query($connection,$delete_cure);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='error';
+        }
+
+        return $data;
+    }
+
+    public function editCure($id){
+
+        global $connection;
+
+        $select_query = "SELECT *FROM cure WHERE id ='$id'; ";
+
+        $result = mysqli_query($connection,$select_query);
+
+        $data = array();
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data['id'] = $row["id"];
+            $data['disease_id'] = $row["disease_id"];
+            $data['preventive_care'] = $row["preventive_care"];
+        }
+
+        return $data;
+
+    }
+
+    public function updateCure($disease_id,$preventive,$id){
+
+        global $connection;
+
+        $update_date = date("Y-m-d");
+
+        $update_cure = "UPDATE cure SET disease_id = '$disease_id',preventive_care='$preventive',updated_date='$update_date' WHERE id='$id' ";
+
+        $result = mysqli_query($connection,$update_cure);
+
+        $data = array();
+
+        if($result){
+            $data['message'] = 'success';
+        }
+        else{
+            $data['message'] = 'fail';
+        }
+
+        return $data;
     }
 
 }
