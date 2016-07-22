@@ -14,19 +14,15 @@ if(isset($_POST['mode'])){
 
     if($_POST["mode"]=="add"){
 
-        $disease_name = $_POST['diseaseName'];
-        $description = $_POST['description'];
+        $disease_id = $_POST['disease_id'];
+        $preventive = $_POST['preventive'];
 
-        $image = $_FILES['image']['name'];
-        $image_tmp = $_FILES['image']['tmp_name'];
-
-        move_uploaded_file($image_tmp,"../images/$image");
 
         $result = array();
-        $result = $objCommon->createDisease($disease_name,$description,$image);
+        $result = $objCommon->createCure($disease_id,$preventive);
 
         if($result['message']=='success'){
-            header("Location:../views/disease.php");
+            header("Location:../views/cure.php");
         }
 
     }
@@ -36,7 +32,7 @@ if(isset($_POST['mode'])){
         $id = $_POST['id'];
 
         $result = array();
-        $result = $objCommon->editFood($id);
+        $result = $objCommon->editCure($id);
 
         echo json_encode($result);
 
@@ -48,30 +44,23 @@ if(isset($_POST['mode'])){
 
         $result = array();
 
-        $result = $objCommon->deleteFood($id);
+        $result = $objCommon->deleteCure($id);
 
         echo json_encode($result);
     }
 
     else if($_POST['mode']=="update"){
 
-        $f_id = $_POST['food_id'];
-        $food_name = $_POST['feedName'];
-        $description = $_POST['description'];
+        $id = $_POST['cure_id'];
+        $disease_id = $_POST['disease_id'];
+        $preventive = $_POST['preventive'];
 
-        $image = $_FILES['image']['name'];
-        $image_tmp = $_FILES['image']['tmp_name'];
-
-        move_uploaded_file($image_tmp,"../images/$image");
 
         $result = array();
-        $result = $objCommon->updateFood($food_name,$description,$image,$f_id);
+        $result = $objCommon->updateCure($disease_id,$preventive,$id);
 
         if($result['message']=='success'){
-            header("Location:../views/food.php");
+            header("Location:../views/cure.php");
         }
-
-        echo json_encode($result);
-
     }
 }
