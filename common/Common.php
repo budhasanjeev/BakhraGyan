@@ -289,7 +289,7 @@ class Common {
 
         global $connection;
 
-        $result = mysqli_query($connection,"SELECT  *FROM disease");
+        $result = mysqli_query($connection,"SELECT  *FROM cure");
         $data = array();
         $i = 0;
 
@@ -297,8 +297,8 @@ class Common {
         {
             $data[$i]['id'] = $row["id"];
             $data[$i]['disease_name'] = $row["disease_name"];
-            $data[$i]['description'] = $row["description"];
-            $data[$i]['picture'] = $row["picture"];
+            $data[$i]['description_symptom'] = $row["description_symptom"];
+            $data[$i]['preventive_care'] = $row["preventive_care"];
             $i++;
         }
         return $data;

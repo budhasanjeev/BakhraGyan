@@ -28,7 +28,7 @@
         <a href="../home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="DWIT NEWS"></a>
         <ul style="list-style: none; float: right; padding-top: 2%; position: relative; margin-right: 2%;">
             <?php
-                if($_SESSION['email']){?>
+                if(isset($_SESSION['email'])){?>
                     <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="logout.php">बाहिर निस्कनुहोस</a> </li>
                <?php }
             else{?>
@@ -50,7 +50,7 @@
 
             <div class="collapse navbar-collapse" id="menu">
                 <?php
-                    if($_SESSION['email']){?>
+                    if(isset($_SESSION['email'])){?>
 
                             <ul class="nav navbar-nav">
                                 <li><a href="dashboard.php"><span class="glyphicon glyphicon-home"></span></a></li>

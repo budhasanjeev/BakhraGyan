@@ -9,7 +9,7 @@
 require('../common/Common.php');
 
 
-if($_SESSION['email']){
+if(isset($_SESSION['email'])){
     header("Location:dashboard.php");
 }
 

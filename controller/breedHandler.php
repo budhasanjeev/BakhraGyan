@@ -10,71 +10,74 @@ require('../common/Common.php');
 
 $objCommon = new Common();
 
-if($_POST["mode"]=="add"){
+if(isset($_POST['mode'])){
 
-    $breed_name = $_POST['breedName'];
-    $description = $_POST['description'];
-    $category = $_POST['category'];
-    $searchKeyword = $_POST['searchKeyword'];
+    if($_POST["mode"]=="add"){
 
-    $image = $_FILES['image']['name'];
-    $image_tmp = $_FILES['image']['tmp_name'];
+        $breed_name = $_POST['breedName'];
+        $description = $_POST['description'];
+        $category = $_POST['category'];
+        $searchKeyword = $_POST['searchKeyword'];
 
-    move_uploaded_file($image_tmp,"../images/$image");
+        $image = $_FILES['image']['name'];
+        $image_tmp = $_FILES['image']['tmp_name'];
+
+        move_uploaded_file($image_tmp,"../images/$image");
 
 
-    $result = $objCommon->createBreed($category,$breed_name,$description,$image,$searchKeyword);
+        $result = $objCommon->createBreed($category,$breed_name,$description,$image,$searchKeyword);
 
-    if($result['message']=='success'){
-        $_SESSION['add'] ="success";
-    } else {
-        $_SESSION['add'] ="error";
+        if($result['message']=='success'){
+            $_SESSION['add'] ="success";
+        } else {
+            $_SESSION['add'] ="error";
+        }
+
+        header('Location:../views/breed.php');
     }
 
-    header('Location:../views/breed.php');
-}
+    else if($_POST["mode"]=="edit"){
 
-else if($_POST["mode"]=="edit"){
+        $id = $_POST['id'];
 
-    $id = $_POST['id'];
+        $result = array();
+        $result = $objCommon->editBreed($id);
 
-    $result = array();
-    $result = $objCommon->editBreed($id);
-
-    echo json_encode($result);
-}
-
-else if($_POST["mode"]=="update"){
-
-    $b_id = $_POST['breed_id'];
-    $breed_name = $_POST['breedName'];
-    $description = $_POST['description'];
-    $category = $_POST['category'];
-    $searchKeyword = $_POST['searchKeyword'];
-
-    $image = $_FILES['image']['name'];
-    $image_tmp = $_FILES['image']['tmp_name'];
-
-    move_uploaded_file($image_tmp,"../images/$image");
-
-    $result = array();
-
-    $result = $objCommon->updateBreed($category,$breed_name,$description,$image,$searchKeyword,$b_id);
-
-    if($result['message']=='success'){
-
-        header("Location:../views/breed.php");
+        echo json_encode($result);
     }
 
-}
+    else if($_POST["mode"]=="update"){
 
-else if($_POST['mode']=='delete'){
+        $b_id = $_POST['breed_id'];
+        $breed_name = $_POST['breedName'];
+        $description = $_POST['description'];
+        $category = $_POST['category'];
+        $searchKeyword = $_POST['searchKeyword'];
 
-    $id= $_POST['id'];
+        $image = $_FILES['image']['name'];
+        $image_tmp = $_FILES['image']['tmp_name'];
 
-    $result = array();
+        move_uploaded_file($image_tmp,"../images/$image");
 
-    $result = $objCommon->deleteBreed($id);
+        $result = array();
 
-    echo json_encode($result);
+        $result = $objCommon->updateBreed($category,$breed_name,$description,$image,$searchKeyword,$b_id);
+
+        if($result['message']=='success'){
+
+            header("Location:../views/breed.php");
+        }
+
+    }
+
+    else if($_POST['mode']=='delete'){
+
+        $id= $_POST['id'];
+
+        $result = array();
+
+        $result = $objCommon->deleteBreed($id);
+
+        echo json_encode($result);
+    }
 }

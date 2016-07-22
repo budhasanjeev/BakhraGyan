@@ -2,9 +2,10 @@
 /**
  * Created by PhpStorm.
  * User: sanjeevbudha
- * Date: 7/1/16
- * Time: 2:13 AM
+ * Date: 7/20/16
+ * Time: 2:20 PM
  */
+
 require('../common/Common.php');
 
 $objCommon = new Common();
@@ -71,6 +72,6 @@ if(isset($_POST['mode'])){
         }
 
         echo json_encode($result);
-    }
 
+    }
 }

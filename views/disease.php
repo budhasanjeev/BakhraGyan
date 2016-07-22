@@ -8,7 +8,7 @@
 session_start();
 require('../common/Common.php');
 
-if(!$_SESSION['email']){
+if(!isset($_SESSION['email'])){
     header("Location:login.php");
 }
 ?>
@@ -35,7 +35,7 @@ require('../views/Layout/header.php');
     ?>
 
 
-    <table class="table table-striped table-responsive">
+    <table class="table table-striped table-responsive" id="disease-table">
         <thead>
         <tr>
             <th> फोटो </th>
@@ -133,7 +133,7 @@ require('../views/Layout/footer.php');
 
 
     $(document).ready(function(){
-        $('#food-table').DataTable({
+        $('#disease-table').DataTable({
             "info":true,
             "paging":true,
             "ordering":false,
