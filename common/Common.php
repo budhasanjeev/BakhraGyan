@@ -305,4 +305,45 @@ class Common {
 
     }
 
+    public function getShed(){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM shed");
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['title'] = $row["shed_title"];
+            $data[$i]['photo'] = $row["photo"];
+            $data[$i]['description'] = $row["description"];
+            $i++;
+        }
+        return $data;
+    }
+
+    public function createShed($shed_title,$image,$description){
+
+        global $connection;
+
+        $created_date = date("Y-m-d");
+
+        $create_shed = "INSERT INTO shed(shed_title,description,photo,created_date) VALUES('$shed_title','$description','$image','$created_date')";
+
+        $result = mysqli_query($connection,$create_shed);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }
+        else{
+            $data['message']='fail';
+        }
+
+        return $create_shed;
+    }
+
 }
