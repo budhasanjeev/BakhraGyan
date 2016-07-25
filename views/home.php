@@ -27,35 +27,51 @@ if(isset($_SESSION['email'])){
             require('Layout/header.php');
         ?>
         <div id="content">
+            <div class="col-sm-8">
 
-            <?php
+            </div>
 
-                $newsList = array();
-                $objCommon = new Common();
-                $newsList = $objCommon->getNews();
+            <div class="col-sm-4">
 
-                foreach($newsList as $news){
-
-                     $id = $news["id"];
-
-                echo '
-                    <div id="left-news-content" class="row">
-
-                        <div class="col-sm-4">
-                            <img id="news-image" src="../images/news_images/' .$news["image"].'" style="width: 50%">
+                <fieldset>
+                    <legend> जिज्ञास </legend>
+                </fieldset>
+                <form class="form-horizontal" role="form" id="food-form" method="post" action="../controller/queryHandler" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="fullName">Full Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="fullName" name="fullName">
                         </div>
-
-                        <div class="col-md-8">
-                            <h1>' .$news["news_headline"].'</h1>
-                            <p>'.$news["news_body"].'</p>
-                            <button id="news-button" type="button">Read</button>
-                        </div>
-
                     </div>
-                ';
-                }
-            ?>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="phoneNumber">Phone Number</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
+                        </div>
+                    </div>
 
+                    <div id="news-img" class="form-group">
+                        <label class="control-label col-sm-4" for="email">Email</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="email" name="email" >
+                        </div>
+                    </div>
+
+                    <div id="news-img" class="form-group">
+                        <label class="control-label col-sm-4">Address</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="address" name="address">
+                        </div>
+                    </div>
+                    <div id="news-img" class="form-group">
+                        <label class="control-label col-sm-4">Query</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="query" name="query" style="height: 100px"></textarea>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
         </div>
         <?php
             require('Layout/footer.php');
