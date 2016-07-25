@@ -16,7 +16,7 @@ function deleteDisease(id){
                 n.close();
                 $.ajax({
                     type:"POST",
-                    url:'../controller/foodHandler.php',
+                    url:'../controller/diseaseHandler.php',
                     data:"mode="+mode+"&id="+id,
                     success:function(data){
                         var data = JSON.parse(data);
@@ -48,21 +48,22 @@ function editDisease(id){
 
     $.ajax({
         type:"POST",
-        url:'../controller/foodHandler.php',
+        url:'../controller/diseaseHandler.php',
         data:"mode="+mode+"&id="+id,
         success:function(data){
             var data = JSON.parse(data);
 
-            var f_id = data['id'];
-            $("#feedName").val(data['title']);
+            var d_id = data['id'];
+            $("#diseaseName").val(data['disease_name']);
             $("#description").val(data['description']);
+            $("#image").attr('value',data['picture']);
 
-            $('#insert-food').modal('show');
-            $('#insert-food .modal-title').html("Edit Food");
-            $('#insert-food button[type=submit]').html("Save Changes");
-            $('#food-form').attr('action','../controller/foodHandler.php');
+            $('#insert-disease').modal('show');
+            $('#insert-disease .modal-title').html("Edit Food");
+            $('#insert-disease button[type=submit]').html("Save Changes");
+            $('#disease-form').attr('action','../controller/diseaseHandler.php');
             $('#mode').attr('value','update');
-            $('#food_id').attr('value',f_id);
+            $('#disease_id').attr('value',d_id);
 
             $('.modal').on('hidden.bs.modal', function(){
                 $(this).find('form')[0].reset();

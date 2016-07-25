@@ -285,6 +285,71 @@ class Common {
         return $data;
     }
 
+
+    public function deleteDisease($id){
+
+        global $connection;
+
+        $delete_disease = "DELETE FROM disease WHERE id='$id' ";
+
+        $result = mysqli_query($connection,$delete_disease);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='error';
+        }
+
+        return $data;
+
+    }
+
+    public function editDisease($id){
+
+        global $connection;
+
+        $select_query = "SELECT *FROM disease WHERE id ='$id'; ";
+
+        $result = mysqli_query($connection,$select_query);
+
+        $data = array();
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data['id'] = $row["id"];
+            $data['disease_name'] = $row["disease_name"];
+            $data['description'] = $row["description"];
+            $data['picture'] = $row["picture"];
+        }
+
+        return $data;
+    }
+
+    public function updateDisease($disease_name,$description,$picture,$id){
+
+        global $connection;
+
+        $update_date = date("Y-m-d");
+
+        $update_disease = "UPDATE disease SET disease_name = '$disease_name',description='$description',picture='$picture',update_date='$update_date' WHERE id='$id' ";
+
+        $result = mysqli_query($connection,$update_disease);
+
+        $data = array();
+
+        if($result){
+            $data['message'] = 'success';
+        }
+        else{
+            $data['message'] = 'fail';
+        }
+
+        return $data;
+
+    }
+
     public function getCure(){
 
         global $connection;
@@ -445,6 +510,27 @@ class Common {
         }
 
         return $create_shed;
+    }
+
+
+    public function getQuery(){
+
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM query");
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['query'] = $row["query"];
+            $data[$i]['query_from'] = $row["query_from"];
+            $data[$i]['created_date'] = $row["created_date"];
+            $i++;
+        }
+        return $data;
     }
 
 }

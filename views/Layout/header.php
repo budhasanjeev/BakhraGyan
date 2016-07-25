@@ -63,8 +63,10 @@
 
                             </ul>
 
-                            <ul class="nav navbar-nav pull-right">
-                                <li><a>Welcome &nbsp;<?php echo $_SESSION["email"]?></a></li>
+                            <ul class="nav navbar-nav pull-right" >
+                                <li><a>Welcome &nbsp;<?php echo $_SESSION["email"]?></a>
+
+                                </li>
                             </ul>
                 <?php
                     }

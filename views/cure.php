@@ -34,7 +34,7 @@ require('../views/Layout/header.php');
     ?>
 
 
-    <table class="table table-striped table-responsive" id="cure-table">
+    <table class="table table-striped table-responsive" id="cure_table">
         <thead>
         <tr>
             <th>रोगको नाम</th>
@@ -139,7 +139,7 @@ require('../views/Layout/footer.php');
 
 
     $(document).ready(function(){
-        $('#cure-table').DataTable({
+        $('#cure_table').DataTable({
             "info":true,
             "paging":true,
             "ordering":false,

@@ -35,7 +35,7 @@ if(isset($_POST['mode'])){
         $id = $_POST['id'];
 
         $result = array();
-        $result = $objCommon->editFood($id);
+        $result = $objCommon->editDisease($id);
 
         echo json_encode($result);
 
@@ -47,15 +47,15 @@ if(isset($_POST['mode'])){
 
         $result = array();
 
-        $result = $objCommon->deleteFood($id);
+        $result = $objCommon->deleteDisease($id);
 
         echo json_encode($result);
     }
 
     else if($_POST['mode']=="update"){
 
-        $f_id = $_POST['food_id'];
-        $food_name = $_POST['feedName'];
+        $id = $_POST['disease_id'];
+        $disease_name = $_POST['diseaseName'];
         $description = $_POST['description'];
 
         $image = $_FILES['image']['name'];
@@ -64,13 +64,12 @@ if(isset($_POST['mode'])){
         move_uploaded_file($image_tmp,"../images/$image");
 
         $result = array();
-        $result = $objCommon->updateFood($food_name,$description,$image,$f_id);
+        $result = $objCommon->updateDisease($disease_name,$description,$image,$id);
 
         if($result['message']=='success'){
-            header("Location:../views/food.php");
+            header("Location:../views/disease.php");
         }
 
-        echo json_encode($result);
     }
 
 }
