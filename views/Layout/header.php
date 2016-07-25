@@ -72,12 +72,11 @@
 
                             <ul class="nav navbar-nav">
                             <li><a href="../views/home.php">गृह पृष्ठ</a></li>
-                            <li><a>प्रजाति पृष्ठ</a></li>
-                            <li><a>आहारा पृष्ठ</a></li>
-                            <li><a>रोग पृष्ठ</a></li>
-                            <li><a>उपचार पृष्ठ</a></li>
-                            <li><a>खोर पृष्ठ</a></li>
-                            <li><a>जिज्ञास पृष्ठ</a></li>
+                            <li><a href="../views/breedShow.php">प्रजाति पृष्ठ</a></li>
+                            <li><a href="../views/foodShow.php">आहारा पृष्ठ</a></li>
+                            <li><a href="../views/diseaseShow.php">रोग पृष्ठ</a></li>
+                            <li><a href="../views/cureShow.php">उपचार पृष्ठ</a></li>
+                            <li><a href="../views/shedShow.php">खोर पृष्ठ</a></li>
                         </ul>
                         <?php
                     }
