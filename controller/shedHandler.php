@@ -38,18 +38,16 @@ if(isset($_POST['mode'])){
         $id = $_POST['id'];
 
         $result = array();
-        $result = $objCommon->editBreed($id);
+        $result = $objCommon->editShed($id);
 
         echo json_encode($result);
     }
 
     else if($_POST["mode"]=="update"){
 
-        $b_id = $_POST['breed_id'];
-        $breed_name = $_POST['breedName'];
+        $s_id = $_POST['shed_id'];
+        $shed_title= $_POST['shedTitle'];
         $description = $_POST['description'];
-        $category = $_POST['category'];
-        $searchKeyword = $_POST['searchKeyword'];
 
         $image = $_FILES['image']['name'];
         $image_tmp = $_FILES['image']['tmp_name'];
@@ -58,13 +56,12 @@ if(isset($_POST['mode'])){
 
         $result = array();
 
-        $result = $objCommon->updateBreed($category,$breed_name,$description,$image,$searchKeyword,$b_id);
+        $result = $objCommon->updateShed($description,$image,$shed_title,$s_id);
 
         if($result['message']=='success'){
 
-            header("Location:../views/breed.php");
+            header("Location:../views/shed.php");
         }
-
     }
 
     else if($_POST['mode']=='delete'){
@@ -73,7 +70,7 @@ if(isset($_POST['mode'])){
 
         $result = array();
 
-        $result = $objCommon->deleteBreed($id);
+        $result = $objCommon->deleteShed($id);
 
         echo json_encode($result);
     }
