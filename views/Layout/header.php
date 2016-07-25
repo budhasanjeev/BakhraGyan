@@ -59,8 +59,6 @@
                                 <li><a href="disease.php">रोग </a></li>
                                 <li><a href="cure.php">उपचार </a></li>
                                 <li><a href="shed.php">खोर </a></li>
-                                <li><a href="query.php"> जिज्ञासा  </a></li>
-
                             </ul>
 
                             <ul class="nav navbar-nav pull-right" >
@@ -73,7 +71,7 @@
                     else{?>
 
                             <ul class="nav navbar-nav">
-                            <li><a>गृह पृष्ठ</a></li>
+                            <li><a href="../views/home.php">गृह पृष्ठ</a></li>
                             <li><a>प्रजाति पृष्ठ</a></li>
                             <li><a>आहारा पृष्ठ</a></li>
                             <li><a>रोग पृष्ठ</a></li>
