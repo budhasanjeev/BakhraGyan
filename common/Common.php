@@ -447,4 +447,66 @@ class Common {
         return $create_shed;
     }
 
+    public function deleteShed($id){
+
+        global $connection;
+
+        $delete_shed = "DELETE FROM shed WHERE id='$id' ";
+
+        $result = mysqli_query($connection,$delete_shed);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='error';
+        }
+
+        return $data;
+
+    }
+
+    public function editShed($id){
+
+        global $connection;
+
+        $select_query = "SELECT *FROM shed WHERE id ='$id'; ";
+
+        $result = mysqli_query($connection,$select_query);
+
+        $data = array();
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data['id'] = $row["id"];
+            $data['image'] = $row["photo"];
+            $data['shed_title'] = $row["shed_title"];
+            $data['description'] = $row["description"];
+
+        }
+        return $data;
+
+    }
+
+    public function updateShed($description,$image,$shed_title,$s_id){
+
+        global $connection;
+
+        $update_date = date("Y-m-d");
+
+        $update_shed = "UPDATE shed SET description='$description',photo='$image',update_date='$update_date',shed_title='$shed_title' WHERE id='$s_id' ";
+        $result = mysqli_query($connection,$update_shed);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='fail';
+        }
+
+        return $data;
+    }
+
 }
