@@ -16,6 +16,7 @@ if(!isset($_SESSION['email'])){
 <html>
 <head>
     <title>कृषि सुझाब</title>
+    <script src="../js/shed.js"></script>
 </head>
 
 <body>
@@ -52,7 +53,7 @@ require('../views/Layout/header.php');
                 <td style="vertical-align: middle;"><?php echo $shed["title"]?></td>
                 <td style="vertical-align: middle;"><?php echo $shed["description"]?></td>
                 <td style="vertical-align: middle;">
-                    <button class="btn btn-danger" onclick="return deleteShed(<?php echo $shed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button class="btn btn-danger" onclick="return deleteShed(<?php echo $shed['id'] ?>)"><span class="glyphicon glyphicon-trash"></span></button>
                     <button class="btn btn-success" onclick="return editShed(<?php echo $shed['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
                 </td>
             </tr>
