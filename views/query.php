@@ -30,7 +30,7 @@ require('../views/Layout/header.php');
         <thead>
         <tr>
             <th>S.N</th>
-            <th>Comment</th>
+            <th>Query</th>
             <th>From</th>
             <th>Date</th>
             <th>Reply</th>
