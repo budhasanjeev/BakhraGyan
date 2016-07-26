@@ -28,54 +28,50 @@ if(isset($_SESSION['email'])){
         ?>
         <div id="content">
             <div class="col-sm-8">
-                <h1>Welcome To Bakhragyan</h1><br>
-                <h4>Welcome to the world of GoatGyan bringing all information related to goat farming at one point.
-                At present we can see that government has now tightened the policy and consolidating action plan
-                for the development of small ruminant production in India. XII five year plan clearly pave the
-                way for overall upliftment of this sector through the implementation of newer technology.
-                Keeping future trends in mind and after assessment of present status of commercial goat
-                farming in India this comprehensive knowledge portal is being designed. The main purpose
-                of this knowledge forum is to provide first hand scientific information in a lucid and
-                easily understandable form to the new entrepreneurs and farmers. Creation of healthy knowledge
-                community including emerging entrepreneurs and goat farming experts will add more value to this
-                concept. We hope that this goat farming knowledge portal will help in integrating fragmented
-                goat industry and create awareness among the people about intensive goat farming.</h4>
-            </div>
+                <h1> बाख्रा-ज्ञान मा स्वागत छ  </h1><br>
 
+                तपाईहरुलाई बाख्रा-ज्ञानमा स्वागत छ| बाख्रा-ज्ञान अनलाइन वेव पोर्टल हो| बाख्रा-ज्ञान एपमा बाख्रा सम्बन्धीसम्पूर्ण
+                जानकारीहरु पाईन्छ| यसमा राखिएको जानकारीहरु बाख्रा विशेषग तथा आधिकारिक स्रोतहरुबाट संशोधनगरी राखिएको हुनाले जानकारीहरु आधिकारिक छन्|
+                <br>
+                <br>
+                यस एपमा कृषकले सजिलैसंग बाख्रा पालन गर्ने बिधिहरु प्राप्त गर्न सक्नुहुनेछ|यो एपमा कृषकले आफ्नाजिज्ञासाहरु राख्न पाउनेहुनेछ|तथा बाख्रा
+                विशेषगबाट कृषकहरुको जिज्ञासाहरु समाधान गर्न प्रयत्न गर्न खोजेको छौ|
+
+          </div>
             <div class="col-sm-4">
 
                 <fieldset>
-                    <legend> जिज्ञास </legend>
+                    <legend> जिझासा </legend>
                 </fieldset>
                 <form class="form-horizontal" role="form" id="food-form" method="post" action="../controller/queryHandler" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="fullName">Full Name</label>
+                        <label class="control-label col-sm-4" for="fullName">पुरा नाम:</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="fullName" name="fullName">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="phoneNumber">Phone Number</label>
+                        <label class="control-label col-sm-4" for="phoneNumber">फोन नम्बर:</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
                         </div>
                     </div>
 
                     <div id="news-img" class="form-group">
-                        <label class="control-label col-sm-4" for="email">Email</label>
+                        <label class="control-label col-sm-4" for="email">इमेल:</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="email" name="email" >
                         </div>
                     </div>
 
                     <div id="news-img" class="form-group">
-                        <label class="control-label col-sm-4">Address</label>
+                        <label class="control-label col-sm-4">ठेगाना:</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="address" name="address">
                         </div>
                     </div>
                     <div id="news-img" class="form-group">
-                        <label class="control-label col-sm-4">Query</label>
+                        <label class="control-label col-sm-4">प्रश्न:</label>
                         <div class="col-sm-8">
                             <textarea type="text" class="form-control" id="query" name="query" style="height: 100px"></textarea>
                         </div>
@@ -83,9 +79,13 @@ if(isset($_SESSION['email'])){
                     <div id="news-img" class="form-group">
                         <label class="control-label col-sm-4"></label>
                         <div class="col-sm-8">
-                            <input type="submit" class="btn btn-primary" value="submit"/>
+                            <input type="submit" class="btn btn-primary" value="पठाउनुहोस्"/>
                         </div>
                     </div>
+
+            </div>
+        </div>
+
                 </form>
 
             </div>
