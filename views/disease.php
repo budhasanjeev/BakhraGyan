@@ -15,8 +15,11 @@ if(!isset($_SESSION['email'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>कृषि सुझाब</title>
+    <title>बाख्रा ज्ञान</title>
+    <meta charset="utf-8">
     <script src="../js/disease.js"></script>
+    <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,7 +27,7 @@ if(!isset($_SESSION['email'])){
 require('../views/Layout/header.php');
 ?>
 
-<div id="content">
+<div id="container-size">
     <button class="btn btn-primary" id="add-disease">रोगको बारेमा थप्नुहोस </button>
     <?php
 
