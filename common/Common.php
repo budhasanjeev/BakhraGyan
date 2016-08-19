@@ -47,20 +47,21 @@ class Common {
             $data[$i]['id'] = $row["id"];
             $data[$i]['image'] = $row["image"];
             $data[$i]['breed_name'] = $row["breed_name"];
-            $data[$i]['description'] = $row["description"];
-            $data[$i]['category'] = $row["category"];
+            $data[$i]['origin_distribution'] = $row["origin_distribution"];
+            $data[$i]['character'] = $row["breed_character"];
+            $data[$i]['utility'] = $row["utility"];
             $i++;
         }
         return $data;
     }
 
-    public function createBreed($category,$breed_name,$description,$image,$searchKeyword){
+    public function createBreed($origin_distribution,$breed_name,$character,$image,$utility,$searchKeyword){
 
         global $connection;
 
         $created_date = date("Y-m-d");
 
-        $create_breed = "INSERT INTO breed(category,breed_name,description,image,created_date,search_words) VALUES('$category','$breed_name','$description','$image','$created_date','$searchKeyword')";
+        $create_breed = "INSERT INTO breed(breed_name,origin_distribution,breed_character,utility,image,created_date,search_words) VALUES('$breed_name','$origin_distribution','$character','$utility','$image','$created_date','$searchKeyword')";
 
         $result = mysqli_query($connection,$create_breed);
 
