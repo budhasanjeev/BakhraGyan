@@ -12,8 +12,8 @@
 <html>
 
 <head>
-    <title>
-    </title>
+    <title>बाख्रा ज्ञान</title>
+    <meta charset="utf-8">
     <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="../css/news.css" type="text/css" rel="stylesheet">
 
