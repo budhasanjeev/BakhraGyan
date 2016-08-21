@@ -12,6 +12,7 @@
     <head>
         <title>कृषि सुझाब</title>
         <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="../../css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
 
         <script src="../js/jquery-1.12.4.min.js" type="text/javascript"></script>
         <script src="../js/jquery.noty.packaged.min.js" type="text/javascript"></script>

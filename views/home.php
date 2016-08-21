@@ -20,6 +20,7 @@ if(isset($_SESSION['email'])){
 <html>
     <head>
         <title>कृषि सुझाब</title>
+        <meta charset="utf-8">
     </head>
 
     <body>

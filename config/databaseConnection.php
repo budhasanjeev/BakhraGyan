@@ -8,8 +8,8 @@
 
     $server_name = "localhost";
     $username    = "root";
-    $password    = "clockme";
-    $db_name     = "krishi_sujhab";
+    $password    = "";
+    $db_name     = "BakhraGyan";
 
     /*Create Connection*/
     $connection = mysqli_connect($server_name,$username,$password,$db_name);

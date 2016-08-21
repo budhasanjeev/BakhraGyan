@@ -15,8 +15,11 @@ if(!isset($_SESSION['email'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>कृषि सुझाब</title>
+    <title>बाख्रा ज्ञान</title>
+    <meta charset="utf-8">
     <script src="../js/breed.js"></script>
+    <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,7 +27,7 @@ if(!isset($_SESSION['email'])){
 require('../views/Layout/header.php');
 ?>
 
-<div id="content">
+<div id="container-size">
 
     <button class="btn btn-primary" id="add-breed">प्रजाति बारेमा  थप्नुहोस</button>
     <?php
@@ -35,13 +38,14 @@ require('../views/Layout/header.php');
 
 
 
-    <table class="table table-striped table-responsive" id="breed-table">
+    <table class="table table-striped" id="breed-table">
         <thead>
         <tr>
             <th>फोटो</th>
             <th>प्रजाति नाम</th>
-            <th>विवरण</th>
-            <th>वर्ग</th>
+            <th>मूल र वितरण</th>
+            <th>विशेषताहरु</th>
+            <th>उपयोगिता</th>
             <th>कार्यहरू</th>
         </tr>
         </thead>
@@ -54,8 +58,9 @@ require('../views/Layout/header.php');
             <tr>
                 <td><img class="img-circle" src="../images/<?php echo $breed["image"] ?>" style="height: 70px;width:70px;"></td>
                 <td style="vertical-align: middle;"><?php echo $breed["breed_name"] ?></td>
-                <td style="vertical-align: middle;"><?php echo $breed["description"]?></td>
-                <td style="vertical-align: middle;"><?php echo $breed["category"]?></td>
+                <td style="vertical-align: middle;"><?php echo $breed["origin_distribution"]?></td>
+                <td style="vertical-align: middle;"><?php echo $breed["character"]?></td>
+                <td style="vertical-align: middle;"><?php echo $breed["utility"]?></td>
                 <td style="vertical-align: middle;">
                     <button class="btn btn-danger" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
                     <button class="btn btn-success" onclick="return editBreed(<?php echo $breed['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
@@ -88,25 +93,27 @@ require('../views/Layout/footer.php');
                     <input type="hidden" name="mode" id="mode">
                     <input type="hidden" name="breed_id" id="breed_id">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="breedName">Breed Name</label>
+                        <label class="control-label col-sm-4" for="breedName">प्रजाति नाम</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="breedName" name="breedName">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="description">Description</label>
+                        <label class="control-label col-sm-4" for="origin_distribution">मूल र वितरण</label>
                         <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
+                            <textarea type="text" class="form-control" id="origin_distribution" name="origin_distribution" style="width: 100%;height:100px"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="category">Category</label>
+                        <label class="control-label col-sm-4" for="character">विशेषताहरु</label>
                         <div class="col-sm-8">
-                            <select class="form-control" id="category" name="category">
-                                <option value="Dairy">Dairy</option>
-                                <option value="Meat">Meat</option>
-                                <option value="Other">Other</option>
-                            </select>
+                            <textarea type="text" class="form-control" id="character" name="character" style="width: 100%;height:100px"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="utility">उपयोगिता</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="utility" name="utility" style="width: 100%;height:100px"></textarea>
                         </div>
                     </div>
                     <div id="news-img" class="form-group">

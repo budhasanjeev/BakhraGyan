@@ -15,8 +15,9 @@ if(isset($_POST['mode'])){
     if($_POST["mode"]=="add"){
 
         $breed_name = $_POST['breedName'];
-        $description = $_POST['description'];
-        $category = $_POST['category'];
+        $origin_distribution = $_POST['origin_distribution'];
+        $character = $_POST['character'];
+        $utility = $_POST['utility'];
         $searchKeyword = $_POST['searchKeyword'];
 
         $image = $_FILES['image']['name'];
@@ -25,7 +26,7 @@ if(isset($_POST['mode'])){
         move_uploaded_file($image_tmp,"../images/$image");
 
 
-        $result = $objCommon->createBreed($category,$breed_name,$description,$image,$searchKeyword);
+        $result = $objCommon->createBreed($origin_distribution,$breed_name,$character,$image,$utility,$searchKeyword);
 
         if($result['message']=='success'){
             $_SESSION['add'] ="success";
