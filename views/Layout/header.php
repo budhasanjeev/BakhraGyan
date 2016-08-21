@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>कृषि सुझाब</title>
+        <title>बाख्रा-ज्ञान</title>
         <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="../../css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
 
@@ -25,7 +25,7 @@
 
     <body>
     <header class="container-fluid">
-        <a href="../home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="DWIT NEWS"></a>
+        <a href="../home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="bakhra-gyan"></a>
         <ul style="list-style: none; float: right; padding-top: 2%; position: relative; margin-right: 2%;">
             <?php
                 if(isset($_SESSION['email'])){?>

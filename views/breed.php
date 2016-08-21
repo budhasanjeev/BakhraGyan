@@ -56,7 +56,7 @@ require('../views/Layout/header.php');
 
 
             <tr>
-                <td><img class="img-circle" src="../images/<?php echo $breed["image"] ?>" style="height: 70px;width:70px;"></td>
+                <td style="vertical-align: middle"><img class="img-circle" src="../images/<?php echo $breed["image"] ?>" style="height: 70px;width:70px;"></td>
                 <td style="vertical-align: middle;"><?php echo $breed["breed_name"] ?></td>
                 <td style="vertical-align: middle;"><?php echo $breed["origin_distribution"]?></td>
                 <td style="vertical-align: middle;"><?php echo $breed["character"]?></td>

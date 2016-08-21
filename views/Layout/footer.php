@@ -16,7 +16,7 @@
 
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-bottom" style="border: none;">
-    <p style="text-align: center;padding: 1%;color: #ffffff">@कृषि सुझाब</p>
+    <p style="text-align: center;padding: 1%;color: #ffffff">@बाख्रा-ज्ञान</p>
 </nav>
 
 </body>
