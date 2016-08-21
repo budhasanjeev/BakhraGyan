@@ -25,7 +25,7 @@
 
     <body>
     <header class="container-fluid">
-        <a href="../home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="bakhra-gyan"></a>
+        <a href="home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="bakhra-gyan"></a>
         <ul style="list-style: none; float: right; padding-top: 2%; position: relative; margin-right: 2%;">
             <?php
                 if(isset($_SESSION['email'])){?>

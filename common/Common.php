@@ -513,27 +513,6 @@ class Common {
         return $create_shed;
     }
 
-
-    public function getQuery(){
-
-
-        global $connection;
-
-        $result = mysqli_query($connection,"SELECT  *FROM query");
-        $data = array();
-        $i = 0;
-
-        while($row = mysqli_fetch_assoc($result))
-        {
-            $data[$i]['id'] = $row["id"];
-            $data[$i]['query'] = $row["query"];
-            $data[$i]['query_from'] = $row["query_from"];
-            $data[$i]['created_date'] = $row["created_date"];
-            $i++;
-        }
-        return $data;
-    }
-
     public function deleteShed($id){
 
         global $connection;
@@ -596,4 +575,43 @@ class Common {
         return $data;
     }
 
+    public function createQuery($fullName,$phoneNumber,$email,$address,$query){
+
+        global $connection;
+
+        $created_date = date("Y-m-d");
+
+        $create_query = "INSERT INTO query(full_name,phone_number,email,address,query,created_date) VALUES('$fullName','$phoneNumber','$email','$address','$query','$created_date')";
+
+        $result = mysqli_query($connection,$create_query);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='fail';
+        }
+
+        return $data;
+    }
+
+    public function getQuery(){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM query");
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['query'] = $row["query"];
+            $data[$i]['query_from'] = $row["query_from"];
+            $data[$i]['created_date'] = $row["created_date"];
+            $i++;
+        }
+        return $data;
+    }
 }

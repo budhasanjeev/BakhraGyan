@@ -19,8 +19,10 @@ if(isset($_SESSION['email'])){
 <!DOCTYPE html>
 <html>
     <head>
-        <title>कृषि सुझाब</title>
+        <title>बाख्रा ज्ञान</title>
         <meta charset="utf-8">
+
+        <script src="../js/query.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -42,9 +44,11 @@ if(isset($_SESSION['email'])){
             <div class="col-sm-4">
 
                 <fieldset>
-                    <legend> जिझासा </legend>
+                    <legend style="text-align: center;">आफ्नो बाख्रा सम्बन्धि जिझासा लेख्नुहोस| <br>
+                    </legend>
                 </fieldset>
-                <form class="form-horizontal" role="form" id="food-form" method="post" action="../controller/queryHandler" enctype="multipart/form-data">
+                <p style="text-align: center;"><b >सबै विवरणहरु अनिवार्य छन् | </b></p>
+                <form class="form-horizontal" role="form" id="query-form" >
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="fullName">पुरा नाम:</label>
                         <div class="col-sm-8">
@@ -80,10 +84,9 @@ if(isset($_SESSION['email'])){
                     <div id="news-img" class="form-group">
                         <label class="control-label col-sm-4"></label>
                         <div class="col-sm-8">
-                            <input type="submit" class="btn btn-primary" value="पठाउनुहोस्"/>
+                            <button onclick="farmerQuery()" class="btn btn-primary">पठाउनुहोस्</button>
                         </div>
                     </div>
-
             </div>
         </div>
 
