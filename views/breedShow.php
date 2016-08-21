@@ -38,8 +38,9 @@ require('../common/Common.php');
 
                 <div class="col-sm-8">
                     <h3><?php echo $breed['breed_name'] ?></h3>
-                    <p><?php echo $breed['description']?></p>
-                    <p>Category :- <?php echo $breed['category'] ?></p>
+                    <p><?php echo $breed['origin_distribution']?></p>
+                    <p><?php echo $breed['character'] ?></p>
+                    <p><?php echo $breed['utility'] ?></p>
                 </div>
             </div>
 
