@@ -32,11 +32,13 @@ require('../views/Layout/header.php');
     <table class="table table-responsive" id="query-table">
         <thead>
         <tr>
-            <th>S.N</th>
-            <th>Query</th>
             <th>From</th>
+            <th>phone Number</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Query</th>
             <th>Date</th>
-            <th>Reply</th>
+            <th>Actions</th>
         </tr>
         </thead>
 
@@ -51,11 +53,16 @@ require('../views/Layout/header.php');
         foreach($queryList as $query){
             ?>
             <tr>
-                <td><?php echo $i ?></td>
+                <td><?php echo $query['full_name'] ?></td>
+                <td><?php echo $query['phone_number'] ?></td>
+                <td><?php echo $query['email'] ?></td>
+                <td><?php echo $query['address'] ?></td>
                 <td><?php echo $query['query'] ?></td>
-                <td><?php echo $query['query_from'] ?></td>
                 <td><?php echo $query['created_date'] ?></td>
-                <td><button onclick="reply(<?php echo $query['id']?>)"><span class="glyphicon glyphicon-send"></span></button></td>
+                <td><button onclick="reply(<?php echo $query['id']?>)" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span></button>
+                    <button onclick="discard(<?php echo $query['id']?>)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button onclick="showReply(<?php echo $query['id'] ?>)" class="btn btn-success"><span class="glyphicon glyphicon-info-sign"></span></button>
+                </td>
             </tr>
 
             <?php $i++ ; } ?>
@@ -66,6 +73,69 @@ require('../views/Layout/header.php');
 <?php
 require('../views/Layout/footer.php');
 ?>
+<div class="modal fade" id="insert-reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"></h2>
+            </div>
+
+            <div class="modal-body">
+
+                <form class="form-horizontal" role="form" id="reply-form" method="post" action="" enctype="multipart/form-data">
+                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="query_id" id="query_id">
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="reply">Reply</label>
+                        <div class="col-sm-8">
+                            <textarea type="text" class="form-control" id="reply" name="reply" style="width: 100%;height:200px"></textarea>
+                        </div>
+                    </div>
+
+                    <div id="news-img" class="form-group">
+                        <label class="control-label col-sm-4" for="reply"></label>
+                        <button type="submit" class="btn btn-default"></button>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="show-reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"></h2>
+            </div>
+
+            <div class="modal-body" >
+                <table class="table table-striped" id="replyList">
+                    <thead>
+                        <tr>
+                            <th>Reply</th>
+                            <th>Reply From</th>
+                            <th>Replied Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
 

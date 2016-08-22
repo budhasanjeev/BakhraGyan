@@ -77,6 +77,7 @@
                             <li><a href="../views/diseaseShow.php">रोग पृष्ठ</a></li>
                             <li><a href="../views/cureShow.php">उपचार पृष्ठ</a></li>
                             <li><a href="../views/shedShow.php">खोर पृष्ठ</a></li>
+                            <li><a href="../views/qa.php">प्रश्नोत्तर</a></li>
                         </ul>
                         <?php
                     }

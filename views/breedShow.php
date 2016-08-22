@@ -12,6 +12,7 @@ require('../common/Common.php');
 <html>
 <head>
     <title>बाख्रा ज्ञान </title>
+    <meta charset="utf-8">
 </head>
 
     <body>
@@ -33,7 +34,7 @@ require('../common/Common.php');
             ?>
             <div class="panel">
                 <div class="col-sm-4">
-                    <img class="img-thumbnail" src="../images/<?php echo $breed["image"] ?>" style="height: 200px;width:200px;">
+                    <img  class="img-thumbnail" src="../images/<?php echo $breed["image"] ?>" style="height: 200px;width:200px;">
                 </div>
 
                 <div class="col-sm-8">
