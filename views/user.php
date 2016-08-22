@@ -16,7 +16,7 @@ require('../common/Common.php');
     <title>DWIT News</title>
 
     <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
-    <link href="../css/news.css" type="text/css" rel="stylesheet"/>
+    <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet"/>
 
     <script src="../js/jquery-1.12.0.min.js" type="text/javascript"></script>
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
