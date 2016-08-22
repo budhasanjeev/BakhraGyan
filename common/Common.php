@@ -397,7 +397,7 @@ class Common {
 
         global $connection;
 
-        $result = mysqli_query($connection,"SELECT disease_name from disease WHERE id = '$id' ");
+        $result = mysqli_query($connection,"SELECT  *from disease WHERE id = '$id' ");
 
         $data = array();
 
