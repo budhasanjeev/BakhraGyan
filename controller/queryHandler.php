@@ -45,8 +45,22 @@ if(isset($_POST['mode'])){
         
         $replyFrom = $_SESSION['email'];
         $result = array();
+
         $result = $objCommon->replyQuery($id,$reply,$replyFrom);
         
-        
+        if($result['message']=='success'){
+            header('Location:../views/dashboard.php');
+        }
+    }
+
+    if($_POST['mode']=='show'){
+
+        $id = $_POST['id'];
+
+        $result = array();
+
+        $result = $objCommon->getReplyList($id);
+
+        echo json_encode($result);
     }
 }

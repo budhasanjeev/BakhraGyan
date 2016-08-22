@@ -61,7 +61,7 @@ require('../views/Layout/header.php');
                 <td><?php echo $query['created_date'] ?></td>
                 <td><button onclick="reply(<?php echo $query['id']?>)" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span></button>
                     <button onclick="discard(<?php echo $query['id']?>)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
-                    <button onclick="replyList(<?php echo $query['id']?>)" class="btn btn-success"><?php echo 3 ?></span></button>
+                    <button onclick="showReply(<?php echo $query['id'] ?>)" class="btn btn-success"><span class="glyphicon glyphicon-info-sign"></span></button>
                 </td>
             </tr>
 
@@ -99,6 +99,26 @@ require('../views/Layout/footer.php');
                         <button type="submit" class="btn btn-default"></button>
                     </div>
                 </form>
+
+            </div>
+
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="show-reply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"></h2>
+            </div>
+
+            <div class="modal-body">
 
             </div>
 

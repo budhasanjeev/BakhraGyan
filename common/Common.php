@@ -657,4 +657,34 @@ class Common {
         return $data;
     }
 
+    public function countReply($id){
+
+        global $connection;
+
+        $select_reply_id = "SELECT *from reply WHERE reply_to_query='$id'";
+
+        $result = mysqli_query($connection,$select_reply_id);
+
+        return mysqli_num_rows($result);
+    }
+
+    public function getReplyList($id){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM reply WHERE reply_to_query='$id'");
+
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['reply'] = $row["reply"];
+            $data[$i]['reply_from'] = $row["reply_from"];
+            $data[$i]['replied_date'] = $row["replied_date"];
+            $i++;
+        }
+        return $data;
+    }
 }
