@@ -39,9 +39,18 @@ require('../views/Layout/header.php');
     <div class="panel panel-primary">
 
         <div class="panel panel-body">
-            <?php echo $query['full_name'] .$query['query'] ?>?
-
+            <b><?php echo $query['query'] ?>? </b>&nbsp;&nbsp;Posted By:-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $query['full_name'].' '.$query['created_date']?>
             <hr>
+
+            <?php
+                $replyList = $objCommon->getReplyList($query['id']);
+
+                foreach ($replyList as $reply){
+            ?>
+
+                <?php echo $reply['reply'] ?>? Replied By:-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $reply['reply_from'].' '.$reply['replied_date']?><br>
+
+            <?php } ?>
         </div>
     </div>
 
