@@ -118,13 +118,21 @@ require('../views/Layout/footer.php');
                 <h2 class="modal-title"></h2>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body" >
+                <table class="table table-striped" id="replyList">
+                    <thead>
+                        <tr>
+                            <th>Reply</th>
+                            <th>Reply From</th>
+                            <th>Replied Date</th>
+                        </tr>
+                    </thead>
 
+                    <tbody>
+                        
+                    </tbody>
+                </table>
             </div>
-
-            <div class="modal-footer">
-            </div>
-
         </div>
     </div>
 </div>
