@@ -593,7 +593,7 @@ class Common {
             $data['message']='fail';
         }
 
-        return $data;
+        return $create_query;
     }
 
     public function getQuery(){
@@ -607,11 +607,54 @@ class Common {
         while($row = mysqli_fetch_assoc($result))
         {
             $data[$i]['id'] = $row["id"];
+            $data[$i]['full_name'] = $row["full_name"];
+            $data[$i]['phone_number'] = $row["phone_number"];
+            $data[$i]['email'] = $row["email"];
+            $data[$i]['address'] = $row["address"];
             $data[$i]['query'] = $row["query"];
-            $data[$i]['query_from'] = $row["query_from"];
             $data[$i]['created_date'] = $row["created_date"];
             $i++;
         }
         return $data;
     }
+
+    public function deleteQuery($id){
+        
+        global $connection;
+
+        $delete_query = "DELETE FROM query WHERE id='$id' ";
+
+        $result = mysqli_query($connection,$delete_query);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='error';
+        }
+
+        return $data;
+    }
+
+    public function replyQuery($id,$reply,$replyFrom){
+
+        global $connection;
+
+        $replied_date = date("Y-m-d");
+        $reply_query = "INSERT INTO reply(reply,reply_from,reply_to_query,replied_date) VALUES('$reply','$replyFrom','$id','$replied_date')";
+
+        $result = mysqli_query($connection,$reply_query);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='error';
+        }
+
+        return $data;
+    }
+
 }
