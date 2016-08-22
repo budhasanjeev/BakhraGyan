@@ -43,7 +43,21 @@ $shedList = $objCommon->getShed()
                 <div class="col-sm-8">
                     <h3><?php echo $shed['title'] ?></h3>
 
-                    <p><?php echo $shed['description'] ?></p>
+
+                    <?php
+
+                    $descriptionList = explode('->',$shed['description'])
+
+                    ?>
+                    <ul>
+                        <?php
+                        for($i = 1;$i < count($descriptionList);$i++){
+                            ?>
+                            <li><?php echo $descriptionList[$i] ?></li>
+
+                        <?php } ?>
+                    </ul>
+
                 </div>
 
                 <div class="col-sm-4">

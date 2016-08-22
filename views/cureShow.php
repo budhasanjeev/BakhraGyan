@@ -37,13 +37,29 @@ $cureList = $objCommon->getCure()
     if(count($cureList) >0) {
 
         foreach ($cureList as $cure) {
+
+            $diseaseName = $objCommon->getDiseaseNameById($cure['disease_id'])
             ?>
             <div class="panel">
 
                 <div class="col-sm-8">
-                    <h3><?php echo $cure['disease_id'] ?></h3>
+                    <h3><?php echo $diseaseName['disease_name'] ?></h3>
 
-                    <p><?php echo $cure['preventive_care'] ?></p>
+                    <?php
+
+                    $preventive_careList = explode('->',$cure['preventive_care'])
+
+                    ?>
+                    <ul>
+                        <?php
+                        for($i = 1;$i < count($preventive_careList);$i++){
+                            ?>
+                            <li><?php echo $preventive_careList[$i] ?></li>
+
+                        <?php } ?>
+                    </ul>
+
+                    <!--<p><?php /*echo $cure['preventive_care'] */?></p>-->
                 </div>
 
             </div>

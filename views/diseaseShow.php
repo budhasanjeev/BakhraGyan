@@ -41,17 +41,31 @@ $diseaseList = $objCommon->getDisease()
             <div class="panel">
 
                 <div class="col-sm-8">
-                    <h3><?php echo $disease['disease_name'] ?></h3>
 
-                    <p><?php echo $disease['description'] ?></p>
+                    <h3><?php echo $disease['disease_name'] ?></h3>
+                    <?php
+
+                    $descriptionList = explode('->',$disease['description'])
+
+                    ?>
+                    <ul>
+                        <?php
+                        for($i = 1;$i < count($descriptionList);$i++){
+                            ?>
+                            <li><?php echo $descriptionList[$i] ?></li>
+
+                        <?php } ?>
+                    </ul>
+
                 </div>
 
                 <div class="col-sm-4">
-                    <img class="img-thumbnail" src="../images/<?php echo $food["picture"] ?>"
+                    <img class="img-thumbnail" src="../images/<?php echo $disease["picture"] ?>"
                          style="height: 200px;width:200px;">
                 </div>
 
             </div>
+
 
         <?php }
     }
