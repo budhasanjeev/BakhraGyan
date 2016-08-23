@@ -15,7 +15,7 @@ if(!isset($_SESSION['email'])){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>कृषि सुझाब</title>
+    <title>बाख्रा ज्ञान</title>
     <script src="../js/query.js"></script>
 </head>
 

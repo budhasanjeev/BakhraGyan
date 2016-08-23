@@ -59,10 +59,17 @@
                                 <li><a href="disease.php">रोग </a></li>
                                 <li><a href="cure.php">उपचार </a></li>
                                 <li><a href="shed.php">खोर </a></li>
+                                <?php
+                                if(isset($_SESSION['role']) && $_SESSION['role']=='admin'){
+
+                                    ?>
+                                    <li><a href="../views/user.php">प्रयोगकर्ता </a></li>
+
+                                <?php } ?>
                             </ul>
 
                             <ul class="nav navbar-nav pull-right" >
-                                <li><a>Welcome &nbsp;<?php echo $_SESSION["email"]?></a>
+                                <li><a>Welcome &nbsp;<?php echo $_SESSION["email"].' ['.$_SESSION['role'].' ]'?></a>
 
                                 </li>
                             </ul>
@@ -78,6 +85,8 @@
                             <li><a href="../views/cureShow.php">उपचार पृष्ठ</a></li>
                             <li><a href="../views/shedShow.php">खोर पृष्ठ</a></li>
                             <li><a href="../views/qa.php">प्रश्नोत्तर</a></li>
+                            <li><a href="../views/findDisease.php">रोग पत्ता लगाउनुहोस्</a></li>
+
                         </ul>
                         <?php
                     }

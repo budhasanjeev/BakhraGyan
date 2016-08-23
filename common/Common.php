@@ -25,6 +25,11 @@ class Common {
         if(mysqli_num_rows($result)>0){
 
             $data['message']='success';
+
+            while($row = mysqli_fetch_assoc($result)){
+                $data['role']= $row['role'];
+            }
+
         }
         else{
             $data['message']='fail';
@@ -685,6 +690,52 @@ class Common {
             $data[$i]['replied_date'] = $row["replied_date"];
             $i++;
         }
+        return $data;
+    }
+
+
+    public function getUser(){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM user");
+
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['first_name'] = $row["first_name"];
+            $data[$i]['last_name'] = $row["last_name"];
+            $data[$i]['city'] = $row["city"];
+            $data[$i]['zone'] = $row["zone"];
+            $data[$i]['district'] = $row["district"];
+            $data[$i]['mobile_number'] = $row["mobile_number"];
+            $data[$i]['email_address'] = $row["email_address"];
+            $data[$i]['role'] = $row["role"];
+
+            $i++;
+        }
+        return $data;
+    }
+
+    public function deleteUser($id){
+
+        global $connection;
+
+        $delete_user = "DELETE FROM user WHERE id='$id' ";
+
+        $result = mysqli_query($connection,$delete_user);
+
+        $data = array();
+
+        if($result){
+            $data['message']='success';
+        }else{
+            $data['message']='error';
+        }
+
         return $data;
     }
 }

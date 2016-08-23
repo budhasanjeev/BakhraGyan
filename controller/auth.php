@@ -22,11 +22,13 @@ if(isset($_POST['login'])){
 
     if($result['message']=='success'){
         $_SESSION['email']=$email;
+        $_SESSION['role'] = $result['role'];
         header('Location:../views/dashboard.php');
     }
     else{
         header('Location:../views/login.php');
     }
+
 
 }
 else{
