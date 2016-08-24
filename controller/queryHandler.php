@@ -12,6 +12,12 @@ $objCommon = new Common();
 
 if(isset($_POST['mode'])){
 
+
+
+
+
+
+
     if($_POST['mode'] == 'farmerQuestion'){
         $fullName = $_POST['fullName'];
         $phoneNumber = $_POST['phoneNumber'];
