@@ -87,20 +87,20 @@ require('../views/Layout/footer.php');
                     <input type="hidden" name="mode" id="mode">
                     <input type="hidden" name="food_id" id="food_id">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="feedName">Feed Name</label>
+                        <label class="control-label col-sm-4" for="feedName">खानाको नाम</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="feedName" name="feedName">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="description">Description</label>
+                        <label class="control-label col-sm-4" for="description">विवरण</label>
                         <div class="col-sm-8">
                             <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
                         </div>
                     </div>
 
                     <div id="news-img" class="form-group">
-                        <label class="control-label col-sm-4" for="image">image</label>
+                        <label class="control-label col-sm-4" for="image">फोटो</label>
 
                         <input type="file" id="image" name="image" >
                     </div>
@@ -124,8 +124,8 @@ require('../views/Layout/footer.php');
     $('#add-food').on('click',function(){
 
         $('#insert-food').modal('show');
-        $('#insert-food .modal-title').html("Add Food");
-        $('#insert-food button[type=submit]').html("Add");
+        $('#insert-food .modal-title').html("आहारा थप्नुहोस");
+        $('#insert-food button[type=submit]').html("पेश गर्नुहोस्");
         $('#food-form').attr('action','../controller/foodHandler.php');
         $('#mode').attr('value','add');
 

@@ -14,6 +14,7 @@ require('../common/Common.php');
 <head>
     <meta charset="utf-8"/>
     <title>बाख्रा ज्ञान</title>
+    <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
 
     <script src="../js/user.js" type="text/javascript"></script>
 
@@ -24,7 +25,7 @@ require('../common/Common.php');
 require('../views/Layout/header.php');
 ?>
 
-<div id="content">
+<div id="container-size">
 
 
     <button class="btn btn-default" id="add-user"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Add User</button>
@@ -40,6 +41,7 @@ require('../views/Layout/header.php');
     <table class="table table-bordered table-responsive">
         <thead>
         <tr>
+            <th>Photo</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Mobile Number</th>
@@ -59,6 +61,7 @@ require('../views/Layout/header.php');
         ?>
 
                     <tr>
+                        <td style="vertical-align: middle"><img class="img-circle" src="../images/<?php echo $user['image'] ?>" style="height: 70px;width:70px;"></td>
                         <td style="vertical-align: middle;"><?php echo $user['first_name'] ?></td>
                         <td style="vertical-align: middle;" id="first-name"><?php echo $user['last_name'] ?></td>
                         <td style="vertical-align: middle;" id="last-name"><?php echo $user['mobile_number'] ?></td>
@@ -116,12 +119,6 @@ require('../views/Layout/footer.php');
                             <input type="text" class="form-control" id="mobile_number" name="mobileNumber" placeholder="Enter Mobile Number">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-4" for="phone_number">Phone Number</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="phone_number" name="phoneNumber" placeholder="Enter Phone Number">
-                        </div>
-                    </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="email_address">Email Address</label>
@@ -130,42 +127,54 @@ require('../views/Layout/footer.php');
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="address">Address</label>
+                        <label class="control-label col-sm-4" for="city">City</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="address" name="addresses" placeholder="Enter Address">
+                            <input type="text" class="form-control" id="city" name="city" placeholder="Enter City">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="zone">Zone</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="zone" name="zone" placeholder="Enter Zone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="city">District</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="district" name="district" placeholder="Enter district">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="role">Role</label>
                         <div class="col-sm-8">
                             <select id="role" name="role" class="form-control">
-                                <option>WRITER</option>
-                                <option>EDITOR</option>
-                                <option>ADMIN</option>
+                                <option value="#">---Select Role---</option>
+                                <option value="admin">ADMIN</option>
+                                <option value="expert">EXPERT</option>
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-4" for="status">Status</label>
-                        <div class="col-sm-8">
-                            <input type="radio" id="status1" name="status" value="active" checked>Active
-                            <input type="radio" id="status2" name="status" value="inactive">InActive
-                        </div>
-                    </div>
+
                     <div id="profile-img" class="form-group">
                         <label class="control-label col-sm-4" for="profile-picture">Profile Picture</label>
 
-                        <input type="file" id="profile-picture" name="profileImg">
+                        <div class="col-sm-8">
+                            <input type="file" id="profile-picture" name="profileImage">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4"></label>
+
+                        <div class="col-sm-8">
+                            <input type="submit" value="Submit">
+                        </div>
                     </div>
                 </form>
 
             </div>
-
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-default" id="save-user" onclick="$('form').submit()"></button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-
         </div>
     </div>
 </div>
@@ -183,11 +192,6 @@ require('../views/Layout/footer.php');
 
     });
 
-    /*$('#edit-user').click(function(){
-
-
-
-     });*/
 </script>
 </body>
 </html>

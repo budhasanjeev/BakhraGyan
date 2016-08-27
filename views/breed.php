@@ -116,15 +116,9 @@ require('../views/Layout/footer.php');
                             <textarea type="text" class="form-control" id="utility" name="utility" style="width: 100%;height:100px"></textarea>
                         </div>
                     </div>
-                    <div id="news-img" class="form-group">
-                        <label class="control-label col-sm-4" for="search_keyword">Search Keywords</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="search_keyword" name="searchKeyword" placeholder="Enter Search Keywords">
-                        </div>
-                    </div>
 
                     <div id="news-img" class="form-group">
-                        <label class="control-label col-sm-4" for="image">image</label>
+                        <label class="control-label col-sm-4" for="image">फोटो</label>
 
                         <input type="file" id="image" name="image" >
                     </div>
@@ -148,8 +142,8 @@ require('../views/Layout/footer.php');
     $('#add-breed').on('click',function(){
 
         $('#insert-breed').modal('show');
-        $('#insert-breed .modal-title').html("Breed");
-        $('#insert-breed button[type=submit]').html("Add");
+        $('#insert-breed .modal-title').html("प्रजाति थप्नुहोस");
+        $('#insert-breed button[type=submit]').html("पेश गर्नुहोस्");
         $('#breed-form').attr('action','../controller/breedHandler.php');
         $('#mode').attr('value','add');
 

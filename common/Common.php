@@ -714,7 +714,7 @@ class Common {
             $data[$i]['mobile_number'] = $row["mobile_number"];
             $data[$i]['email_address'] = $row["email_address"];
             $data[$i]['role'] = $row["role"];
-
+            $data[$i]['image'] = $row['image'];
             $i++;
         }
         return $data;
@@ -737,5 +737,39 @@ class Common {
         }
 
         return $data;
+    }
+
+    public function createUser($firstName,$lastName,$mobileNumber,$emailAddress,$city,$zone,$district,$role,$profilePicture){
+
+        global $connection;
+
+        $created_date = date("Y-m-d");
+        $password = md5($this->randomPassword());
+
+        $create_user = "INSERT INTO user(first_name,last_name,city,zone,district,mobile_number,email_address,password,role,image,created_date) VALUES('$firstName','$lastName','$city','$zone','$district','$mobileNumber','$emailAddress','$password','$role','$profilePicture','$created_date')";
+
+        $result = mysqli_query($connection,$create_user);
+        $data = array();
+
+        if($result){
+            $data['password']=$password;
+            $data['message']='success';
+        }else{
+            $data['message']='fail';
+        }
+
+        return $data;
+    }
+
+    public function randomPassword(){
+
+        $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+        $pass = array();
+        $alphaLength = strlen($alphabet) - 1;
+        for ($i = 0; $i < 8; $i++) {
+            $n = rand(0, $alphaLength);
+            $pass[] = $alphabet[$n];
+        }
+        return implode($pass);
     }
 }

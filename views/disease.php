@@ -90,20 +90,20 @@ require('../views/Layout/footer.php');
                     <input type="hidden" name="mode" id="mode">
                     <input type="hidden" name="disease_id" id="disease_id">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="diseaseName">Disease Name</label>
+                        <label class="control-label col-sm-4" for="diseaseName">रोगको नाम</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="diseaseName" name="diseaseName">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="description">Description</label>
+                        <label class="control-label col-sm-4" for="description">विवरण</label>
                         <div class="col-sm-8">
                             <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
                         </div>
                     </div>
 
                     <div id="news-img" class="form-group">
-                        <label class="control-label col-sm-4" for="image">image</label>
+                        <label class="control-label col-sm-4" for="image">फोटो</label>
 
                         <input type="file" id="image" name="image" >
                     </div>
@@ -127,8 +127,8 @@ require('../views/Layout/footer.php');
     $('#add-disease').on('click',function(){
 
         $('#insert-disease').modal('show');
-        $('#insert-disease .modal-title').html("Add Disease");
-        $('#insert-disease button[type=submit]').html("Add");
+        $('#insert-disease .modal-title').html("रोग थप्नुहोस");
+        $('#insert-disease button[type=submit]').html("पेश गर्नुहोस्");
         $('#disease-form').attr('action','../controller/diseaseHandler.php');
         $('#mode').attr('value','add');
 
