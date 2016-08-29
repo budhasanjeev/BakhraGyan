@@ -47,7 +47,7 @@
 <div class="container" style="width: 60%;margin-top: 5%">
 
     <fieldset>
-    <legend style="margin-left: 10%">लग-इन गारनुहोस</legend>
+    <legend style="margin-left: 10%">लग-इन  गर्नुहोस्</legend>
     <form class="form-horizontal" role="form" id="login-form" action="../controller/auth.php" method="post">
 
         <input type="hidden" name="login" value="login">
