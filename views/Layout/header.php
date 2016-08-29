@@ -69,7 +69,7 @@
                             </ul>
 
                             <ul class="nav navbar-nav pull-right" >
-                                <li><a>Welcome &nbsp;<?php echo $_SESSION["email"].' ['.$_SESSION['role'].' ]'?></a>
+                                <li><a>स्वागतम &nbsp;<?php echo $_SESSION["email"].' ['.$_SESSION['role'].' ]'?></a>
 
                                 </li>
                             </ul>
