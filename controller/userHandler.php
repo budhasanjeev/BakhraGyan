@@ -44,10 +44,8 @@ if(isset($_POST['mode'])){
 
         if($result['message']=='success'){
 
-            echo $result['message'];
             $mail = new PHPMailer();
             $mail->CharSet =  "utf-8";
-            $mail->IsSMTP();
             $mail->Username = "BakhraGyan";
             $mail->Password = "iam@Ktm36";
             $mail->Host = "smtp.gmail.com";

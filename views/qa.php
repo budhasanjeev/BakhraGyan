@@ -17,6 +17,8 @@ if(isset($_SESSION['email'])){
 <head>
     <title>बाख्रा ज्ञान</title>
     <meta charset="utf-8">
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
     <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
 
 </head>
@@ -33,6 +35,7 @@ require('../views/Layout/header.php');
         $objCommon = new Common();
         $queryList = $objCommon->getQuery();
 
+    if (count($queryList)){
         foreach ($queryList as $query) {
     ?>
 
@@ -54,8 +57,12 @@ require('../views/Layout/header.php');
         </div>
     </div>
 
-    <?php } ?>
+    <?php } }
+        else{
+    ?>
+    <p>प्रश्नोत्तरमा अहिलेसम्म कुनै जानकारी छैन|</p>
 
+    <?php } ?>
 </div>
 
 <?php

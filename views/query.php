@@ -17,6 +17,8 @@ if(!isset($_SESSION['email'])){
 <head>
     <title>बाख्रा ज्ञान</title>
     <script src="../js/query.js"></script>
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
 </head>
 
 <body>

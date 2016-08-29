@@ -14,6 +14,8 @@ require('../common/Common.php');
 <head>
     <meta charset="utf-8"/>
     <title>बाख्रा ज्ञान</title>
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
     <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
 
     <script src="../js/user.js" type="text/javascript"></script>
@@ -28,7 +30,7 @@ require('../views/Layout/header.php');
 <div id="container-size">
 
 
-    <button class="btn btn-default" id="add-user"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Add User</button>
+    <button class="btn btn-default" id="add-user"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;प्रयोगकर्ता थप्नुहोस</button>
 
     <hr>
     <?php
@@ -41,14 +43,14 @@ require('../views/Layout/header.php');
     <table class="table table-bordered table-responsive">
         <thead>
         <tr>
-            <th>Photo</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Mobile Number</th>
-            <th>Email Address</th>
-            <th>Address</th>
-            <th>Role</th>
-            <th>Actions</th>
+            <th>फोटो</th>
+            <th>नाम</th>
+            <th>थर</th>
+            <th>मोबिल नम्बर</th>
+            <th>इमेल</th>
+            <th>ठेगाना</th>
+            <th>भूमिका</th>
+            <th>कार्यहरु</th>
         </tr>
         </thead>
 
@@ -102,63 +104,63 @@ require('../views/Layout/footer.php');
                     <input type="hidden" name="mode" id="mode">
                     <input type="hidden" name="user_id" id="user_id">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="first_name">First Name</label>
+                        <label class="control-label col-sm-4" for="first_name">नाम</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="first_name" name="firstName" placeholder="Enter First Name">
+                            <input type="text" class="form-control" id="first_name" name="firstName">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="last_name">Last Name</label>
+                        <label class="control-label col-sm-4" for="last_name">थर</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="last_name" name="lastName" placeholder="Enter Last Name">
+                            <input type="text" class="form-control" id="last_name" name="lastName">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="mobile_number">Mobile Number</label>
+                        <label class="control-label col-sm-4" for="mobile_number">मोबिल नम्बर</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="mobile_number" name="mobileNumber" placeholder="Enter Mobile Number">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-4" for="email_address">Email Address</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="email_address" name="emailAddress" placeholder="Enter Email Address">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-4" for="city">City</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" id="city" name="city" placeholder="Enter City">
+                            <input type="text" class="form-control" id="mobile_number" name="mobileNumber">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="zone">Zone</label>
+                        <label class="control-label col-sm-4" for="email_address">इमेल अड्ड्रेस</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="zone" name="zone" placeholder="Enter Zone">
+                            <input type="text" class="form-control" id="email_address" name="emailAddress">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="city">टोल</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="city" name="city">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="city">District</label>
+                        <label class="control-label col-sm-4" for="zone">अंचल</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="district" name="district" placeholder="Enter district">
+                            <input type="text" class="form-control" id="zone" name="zone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="city">जिल्ला</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="district" name="district">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="role">Role</label>
+                        <label class="control-label col-sm-4" for="role">भूमिका</label>
                         <div class="col-sm-8">
                             <select id="role" name="role" class="form-control">
-                                <option value="#">---Select Role---</option>
-                                <option value="admin">ADMIN</option>
-                                <option value="expert">EXPERT</option>
+                                <option value="#">--- भूमिका रोज्नुहोस् ---</option>
+                                <option value="admin">व्यवस्थापक</option>
+                                <option value="expert">विशेषज्ञ</option>
                             </select>
                         </div>
                     </div>
 
                     <div id="profile-img" class="form-group">
-                        <label class="control-label col-sm-4" for="profile-picture">Profile Picture</label>
+                        <label class="control-label col-sm-4" for="profile-picture">फोटो</label>
 
                         <div class="col-sm-8">
                             <input type="file" id="profile-picture" name="profileImage">
@@ -169,7 +171,7 @@ require('../views/Layout/footer.php');
                         <label class="control-label col-sm-4"></label>
 
                         <div class="col-sm-8">
-                            <input type="submit" value="Submit">
+                            <button type="submit"></button>
                         </div>
                     </div>
                 </form>
@@ -185,8 +187,8 @@ require('../views/Layout/footer.php');
 <script type="text/javascript">
     $('#add-user').click(function(){
         $('#insert-user').modal('show');
-        $('#insert-user .modal-title').html("Add New User");
-        $('#insert-user button[type=submit]').html("Save User");
+        $('#insert-user .modal-title').html("प्रयोगकर्ता थप्नुहोस");
+        $('#insert-user button[type=submit]').html("पेश गर्नुहोस्");
         $('#user-form').attr('action','../Controller/userHandler.php');
         $('#mode').attr('value','add');
 

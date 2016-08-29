@@ -18,6 +18,8 @@ if(!isset($_SESSION['email'])){
     <title>बाख्रा ज्ञान</title>
     <meta charset="utf-8">
     <script src="../js/shed.js"></script>
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
     <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
 
 </head>
@@ -30,13 +32,14 @@ require('../views/Layout/header.php');
 <div id="container-size">
 
     <button class="btn btn-primary" id="add-shed"> खोर बारेमा थप्नुहोस  </button>
+    <hr>
     <?php
 
     $shedList = array();
     $objCommon = new Common();
     $shedList = $objCommon->getShed();
     ?>
-    <table class="table table-striped table-responsive" id="breed-table">
+    <table class="table table-striped table-responsive" id="shed-table">
         <thead>
         <tr>
             <th>फोटो</th>
@@ -87,14 +90,14 @@ require('../views/Layout/footer.php');
                     <input type="hidden" name="mode" id="mode">
                     <input type="hidden" name="shed_id" id="shed_id">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="shedTitle">Title</label>
+                        <label class="control-label col-sm-4" for="shedTitle">शिर्षक</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="shedTitle" name="shedTitle">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="description"> Description </label>
+                        <label class="control-label col-sm-4" for="description"> विवरण </label>
 
                         <div class="col-sm-8">
                             <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
@@ -102,7 +105,7 @@ require('../views/Layout/footer.php');
                     </div>
 
                     <div id="shed-img" class="form-group">
-                        <label class="control-label col-sm-4" for="image">image</label>
+                        <label class="control-label col-sm-4" for="image"> फोटो </label>
 
                         <input type="file" id="image" name="image" >
                     </div>
@@ -126,8 +129,8 @@ require('../views/Layout/footer.php');
     $('#add-shed').on('click',function(){
 
         $('#insert-shed').modal('show');
-        $('#insert-shed .modal-title').html("Shed");
-        $('#insert-shed button[type=submit]').html("Add");
+        $('#insert-shed .modal-title').html("खोर थप्नुहोस");
+        $('#insert-shed button[type=submit]').html("पेश गर्नुहोस्");
         $('#shed-form').attr('action','../controller/shedHandler.php');
         $('#mode').attr('value','add');
 
@@ -135,7 +138,7 @@ require('../views/Layout/footer.php');
 
 
     $(document).ready(function(){
-        $('#cure-table').DataTable({
+        $('#shed-table').DataTable({
             "info":true,
             "paging":true,
             "ordering":false,
