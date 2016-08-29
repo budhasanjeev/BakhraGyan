@@ -29,10 +29,10 @@
         <ul style="list-style: none; float: right; padding-top: 2%; position: relative; margin-right: 2%;">
             <?php
                 if(isset($_SESSION['email'])){?>
-                    <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="logout.php">बाहिर निस्कनुहोस</a> </li>
+                    <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="logout.php">बाहिर निस्किनुहोस </a> </li>
                <?php }
             else{?>
-                <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="login.php">लग-इन गारनुहोस</a> </li>
+                <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="login.php">लग-इन गर्नुहोस् </a> </li>
             <?php }
             ?>
         </ul>
