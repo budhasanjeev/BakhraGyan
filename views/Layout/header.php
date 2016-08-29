@@ -63,7 +63,7 @@
 
 <!--                        <div class="dropdown">-->
                             <ul class="nav navbar-nav pull-right dropdown">
-
+                                     <input type="hidden" id="userEmail" value="<?php echo $_SESSION['email'] ?>">
                                     <li><a data-toggle="dropdown">स्वागत छ &nbsp;<?php echo $_SESSION["user_name"].' ['.$role.' ]'?> <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="logout.php">लगआउट</a></li>
@@ -102,11 +102,68 @@
     </nav>
 
     <div style="height: 100px;"></div>
+
+    <div class="modal fade" id="change_password_div" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"></h2>
+                </div>
+
+                <div class="modal-body">
+
+                    <form class="form-horizontal" role="form" id="change-password-form" method="post" action="" enctype="multipart/form-data">
+                        <input type="hidden" name="mode" id="mode">
+                        <input type="hidden" name="user-email" id="user-email">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="oldPassword">पुरानो पसस्वोर्ड</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="oldPassword" name="oldPassword">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="newPassword1">नया पसस्वोर्ड</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="newPassword1" name="newPassword1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="newPassword2">नया पसस्वोर्ड पुष्टि गनुहोस्</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="newPassword2" name="newPassword2">
+                            </div>
+                        </div>
+                        <div id="news-img" class="form-group">
+                            <label class="control-label col-sm-4" for="image"></label>
+                            <button type="submit" class="btn btn-default" id="save-breed"></button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     </body>
 
+
 <script>
-    function changePassword(email) {
-        alert(email);
+    function changePassword() {
+        var email = document.getElementById('userEmail').value;
+
+        $('#change_password_div').modal('show');
+        $('#change_password_div .modal-title').html("पसस्वोर्ड परिवर्तन गर्नुहोस्");
+        $('#change_password_div button[type=submit]').html("पेश गर्नुहोस्");
+        $('#change-password-form').attr('action','../controller/auth.php');
+        $('#mode').attr('value','changePassowrd');
+        $('#user-email').attr('value',email);
+
     }
 </script>
 </html>
