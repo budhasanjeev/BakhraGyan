@@ -15,8 +15,14 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-bottom" style="border: none;">
-    <p style="text-align: center;padding: 1%;color: #ffffff">@बाख्रा-ज्ञान</p>
+<div style="height: 100px">
+
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom" style="border: none;">
+    <p style="text-align: center;padding: 1%;">@बाख्रा-ज्ञान</p>
+    <div style="position: fixed;bottom: 48px;right: 0">
+        <img src="../images/logo.png" height="70px">
+    </div>
 </nav>
 
 </body>

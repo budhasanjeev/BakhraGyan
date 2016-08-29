@@ -13,6 +13,8 @@
 
 <head>
     <title>बाख्रा ज्ञान</title>
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
     <meta charset="utf-8">
     <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
@@ -26,28 +28,24 @@
 
 <body>
 
-
-<header class="container-fluid">
-    <a href="home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="DWIT NEWS"></a>
-</header>
-
-<nav class="navbar navbar-inverse" style="border: none;">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-
+<nav class="navbar navbar-default navbar-fixed-top" style="border: none;">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="home.php"><img src="../images/logo.png" style="height: 58px;" title="bakhra-gyan"></a>
     </div>
 </nav>
 
+<div style="height: 100px;">
+
+</div>
 <div class="container" style="width: 60%;margin-top: 5%">
 
     <fieldset>
-    <legend style="margin-left: 10%">लग-इन  गर्नुहोस्</legend>
+    <legend style="margin-left: 10%;text-align: center">लग-इन गारनुहोस</legend>
     <form class="form-horizontal" role="form" id="login-form" action="../controller/auth.php" method="post">
 
         <input type="hidden" name="login" value="login">

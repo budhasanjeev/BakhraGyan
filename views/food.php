@@ -17,6 +17,8 @@ if(!isset($_SESSION['email'])){
 <head>
     <title>बाख्रा ज्ञान</title>
     <meta charset="utf-8">
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
     <script src="../js/feed.js"></script>
     <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
 
@@ -29,6 +31,7 @@ require('../views/Layout/header.php');
 
 <div id="container-size">
     <button class="btn btn-primary" id="add-food">आहारा बारेमा थप्नुहोस </button>
+    <hr>
     <?php
 
     $foodList = array();

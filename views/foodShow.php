@@ -15,6 +15,8 @@ require('../common/Common.php');
 <head>
     <title>बाख्रा ज्ञान </title>
     <meta charset="utf-8">
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
 </head>
 
 <body>
@@ -33,6 +35,7 @@ $foodList = $objCommon->getFood()
 <div class="container">
 
     <?php
+    if(count($foodList)>0){
     foreach($foodList as $food){
         ?>
         <div class="panel">
@@ -60,6 +63,11 @@ $foodList = $objCommon->getFood()
             </div>
 
         </div>
+
+    <?php } }
+        else{
+    ?>
+    <p>आहाराबारे कुनै पनि जानकारी भेटिएन|</p>
 
     <?php } ?>
 </div>

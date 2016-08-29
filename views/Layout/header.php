@@ -12,7 +12,7 @@
     <head>
         <title>बाख्रा-ज्ञान</title>
         <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
-        <link href="../../css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/jquery.dataTables.min.css" type="text/css" rel="stylesheet">
 
         <script src="../js/jquery-1.12.4.min.js" type="text/javascript"></script>
         <script src="../js/jquery.noty.packaged.min.js" type="text/javascript"></script>
@@ -24,21 +24,7 @@
     </head>
 
     <body>
-    <header class="container-fluid">
-        <a href="home.php"><img src="../images/krishisujhab.png" style="height: 70px;" title="bakhra-gyan"></a>
-        <ul style="list-style: none; float: right; padding-top: 2%; position: relative; margin-right: 2%;">
-            <?php
-                if(isset($_SESSION['email'])){?>
-                    <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="logout.php">बाहिर निस्किनुहोस </a> </li>
-               <?php }
-            else{?>
-                <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="login.php">लग-इन गर्नुहोस् </a> </li>
-            <?php }
-            ?>
-        </ul>
-    </header>
-
-    <nav class="navbar navbar-inverse" style="border: none;">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
@@ -46,6 +32,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand" href="home.php"><img src="../images/logo.png" style="height: 58px;" title="bakhra-gyan"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="menu">
@@ -62,17 +49,29 @@
                                 <?php
                                 if(isset($_SESSION['role']) && $_SESSION['role']=='admin'){
 
+                                    if($_SESSION['role'] == 'admin'){
+                                        $role = 'व्यवस्थापक';
+                                    }
+                                    else{
+                                        $role = 'विशेषज्ञ';
+                                    }
                                     ?>
                                     <li><a href="../views/user.php">प्रयोगकर्ता </a></li>
 
                                 <?php } ?>
                             </ul>
 
-                            <ul class="nav navbar-nav pull-right" >
-                                <li><a>स्वागतम &nbsp;<?php echo $_SESSION["email"].' ['.$_SESSION['role'].' ]'?></a>
+<!--                        <div class="dropdown">-->
+                            <ul class="nav navbar-nav pull-right dropdown">
 
-                                </li>
+                                    <li><a data-toggle="dropdown">स्वागत छ &nbsp;<?php echo $_SESSION["user_name"].' ['.$role.' ]'?> <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="logout.php">लगआउट</a></li>
+                                            <li><a href="javascript:changePassword()">पावोर्ड परिवर्तन गर्नुहोस्</a></li>
+                                        </ul>
+                                    </li>
                             </ul>
+<!--                        </div>-->
                 <?php
                     }
                     else{?>
@@ -91,8 +90,23 @@
                         <?php
                     }
                 ?>
+                <ul class="nav navbar-nav pull-right">
+                    <?php
+                    if(!isset($_SESSION['email'])){?>
+                        <li style="float: left; margin-right: 20px; cursor: pointer;"><a href="login.php">लग-इन गर्नुहोस्</a> </li>
+                    <?php }
+                    ?>
+                </ul>
             </div>
         </div>
     </nav>
+
+    <div style="height: 100px;"></div>
     </body>
+
+<script>
+    function changePassword(email) {
+        alert(email);
+    }
+</script>
 </html>
