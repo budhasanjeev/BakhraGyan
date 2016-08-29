@@ -6,33 +6,38 @@
  * Time: 3:27 PM
  */
 require('../common/Common.php');
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>बाख्रा ज्ञान </title>
     <meta charset="utf-8">
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
 </head>
 
-    <body>
-        <?php
-            require('../views/Layout/header.php');
-        ?>
+<body>
+<?php
+require('../views/Layout/header.php');
+?>
 
-        <?php
-            $breedList = array();
-            $objCommon = new Common();
-            $breedList = $objCommon->getBreed()
-        ?>
+<?php
+$breedList = array();
+$objCommon = new Common();
+$breedList = $objCommon->getBreed()
+?>
 
 
-        <div class="container">
+<div class="container">
 
-            <?php
-                foreach($breedList as $breed){
+    <?php
+
+    if(count($breedList)>0){
+
+        foreach($breedList as $breed){
             ?>
-            <div class="panel">
+            <div class="panel panel-default">
                 <div class="col-sm-4">
                     <img  class="img-thumbnail" src="../images/<?php echo $breed["image"] ?>" style="height: 200px;width:200px;">
                 </div>
@@ -45,11 +50,16 @@ require('../common/Common.php');
                 </div>
             </div>
 
-            <?php } ?>
-        </div>
+            <?php
+        }
+    }
+    else{ ?>
+        <p>प्रजतिबारे कुनै पनि जानकारी भेटिएन|</p>
+    <?php } ?>
+</div>
 
-        <?php
-            require('../views/Layout/footer.php');
-        ?>
-    </body>
+<?php
+require('../views/Layout/footer.php');
+?>
+</body>
 </html>

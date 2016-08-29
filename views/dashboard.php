@@ -17,6 +17,7 @@ if(!isset($_SESSION['email'])){
 <head>
     <title>बाख्रा ज्ञान</title>
     <meta charset="utf-8">
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
     <script src="../js/query.js"></script>
     <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
 
@@ -29,6 +30,8 @@ require('../views/Layout/header.php');
 
 <div id="container-size">
 
+    <h4>प्रश्नोत्तर सूची</h4>
+    <hr>
     <table class="table table-responsive" id="query-table">
         <thead>
         <tr>

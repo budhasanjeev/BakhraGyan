@@ -17,6 +17,7 @@ if(!isset($_SESSION['email'])){
 <head>
     <title>बाख्रा ज्ञान</title>
     <meta charset="utf-8">
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
     <script src="../js/cure.js" type="text/javascript"></script>
     <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
 
@@ -29,6 +30,7 @@ require('../views/Layout/header.php');
 
 <div id="container-size">
     <button class="btn btn-primary" id="add-cure"> उपचार बारेमा थप्नुहोस </button>
+    <hr>
     <?php
 
     $cureList = array();
@@ -88,9 +90,10 @@ require('../views/Layout/footer.php');
                     <input type="hidden" name="mode" id="mode">
                     <input type="hidden" name="cure_id" id="cure_id">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="breedName">Disease Name</label>
+                        <label class="control-label col-sm-4" for="breedName">रोगको नाम</label>
                         <div class="col-sm-8">
                             <select class="form-control" id="diseaseName" name="disease_id">
+                                <option value="#">--- रोगको नाम छान्नुहोस् ---</option>
                                 <?php
 
                                 $diseaseList = $objCommon->getDisease();
@@ -107,7 +110,7 @@ require('../views/Layout/footer.php');
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="preventive">Preventive measures</label>
+                        <label class="control-label col-sm-4" for="preventive">निवारक हेरविचार</label>
 
                         <div class="col-sm-8">
                             <textarea type="text" class="form-control" id="preventive" name="preventive" style="width: 100%;height:250px"></textarea>
@@ -115,7 +118,7 @@ require('../views/Layout/footer.php');
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="image"></label>
+                        <label class="control-label col-sm-4"></label>
                         <button type="submit" class="btn btn-default" id="save-cure"></button>
                     </div>
                 </form>
@@ -133,8 +136,8 @@ require('../views/Layout/footer.php');
     $('#add-cure').on('click',function(){
 
         $('#insert-cure').modal('show');
-        $('#insert-cure .modal-title').html("Cure");
-        $('#insert-cure button[type=submit]').html("Add");
+        $('#insert-cure .modal-title').html("हेरविचार थप्नुहोस");
+        $('#insert-cure button[type=submit]').html("पेश गर्नुहोस्");
         $('#cure-form').attr('action','../controller/cureHandler.php');
         $('#mode').attr('value','add');
 

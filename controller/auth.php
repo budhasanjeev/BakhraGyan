@@ -22,6 +22,7 @@ if(isset($_POST['login'])){
 
     if($result['message']=='success'){
         $_SESSION['email']=$email;
+        $_SESSION['user_name'] = $result['first_name'].' '.$result['last_name'];
         $_SESSION['role'] = $result['role'];
         header('Location:../views/dashboard.php');
     }

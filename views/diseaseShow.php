@@ -15,6 +15,8 @@ require('../common/Common.php');
 <head>
     <title>बाख्रा ज्ञान </title>
     <meta charset="utf-8">
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
+
 </head>
 
 <body>
@@ -72,7 +74,7 @@ $diseaseList = $objCommon->getDisease()
     else{
     ?>
 
-    <p>No records found</p>
+    <p>रोगबारे कुनै पनि जानकारी भेटिएन|</p>
     <?php } ?>
 </div>
 

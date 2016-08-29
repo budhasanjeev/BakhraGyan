@@ -16,6 +16,7 @@ if(!isset($_SESSION['email'])){
 <html>
 <head>
     <title>बाख्रा ज्ञान</title>
+    <link rel="icon" href="../images/logo.png" type="image/gif" sizes="16x16">
     <meta charset="utf-8">
     <script src="../js/disease.js"></script>
     <link href="../css/bakhragyan.css" type="text/css" rel="stylesheet">
@@ -29,6 +30,7 @@ require('../views/Layout/header.php');
 
 <div id="container-size">
     <button class="btn btn-primary" id="add-disease">रोगको बारेमा थप्नुहोस </button>
+    <hr>
     <?php
 
         $diseaseList = array();

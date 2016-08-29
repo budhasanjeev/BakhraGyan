@@ -27,7 +27,9 @@ class Common {
             $data['message']='success';
 
             while($row = mysqli_fetch_assoc($result)){
-                $data['role']= $row['role'];
+                $data['first_name'] = $row['first_name'];
+                $data['last_name'] = $row['last_name'];
+                $data['role'] = $row['role'];
             }
 
         }
