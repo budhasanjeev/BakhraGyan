@@ -58,6 +58,7 @@ function editCure(id){
             $("#preventive").val(data['preventive_care']);
             $('#diseaseName').val(data['disease_id']);
 
+            
             $('#insert-cure').modal('show');
             $('#insert-cure .modal-title').html("उपचार परिमार्जन गर्नुहोस्");
             $('#insert-cure button[type=submit]').html("पेश गर्नुहोस्");

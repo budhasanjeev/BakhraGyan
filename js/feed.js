@@ -56,6 +56,7 @@ function editFood(id){
             $("#feedName").val(data['title']);
             $("#description").val(data['description']);
 
+
             $('#insert-food').modal('show');
             $('#insert-food .modal-title').html("आहारा परिमार्जन गर्नुहोस्");
             $('#insert-food button[type=submit]').html("पेश गर्नुहोस्");
