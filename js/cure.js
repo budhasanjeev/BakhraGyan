@@ -59,8 +59,8 @@ function editCure(id){
             $('#diseaseName').val(data['disease_id']);
 
             $('#insert-cure').modal('show');
-            $('#insert-cure .modal-title').html("Edit Cure");
-            $('#insert-cure button[type=submit]').html("Save Changes");
+            $('#insert-cure .modal-title').html("उपचार परिमार्जन गर्नुहोस्");
+            $('#insert-cure button[type=submit]').html("पेश गर्नुहोस्");
             $('#cure-form').attr('action','../controller/cureHandler.php');
             $('#mode').attr('value','update');
             $('#cure_id').attr('value',c_id);
