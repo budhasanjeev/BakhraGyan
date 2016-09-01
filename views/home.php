@@ -54,7 +54,7 @@ require('Layout/header.php');
             <div class="form-group">
                 <label class="control-label col-sm-4" for="fullName">पुरा नाम:</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="fullName" name="fullName">
+                    <input type="text" class="form-control" id="fullName" name="fullName" >
                 </div>
             </div>
             
