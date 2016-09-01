@@ -35,13 +35,13 @@ require('../views/Layout/header.php');
     <table class="table table-responsive" id="query-table">
         <thead>
         <tr>
-            <th>From</th>
-            <th>phone Number</th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Query</th>
-            <th>Date</th>
-            <th>Actions</th>
+            <th>पुरा नाम</th>
+            <th>मोबाइल नम्बर</th>
+            <th>इमेल</th>
+            <th>ठेगाना</th>
+            <th>प्रश्न</th>
+            <th>मिति</th>
+            <th>कार्यहरु</th>
         </tr>
         </thead>
 
@@ -88,11 +88,11 @@ require('../views/Layout/footer.php');
             <div class="modal-body">
 
                 <form class="form-horizontal" role="form" id="reply-form" method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="mode" id="modes">
                     <input type="hidden" name="query_id" id="query_id">
                     <div class="form-group">
-                        <label class="control-label col-sm-4" for="reply">Reply</label>
-                        <div class="col-sm-8">
+                        <label class="control-label col-sm-" for="reply"></label>
+                        <div class="col-sm-12">
                             <textarea type="text" class="form-control" id="reply" name="reply" style="width: 100%;height:200px"></textarea>
                         </div>
                     </div>
@@ -125,9 +125,9 @@ require('../views/Layout/footer.php');
                 <table class="table table-striped" id="replyList">
                     <thead>
                         <tr>
-                            <th>Reply</th>
-                            <th>Reply From</th>
-                            <th>Replied Date</th>
+                            <th>जवाफ</th>
+                            <th>पुरा नाम</th>
+                            <th>मिति</th>
                         </tr>
                     </thead>
 
