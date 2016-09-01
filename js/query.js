@@ -6,10 +6,10 @@ function reply(id){
 
     var f_id = id;
     $('#insert-reply').modal('show');
-    $('#insert-reply .modal-title').html("Reply");
-    $('#insert-reply button[type=submit]').html("Send");
+    $('#insert-reply .modal-title').html("जावफ दिनुहोस्");
+    $('#insert-reply button[type=submit]').html("पेश गर्नुहोस्");
     $('#reply-form').attr('action','../controller/queryHandler.php');
-    $('#mode').attr('value','reply');
+    $('#modes').attr('value','reply');
     $('#query_id').attr('value',f_id);
 
     $('.modal').on('hidden.bs.modal', function(){

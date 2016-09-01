@@ -48,7 +48,7 @@ if(isset($_POST['mode'])){
 
         $id = $_POST['query_id'];
         $reply= $_POST['reply'];
-        
+
         $replyFrom = $_SESSION['email'];
         $result = array();
 
