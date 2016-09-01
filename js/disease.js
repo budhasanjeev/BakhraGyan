@@ -59,8 +59,8 @@ function editDisease(id){
             $("#image").attr('value',data['picture']);
 
             $('#insert-disease').modal('show');
-            $('#insert-disease .modal-title').html("Edit Food");
-            $('#insert-disease button[type=submit]').html("Save Changes");
+            $('#insert-disease .modal-title').html("रोग परिमार्जन गर्नुहोस्");
+            $('#insert-disease button[type=submit]').html("पेश गर्नुहोस्");
             $('#disease-form').attr('action','../controller/diseaseHandler.php');
             $('#mode').attr('value','update');
             $('#disease_id').attr('value',d_id);

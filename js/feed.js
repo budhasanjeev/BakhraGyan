@@ -57,8 +57,8 @@ function editFood(id){
             $("#description").val(data['description']);
 
             $('#insert-food').modal('show');
-            $('#insert-food .modal-title').html("Edit Food");
-            $('#insert-food button[type=submit]').html("Save Changes");
+            $('#insert-food .modal-title').html("आहारा परिमार्जन गर्नुहोस्");
+            $('#insert-food button[type=submit]').html("पेश गर्नुहोस्");
             $('#food-form').attr('action','../controller/foodHandler.php');
             $('#mode').attr('value','update');
             $('#food_id').attr('value',f_id);
