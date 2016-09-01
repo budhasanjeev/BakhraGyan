@@ -44,7 +44,6 @@ function deleteBreed(id){
 
 function editBreed(id){
 
-    alert(id);
     var mode ='edit';
 
     $.ajax({
@@ -56,17 +55,16 @@ function editBreed(id){
 
             var b_id = data['id'];
             $("#breedName").val(data['breed_name']);
-            $("#description").val(data['description']);
-            $('#category').val(data['category']);
-            $('#search_keyword').val(data['search_words']);
-//                $('#image').val(data['image']);
-//
+            $("#origin_distribution").val(data['origin_distribution']);
+            $("#character").val(data['breed_character']);
+            $("#utility").val(data['utility']);
+            $("#image").attr('value',data['image']);
 
             $('#insert-breed').modal('show');
-            $('#insert-breed .modal-title').html("Edit Breed");
-            $('#insert-breed button[type=submit]').html("Save Changes");
+            $('#insert-breed .modal-title').html("प्रजाति परिमार्जन गनुहोस्");
+            $('#insert-breed button[type=submit]').html("पेश गर्नुहोस्");
             $('#breed-form').attr('action','../controller/breedHandler.php');
-            $('#mode').attr('value','update');
+            $('#modes').attr('value','update');
             $('#breed_id').attr('value',b_id);
 
             $('.modal').on('hidden.bs.modal', function(){

@@ -51,8 +51,9 @@ if(isset($_POST['mode'])){
 
         $b_id = $_POST['breed_id'];
         $breed_name = $_POST['breedName'];
-        $description = $_POST['description'];
-        $category = $_POST['category'];
+        $origin_distribution = $_POST['origin_distribution'];
+        $character = $_POST['character'];
+        $utility = $_POST['utility'];
         $searchKeyword = $_POST['searchKeyword'];
 
         $image = $_FILES['image']['name'];
@@ -60,14 +61,16 @@ if(isset($_POST['mode'])){
 
         move_uploaded_file($image_tmp,"../images/$image");
 
-        $result = array();
 
-        $result = $objCommon->updateBreed($category,$breed_name,$description,$image,$searchKeyword,$b_id);
+        $result = $objCommon->updateBreed($origin_distribution,$breed_name,$character,$image,$utility,$b_id);
 
         if($result['message']=='success'){
-
-            header("Location:../views/breed.php");
+            $_SESSION['add'] ="success";
+        } else {
+            $_SESSION['add'] ="error";
         }
+
+        header('Location:../views/breed.php');
 
     }
 

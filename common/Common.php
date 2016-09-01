@@ -98,9 +98,9 @@ class Common {
             $data['id'] = $row["id"];
             $data['image'] = $row["image"];
             $data['breed_name'] = $row["breed_name"];
-            $data['description'] = $row["description"];
-            $data['category'] = $row["category"];
-            $data['search_words'] = $row["search_words"];
+            $data['origin_distribution'] = $row["origin_distribution"];
+            $data['breed_character'] = $row["breed_character"];
+            $data['utility'] = $row["utility"];
         }
         return $data;
 
@@ -126,13 +126,13 @@ class Common {
 
     }
 
-    public function updateBreed($category,$breed_name,$description,$image,$searchKeyword,$b_id){
+    public function updateBreed($origin_distribution,$breed_name,$character,$image,$utility,$b_id){
 
         global $connection;
 
         $update_date = date("Y-m-d");
 
-        $update_breed = "UPDATE breed SET category = '$category',breed_name='$breed_name',description='$description',image='$image',updated_date='$update_date',search_words='$searchKeyword' WHERE id='$b_id' ";
+        $update_breed = "UPDATE breed SET breed_name = '$breed_name',origin_distribution='$origin_distribution',breed_character='$character',utility='$utility',image='$image',updated_date='$update_date' WHERE id='$b_id' ";
         $result = mysqli_query($connection,$update_breed);
 
         $data = array();

@@ -65,7 +65,7 @@ require('../views/Layout/header.php');
                 <td style="vertical-align: middle;"><?php echo $breed["utility"]?></td>
                 <td style="vertical-align: middle;">
                     <button class="btn btn-danger" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
-                    <button class="btn btn-success" onclick="return editBreed(<?php echo $breed['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
+                    <button class="btn btn-success" onclick="editBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-edit"></span></button>
                 </td>
             </tr>
         <?php
@@ -92,7 +92,7 @@ require('../views/Layout/footer.php');
             <div class="modal-body">
 
                 <form class="form-horizontal" role="form" id="breed-form" method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="mode" id="modes">
                     <input type="hidden" name="breed_id" id="breed_id">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="breedName">प्रजाति नाम</label>
@@ -147,7 +147,7 @@ require('../views/Layout/footer.php');
         $('#insert-breed .modal-title').html("प्रजाति थप्नुहोस");
         $('#insert-breed button[type=submit]').html("पेश गर्नुहोस्");
         $('#breed-form').attr('action','../controller/breedHandler.php');
-        $('#mode').attr('value','add');
+        $('#modes').attr('value','add');
 
     })
 
