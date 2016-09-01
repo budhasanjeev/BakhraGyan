@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8ae0852-27d0-4675-943a-84218308a12f" name="Default" comment="updated">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/cure.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/cureHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/Common.php" afterPath="$PROJECT_DIR$/common/Common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/breed.php" afterPath="$PROJECT_DIR$/views/breed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/breedHandler.php" afterPath="$PROJECT_DIR$/controller/breedHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cure.php" afterPath="$PROJECT_DIR$/views/cure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/dashboard.php" afterPath="$PROJECT_DIR$/views/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/disease.php" afterPath="$PROJECT_DIR$/views/disease.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/diseaseHandler.php" afterPath="$PROJECT_DIR$/controller/diseaseHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/food.php" afterPath="$PROJECT_DIR$/views/food.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/foodHandler.php" afterPath="$PROJECT_DIR$/controller/foodHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/Layout/header.php" afterPath="$PROJECT_DIR$/views/Layout/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home.php" afterPath="$PROJECT_DIR$/views/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/query.php" afterPath="$PROJECT_DIR$/views/query.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/shed.php" afterPath="$PROJECT_DIR$/views/shed.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/Common.php" afterPath="$PROJECT_DIR$/common/Common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/breed.js" afterPath="$PROJECT_DIR$/js/breed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/qa.php" afterPath="$PROJECT_DIR$/views/qa.php" />
     </list>
     <ignored path="Krishi-Sujhab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,82 +23,117 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Krishi-Sujhab" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="cure.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/cure.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="2310">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="1530">
+              <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="queryHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/queryHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="breed.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/breed.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qa.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/qa.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="54" column="123" selection-start-line="54" selection-start-column="123" selection-end-line="54" selection-end-column="123" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Common.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/Common.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="791" column="58" selection-start-line="791" selection-start-column="58" selection-end-line="791" selection-end-column="58" />
               <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1469084332987" expanded="true" signature="708:894" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="708:1402" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="724:877" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="737:860" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="894:1402" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="966:1402" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="995:1018" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="1088:1111" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="1187:1210" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="1282:1305" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="1306:1402" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="1912:4035" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="1943:4028" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="1979:4017" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="2019:2174" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="2212:3942" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="2341:3922" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="2520:2825" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="2666:2798" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="2871:3241" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="3031:3214" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="3147:3171" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="3287:3647" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="3693:3898" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="3982:4001" placeholder="..." />
-                <marker date="1469084332987" expanded="true" signature="4045:4052" placeholder="..." />
+                <marker date="1472715207338" expanded="true" signature="279:347" ph="SELECT *FROM... user" />
+                <marker date="1472715207338" expanded="true" signature="957:976" ph="SELECT *FROM... breed" />
+                <marker date="1472715207338" expanded="true" signature="1681:1897" ph="INSERT INTO breed... " />
+                <marker date="1472715207338" expanded="true" signature="2251:2285" ph="SELECT *FROM... breed" />
+                <marker date="1472715207338" expanded="true" signature="2870:2902" ph="DELETE FROM " />
+                <marker date="1472715207338" expanded="true" signature="3339:3520" ph="UPDATE breed... " />
+                <marker date="1472715207338" expanded="true" signature="3869:3887" ph="SELECT *FROM... feed" />
+                <marker date="1472715207338" expanded="true" signature="4405:4519" ph="INSERT INTO feed... " />
+                <marker date="1472715207338" expanded="true" signature="4861:4892" ph="DELETE FROM " />
+                <marker date="1472715207338" expanded="true" signature="5226:5259" ph="SELECT *FROM... feed" />
+                <marker date="1472715207338" expanded="true" signature="5796:5919" ph="UPDATE feed " />
+                <marker date="1472715207338" expanded="true" signature="6284:6305" ph="SELECT *FROM... disease" />
+                <marker date="1472715207338" expanded="true" signature="6852:6982" ph="INSERT INTO disease... " />
+                <marker date="1472715207338" expanded="true" signature="7334:7368" ph="DELETE FROM " />
+                <marker date="1472715207338" expanded="true" signature="7709:7745" ph="SELECT *FROM... disease" />
+                <marker date="1472715207338" expanded="true" signature="8309:8446" ph="UPDATE disea... " />
+                <marker date="1472715207338" expanded="true" signature="8811:8829" ph="SELECT *FROM... cure" />
+                <marker date="1472715207338" expanded="true" signature="9304:9405" ph="INSERT INTO cure... " />
+                <marker date="1472715207338" expanded="true" signature="9777:9815" ph="SELECT *from... disease" />
+                <marker date="1472715207338" expanded="true" signature="10097:10128" ph="DELETE FROM " />
+                <marker date="1472715207338" expanded="true" signature="10462:10495" ph="SELECT *FROM... cure" />
+                <marker date="1472715207338" expanded="true" signature="10998:11113" ph="UPDATE cure " />
+                <marker date="1472715207338" expanded="true" signature="11474:11492" ph="SELECT *FROM... shed" />
+                <marker date="1472715207338" expanded="true" signature="12017:12138" ph="INSERT INTO shed... " />
+                <marker date="1472715207338" expanded="true" signature="12487:12518" ph="DELETE FROM " />
+                <marker date="1472715207338" expanded="true" signature="12853:12886" ph="SELECT *FROM... shed" />
+                <marker date="1472715207338" expanded="true" signature="13435:13561" ph="UPDATE shed " />
+                <marker date="1472715207338" expanded="true" signature="13978:14132" ph="INSERT INTO query... " />
+                <marker date="1472715207338" expanded="true" signature="14489:14508" ph="SELECT *FROM... query" />
+                <marker date="1472715207338" expanded="true" signature="15142:15174" ph="DELETE FROM " />
+                <marker date="1472715207338" expanded="true" signature="15567:15682" ph="INSERT INTO reply... " />
+                <marker date="1472715207338" expanded="true" signature="16020:16065" ph="SELECT *from... reply" />
+                <marker date="1472715207338" expanded="true" signature="16293:16339" ph="SELECT *FROM... reply" />
+                <marker date="1472715207338" expanded="true" signature="16819:16837" ph="SELECT *FROM... user" />
+                <marker date="1472715207338" expanded="true" signature="17616:17647" ph="DELETE FROM " />
+                <marker date="1472715207338" expanded="true" signature="18161:18426" ph="INSERT INTO user... " />
+                <marker date="1472715207338" expanded="true" signature="19183:19207" ph="SELECT *FROM... user" />
+                <marker date="1472715207338" expanded="true" signature="19183:19217" ph="SELECT *FROM... user" />
+                <marker date="1472715207338" expanded="true" signature="19183:19230" ph="SELECT *FROM... user" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cureHandler.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller/cureHandler.php">
+      <file leaf-file-name="query.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/query.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26041666" vertical-offset="90" max-vertical-offset="1245">
-              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-              <folding>
-                <element signature="e#6#93#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cure.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/cure.js">
+      <file leaf-file-name="breed.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/breed.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1275">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc;n#deleteCure#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webservice/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="435">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="1139">
+              <caret line="67" column="72" selection-start-line="67" selection-start-column="72" selection-end-line="67" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -122,48 +147,74 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Config/databaseConnection.php" />
-        <option value="$PROJECT_DIR$/views/Layout/footer.php" />
-        <option value="$PROJECT_DIR$/js/news.js" />
-        <option value="$PROJECT_DIR$/controller/userHandler.php" />
-        <option value="$PROJECT_DIR$/controller/login.php" />
-        <option value="$PROJECT_DIR$/css/news.css" />
-        <option value="$PROJECT_DIR$/js/login.js" />
-        <option value="$PROJECT_DIR$/views/logout.php" />
-        <option value="$PROJECT_DIR$/views/login.php" />
-        <option value="$PROJECT_DIR$/config/databaseConnection.php" />
-        <option value="$PROJECT_DIR$/js/breed.js" />
         <option value="$PROJECT_DIR$/js/feed.js" />
         <option value="$PROJECT_DIR$/js/disease.js" />
         <option value="$PROJECT_DIR$/views/news.php" />
-        <option value="$PROJECT_DIR$/views/user.php" />
-        <option value="$PROJECT_DIR$/controller/auth.php" />
         <option value="$PROJECT_DIR$/js/cure.js" />
-        <option value="$PROJECT_DIR$/common/Common.php" />
         <option value="$PROJECT_DIR$/controller/cureHandler.php" />
-        <option value="$PROJECT_DIR$/controller/breedHandler.php" />
         <option value="$PROJECT_DIR$/controller/diseaseHandler.php" />
         <option value="$PROJECT_DIR$/controller/foodHandler.php" />
+        <option value="$PROJECT_DIR$/views/query.php" />
+        <option value="$PROJECT_DIR$/config/databaseConnection.php" />
+        <option value="$PROJECT_DIR$/views/login.php" />
+        <option value="$PROJECT_DIR$/css/app.css" />
+        <option value="$PROJECT_DIR$/controller/breedHandler.php" />
+        <option value="$PROJECT_DIR$/views/foodShow.php" />
+        <option value="$PROJECT_DIR$/views/breedShow.php" />
         <option value="$PROJECT_DIR$/views/home.php" />
         <option value="$PROJECT_DIR$/views/breed.php" />
-        <option value="$PROJECT_DIR$/views/Layout/header.php" />
-        <option value="$PROJECT_DIR$/views/cure.php" />
-        <option value="$PROJECT_DIR$/views/dashboard.php" />
-        <option value="$PROJECT_DIR$/views/disease.php" />
         <option value="$PROJECT_DIR$/views/food.php" />
-        <option value="$PROJECT_DIR$/views/query.php" />
+        <option value="$PROJECT_DIR$/views/disease.php" />
+        <option value="$PROJECT_DIR$/views/cure.php" />
         <option value="$PROJECT_DIR$/views/shed.php" />
+        <option value="$PROJECT_DIR$/views/user.php" />
+        <option value="$PROJECT_DIR$/controller/auth.php" />
+        <option value="$PROJECT_DIR$/controller/userHandler.php" />
+        <option value="$PROJECT_DIR$/views/findDisease.php" />
+        <option value="$PROJECT_DIR$/views/Layout/header.php" />
+        <option value="$PROJECT_DIR$/views/Layout/footer.php" />
+        <option value="$PROJECT_DIR$/views/findDisease.php" />
+        <option value="$PROJECT_DIR$/views/query.php" />
+        <option value="$PROJECT_DIR$/views/user.php" />
+        <option value="$PROJECT_DIR$/views/home.php" />
+        <option value="$PROJECT_DIR$/views/breed.php" />
+        <option value="$PROJECT_DIR$/views/food.php" />
+        <option value="$PROJECT_DIR$/views/disease.php" />
+        <option value="$PROJECT_DIR$/views/cure.php" />
+        <option value="$PROJECT_DIR$/views/shed.php" />
+        <option value="$PROJECT_DIR$/views/login.php" />
+        <option value="$PROJECT_DIR$/views/foodShow.php" />
+        <option value="$PROJECT_DIR$/views/breedShow.php" />
+        <option value="$PROJECT_DIR$/views/cureShow.php" />
+        <option value="$PROJECT_DIR$/views/diseaseShow.php" />
+        <option value="$PROJECT_DIR$/views/shedShow.php" />
+        <option value="$PROJECT_DIR$/views/changePassword.php" />
+        <option value="$PROJECT_DIR$/views/Layout/header.php" />
+        <option value="$PROJECT_DIR$/views/dashboard.php" />
+        <option value="$PROJECT_DIR$/views/dashboard.php" />
+        <option value="$PROJECT_DIR$/js/query.js" />
+        <option value="$PROJECT_DIR$/controller/queryHandler.php" />
+        <option value="$PROJECT_DIR$/js/breed.js" />
+        <option value="$PROJECT_DIR$/common/Common.php" />
+        <option value="$PROJECT_DIR$/views/qa.php" />
+        <option value="$PROJECT_DIR$/views/qa.php" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1301" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -187,9 +238,11 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -204,8 +257,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -214,12 +267,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webservice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -228,12 +281,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -242,16 +295,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -260,12 +313,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -274,12 +327,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -288,12 +341,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -302,12 +355,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -316,22 +369,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Krishi-Sujhab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="bakhragyan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../refactored-giggle/CareShopNepal" />
-    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -344,21 +399,25 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -367,12 +426,17 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
       <method />
     </configuration>
-    <list size="0" />
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -381,329 +445,407 @@
       <changelist id="e8ae0852-27d0-4675-943a-84218308a12f" name="Default" comment="" />
       <created>1465225970879</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1465225970879</updated>
-    </task>
-    <task id="LOCAL-00007" summary="updated">
-      <created>1467270995138</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1467270995138</updated>
-    </task>
-    <task id="LOCAL-00008" summary="updated">
-      <created>1467271019360</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1467271019360</updated>
-    </task>
-    <task id="LOCAL-00009" summary="updated">
-      <created>1467271252570</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1467271252570</updated>
-    </task>
-    <task id="LOCAL-00010" summary="updated">
-      <created>1467271267793</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1467271267793</updated>
-    </task>
-    <task id="LOCAL-00011" summary="updated&#10;">
-      <created>1467271876472</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1467271876472</updated>
-    </task>
-    <task id="LOCAL-00012" summary="updated">
-      <created>1467285830232</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1467285830232</updated>
-    </task>
-    <task id="LOCAL-00013" summary="updated">
-      <created>1467285871294</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1467285871294</updated>
-    </task>
-    <task id="LOCAL-00014" summary="updated">
-      <created>1467285909223</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1467285909223</updated>
-    </task>
-    <task id="LOCAL-00015" summary="updated">
-      <created>1467285934547</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1467285934548</updated>
-    </task>
-    <task id="LOCAL-00016" summary="updated">
-      <created>1467285962753</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1467285962753</updated>
-    </task>
-    <task id="LOCAL-00017" summary="updated">
-      <created>1467286250139</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1467286250139</updated>
-    </task>
-    <task id="LOCAL-00018" summary="updated">
-      <created>1467286268729</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1467286268729</updated>
-    </task>
-    <task id="LOCAL-00019" summary="updated">
-      <created>1467286341079</created>
-      <option name="number" value="00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1467286341079</updated>
-    </task>
-    <task id="LOCAL-00020" summary="updated&#10;">
-      <created>1467286620222</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1467286620222</updated>
-    </task>
-    <task id="LOCAL-00021" summary="confi">
-      <created>1467287161393</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1467287161393</updated>
-    </task>
-    <task id="LOCAL-00022" summary="updated">
-      <created>1467290146259</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1467290146259</updated>
-    </task>
-    <task id="LOCAL-00023" summary="updated">
-      <created>1467290210361</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1467290210361</updated>
-    </task>
-    <task id="LOCAL-00024" summary="updated">
-      <created>1467290281217</created>
-      <option name="number" value="00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1467290281217</updated>
-    </task>
-    <task id="LOCAL-00025" summary="updated">
-      <created>1467291364462</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1467291364462</updated>
-    </task>
-    <task id="LOCAL-00026" summary="updated">
-      <created>1467299286896</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1467299286896</updated>
-    </task>
-    <task id="LOCAL-00027" summary="updated">
-      <created>1467299341720</created>
-      <option name="number" value="00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1467299341720</updated>
-    </task>
-    <task id="LOCAL-00028" summary="updated">
-      <created>1467299362214</created>
-      <option name="number" value="00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1467299362214</updated>
+      <workItem from="1471590843577" duration="686000" />
+      <workItem from="1471592000109" duration="7254000" />
+      <workItem from="1471700873411" duration="2000" />
+      <workItem from="1471839466571" duration="25050000" />
+      <workItem from="1472059063840" duration="491000" />
+      <workItem from="1472203075983" duration="8145000" />
+      <workItem from="1472266563047" duration="1508000" />
+      <workItem from="1472301392519" duration="5447000" />
+      <workItem from="1472369107807" duration="3051000" />
+      <workItem from="1472463074615" duration="10848000" />
+      <workItem from="1472553970567" duration="598000" />
+      <workItem from="1472649386964" duration="254000" />
+      <workItem from="1472649856861" duration="908000" />
+      <workItem from="1472705381939" duration="1628000" />
+      <workItem from="1472713040795" duration="1347000" />
+      <workItem from="1472714420781" duration="900000" />
     </task>
     <task id="LOCAL-00029" summary="updated">
       <created>1467299409398</created>
       <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
       <updated>1467299409398</updated>
     </task>
     <task id="LOCAL-00030" summary="updated">
       <created>1467299442970</created>
       <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
       <updated>1467299442970</updated>
     </task>
     <task id="LOCAL-00031" summary="updated">
       <created>1467299565311</created>
       <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
       <updated>1467299565311</updated>
     </task>
     <task id="LOCAL-00032" summary="updated">
       <created>1467301385087</created>
       <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
       <updated>1467301385087</updated>
     </task>
     <task id="LOCAL-00033" summary="updated">
       <created>1467301421993</created>
       <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
       <updated>1467301421993</updated>
     </task>
     <task id="LOCAL-00034" summary="updated">
       <created>1467302996363</created>
       <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
       <updated>1467302996363</updated>
     </task>
     <task id="LOCAL-00035" summary="udpated">
       <created>1467303185031</created>
       <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
       <updated>1467303185031</updated>
     </task>
     <task id="LOCAL-00036" summary="updated">
       <created>1467305329170</created>
       <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
       <updated>1467305329170</updated>
     </task>
     <task id="LOCAL-00037" summary="updated">
       <created>1467305365159</created>
       <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
       <updated>1467305365159</updated>
     </task>
     <task id="LOCAL-00038" summary="udpated">
       <created>1467305529558</created>
       <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
       <updated>1467305529558</updated>
     </task>
     <task id="LOCAL-00039" summary="updated">
       <created>1467305544758</created>
       <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
       <updated>1467305544758</updated>
     </task>
     <task id="LOCAL-00040" summary="updated">
       <created>1467305740624</created>
       <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
       <updated>1467305740624</updated>
     </task>
     <task id="LOCAL-00041" summary="updated">
       <created>1467305762438</created>
       <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
       <updated>1467305762438</updated>
     </task>
     <task id="LOCAL-00042" summary="updated">
       <created>1467305836555</created>
       <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
       <option name="project" value="LOCAL" />
       <updated>1467305836555</updated>
     </task>
     <task id="LOCAL-00043" summary="updated">
       <created>1467309227502</created>
       <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
       <option name="project" value="LOCAL" />
       <updated>1467309227502</updated>
     </task>
     <task id="LOCAL-00044" summary="updated">
       <created>1467309248435</created>
       <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
       <option name="project" value="LOCAL" />
       <updated>1467309248435</updated>
     </task>
     <task id="LOCAL-00045" summary="updated">
       <created>1467309260914</created>
       <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
       <updated>1467309260914</updated>
     </task>
     <task id="LOCAL-00046" summary="updated">
       <created>1467309277722</created>
       <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
       <updated>1467309277722</updated>
     </task>
     <task id="LOCAL-00047" summary="updated">
       <created>1467310275888</created>
       <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
       <updated>1467310275888</updated>
     </task>
     <task id="LOCAL-00048" summary="updated">
       <created>1467310288842</created>
       <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
       <updated>1467310288842</updated>
     </task>
     <task id="LOCAL-00049" summary="updated">
       <created>1467310304370</created>
       <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
       <updated>1467310304371</updated>
     </task>
     <task id="LOCAL-00050" summary="updated">
       <created>1467310320047</created>
       <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
       <updated>1467310320084</updated>
     </task>
     <task id="LOCAL-00051" summary="updated">
       <created>1467318270603</created>
       <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
       <updated>1467318270603</updated>
     </task>
     <task id="LOCAL-00052" summary="updated">
       <created>1467318356690</created>
       <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
       <updated>1467318356690</updated>
     </task>
     <task id="LOCAL-00053" summary="updated">
       <created>1469005637056</created>
       <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
       <updated>1469005637060</updated>
     </task>
     <task id="LOCAL-00054" summary="updated">
       <created>1469005703018</created>
       <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
       <updated>1469005703018</updated>
     </task>
     <task id="LOCAL-00055" summary="updated">
       <created>1469005734794</created>
       <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
       <updated>1469005734794</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="changed password and database name">
+      <created>1471587818034</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1471587818034</updated>
+    </task>
+    <task id="LOCAL-00057" summary="charset utf-8 added">
+      <created>1471591770190</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1471591770190</updated>
+    </task>
+    <task id="LOCAL-00058" summary="title changed, meta added">
+      <created>1471592269292</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1471592269292</updated>
+    </task>
+    <task id="LOCAL-00059" summary="updated">
+      <created>1471597589221</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1471597589221</updated>
+    </task>
+    <task id="LOCAL-00060" summary="updated">
+      <created>1471597626447</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1471597626447</updated>
+    </task>
+    <task id="LOCAL-00061" summary="updated">
+      <created>1471604821376</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1471604821376</updated>
+    </task>
+    <task id="LOCAL-00062" summary="updated">
+      <created>1471840538999</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1471840538999</updated>
+    </task>
+    <task id="LOCAL-00063" summary="updated">
+      <created>1471855219044</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1471855219044</updated>
+    </task>
+    <task id="LOCAL-00064" summary="updated">
+      <created>1471855315343</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1471855315343</updated>
+    </task>
+    <task id="LOCAL-00065" summary="updated">
+      <created>1471862464920</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1471862464920</updated>
+    </task>
+    <task id="LOCAL-00066" summary="updated">
+      <created>1471863268545</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1471863268545</updated>
+    </task>
+    <task id="LOCAL-00067" summary="updated">
+      <created>1471863290185</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1471863290185</updated>
+    </task>
+    <task id="LOCAL-00068" summary="updated">
+      <created>1471865061991</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1471865061991</updated>
+    </task>
+    <task id="LOCAL-00069" summary="updated">
+      <created>1471865885558</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1471865885558</updated>
+    </task>
+    <task id="LOCAL-00070" summary="updated">
+      <created>1472303704707</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1472303704707</updated>
+    </task>
+    <task id="LOCAL-00071" summary="updated">
+      <created>1472480025763</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1472480025779</updated>
+    </task>
+    <task id="LOCAL-00072" summary="updated">
+      <created>1472480213621</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1472480213621</updated>
+    </task>
+    <task id="LOCAL-00073" summary="updated">
+      <created>1472480238793</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1472480238793</updated>
+    </task>
+    <task id="LOCAL-00074" summary="new logo">
+      <created>1472480277342</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1472480277342</updated>
+    </task>
+    <task id="LOCAL-00075" summary="updated">
+      <created>1472481627663</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1472481627663</updated>
+    </task>
+    <task id="LOCAL-00076" summary="id changed">
+      <created>1472706827114</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1472706827114</updated>
+    </task>
+    <task id="LOCAL-00077" summary="updated">
+      <created>1472706868898</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1472706868898</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="68117000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5869219" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28117552" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3623298" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5030257" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1764706" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34042552" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5869219" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -718,512 +860,430 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
     <MESSAGE value="noty added" />
     <MESSAGE value="custom js added" />
     <MESSAGE value="updated&#10;" />
     <MESSAGE value="confi" />
     <MESSAGE value="udpated" />
+    <MESSAGE value="changed password and database name" />
+    <MESSAGE value="charset utf-8 added" />
+    <MESSAGE value="title changed, meta added" />
+    <MESSAGE value="new logo" />
+    <MESSAGE value="id changed" />
     <MESSAGE value="updated" />
     <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/controller/userHandler.php</url>
+          <line>26</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/Layout/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2280">
-          <caret line="129" column="87" selection-start-line="129" selection-start-column="87" selection-end-line="129" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="570">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/breedHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1500">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/Common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4845">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..user..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="UPDATE breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..feed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..feed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="UPDATE feed ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..disease..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..disease..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..cure..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/foodHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="495">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1005">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="782">
+          <caret line="51" column="54" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/Layout/footer.php">
+    <entry file="file://$PROJECT_DIR$/js/query.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/databaseConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="330">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Layout/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2280">
-          <caret line="129" column="87" selection-start-line="129" selection-start-column="87" selection-end-line="129" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="570">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/breedHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1500">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/Common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4845">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..user..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="UPDATE breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..feed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..feed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="UPDATE feed ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..disease..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..disease..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..cure..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/foodHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="495">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1005">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Layout/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.noty.packaged.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="381">
-          <caret line="0" column="67" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/news.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1230">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="195">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/databaseConnection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16816144" vertical-offset="0" max-vertical-offset="446">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-1.12.4.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.dataTables.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2580">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/jquery.dataTables.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="457">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/feed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/disease.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51834863" vertical-offset="584" max-vertical-offset="1200">
-          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc;n#deleteDisease#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="2520">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="90" max-vertical-offset="600">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/Layout/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03640777" vertical-offset="0" max-vertical-offset="412">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webservice/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="435">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="1428">
+          <caret line="84" column="12" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cure.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1275">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#deleteCure#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1292">
+          <caret line="76" column="17" selection-start-line="49" selection-start-column="3" selection-end-line="76" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/breedHandler.php">
+    <entry file="file://$PROJECT_DIR$/controller/queryHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4322916" vertical-offset="0" max-vertical-offset="1260">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/diseaseHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9010416" vertical-offset="0" max-vertical-offset="1215">
-          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/foodHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.171875" vertical-offset="0" max-vertical-offset="1185">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="986">
+          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/Common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.85968" vertical-offset="0" max-vertical-offset="4620">
-          <caret line="300" column="67" selection-start-line="300" selection-start-column="67" selection-end-line="300" selection-end-column="67" />
-          <folding>
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..user..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="UPDATE breed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..feed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..feed..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="UPDATE feed ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..disease..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..disease..." />
-            <marker date="1469081089607" expanded="true" signature="-1:-1" placeholder="SELECT *FROM..cure..." />
-          </folding>
+        <state relative-caret-position="10336">
+          <caret line="613" column="28" selection-start-line="613" selection-start-column="23" selection-end-line="613" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/breed.js">
+    <entry file="file://$PROJECT_DIR$/views/cure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1290">
-          <caret line="80" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="80" selection-end-column="1" />
+        <state relative-caret-position="493">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Layout/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/breed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1921">
+          <caret line="113" column="84" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/breedHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/breedShow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/foodShow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="40" column="66" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/food.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="12" selection-start-line="31" selection-start-column="4" selection-end-line="67" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/disease.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/shed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="41" column="0" selection-start-line="6" selection-start-column="3" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/foodHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/feed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="67" column="15" selection-start-line="58" selection-start-column="12" selection-end-line="67" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cure.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="17" selection-start-line="49" selection-start-column="3" selection-end-line="76" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/shedHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="62" column="49" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/breedHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="0" selection-start-line="22" selection-start-column="8" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webservice/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/userHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/Layout/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/findDisease.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/shed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cure.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/disease.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/food.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/breedShow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="56" column="38" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/foodShow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cureShow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/diseaseShow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/shedShow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="4" column="55062" selection-start-line="4" selection-start-column="55062" selection-end-line="4" selection-end-column="55062" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/changePassword.php" />
+    <entry file="file://$PROJECT_DIR$/views/Layout/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="141" column="27" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/databaseConnection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="90" column="62" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/query.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/queryHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/breed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24333926" vertical-offset="13" max-vertical-offset="2535">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="1139">
+          <caret line="67" column="72" selection-start-line="67" selection-start-column="72" selection-end-line="67" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/Layout/header.php">
+    <entry file="file://$PROJECT_DIR$/js/breed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="1335">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        <state relative-caret-position="782">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/disease.php">
+    <entry file="file://$PROJECT_DIR$/common/Common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26642984" vertical-offset="0" max-vertical-offset="2295">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26642984" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/cure.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="2310">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="388">
+          <caret line="791" column="58" selection-start-line="791" selection-start-column="58" selection-end-line="791" selection-end-column="58" />
           <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1469084332987" expanded="true" signature="708:894" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="708:1402" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="724:877" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="737:860" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="894:1402" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="966:1402" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="995:1018" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="1088:1111" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="1187:1210" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="1282:1305" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="1306:1402" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="1912:4035" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="1943:4028" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="1979:4017" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="2019:2174" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="2212:3942" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="2341:3922" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="2520:2825" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="2666:2798" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="2871:3241" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="3031:3214" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="3147:3171" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="3287:3647" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="3693:3898" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="3982:4001" placeholder="..." />
-            <marker date="1469084332987" expanded="true" signature="4045:4052" placeholder="..." />
+            <marker date="1472715207338" expanded="true" signature="279:347" ph="SELECT *FROM... user" />
+            <marker date="1472715207338" expanded="true" signature="957:976" ph="SELECT *FROM... breed" />
+            <marker date="1472715207338" expanded="true" signature="1681:1897" ph="INSERT INTO breed... " />
+            <marker date="1472715207338" expanded="true" signature="2251:2285" ph="SELECT *FROM... breed" />
+            <marker date="1472715207338" expanded="true" signature="2870:2902" ph="DELETE FROM " />
+            <marker date="1472715207338" expanded="true" signature="3339:3520" ph="UPDATE breed... " />
+            <marker date="1472715207338" expanded="true" signature="3869:3887" ph="SELECT *FROM... feed" />
+            <marker date="1472715207338" expanded="true" signature="4405:4519" ph="INSERT INTO feed... " />
+            <marker date="1472715207338" expanded="true" signature="4861:4892" ph="DELETE FROM " />
+            <marker date="1472715207338" expanded="true" signature="5226:5259" ph="SELECT *FROM... feed" />
+            <marker date="1472715207338" expanded="true" signature="5796:5919" ph="UPDATE feed " />
+            <marker date="1472715207338" expanded="true" signature="6284:6305" ph="SELECT *FROM... disease" />
+            <marker date="1472715207338" expanded="true" signature="6852:6982" ph="INSERT INTO disease... " />
+            <marker date="1472715207338" expanded="true" signature="7334:7368" ph="DELETE FROM " />
+            <marker date="1472715207338" expanded="true" signature="7709:7745" ph="SELECT *FROM... disease" />
+            <marker date="1472715207338" expanded="true" signature="8309:8446" ph="UPDATE disea... " />
+            <marker date="1472715207338" expanded="true" signature="8811:8829" ph="SELECT *FROM... cure" />
+            <marker date="1472715207338" expanded="true" signature="9304:9405" ph="INSERT INTO cure... " />
+            <marker date="1472715207338" expanded="true" signature="9777:9815" ph="SELECT *from... disease" />
+            <marker date="1472715207338" expanded="true" signature="10097:10128" ph="DELETE FROM " />
+            <marker date="1472715207338" expanded="true" signature="10462:10495" ph="SELECT *FROM... cure" />
+            <marker date="1472715207338" expanded="true" signature="10998:11113" ph="UPDATE cure " />
+            <marker date="1472715207338" expanded="true" signature="11474:11492" ph="SELECT *FROM... shed" />
+            <marker date="1472715207338" expanded="true" signature="12017:12138" ph="INSERT INTO shed... " />
+            <marker date="1472715207338" expanded="true" signature="12487:12518" ph="DELETE FROM " />
+            <marker date="1472715207338" expanded="true" signature="12853:12886" ph="SELECT *FROM... shed" />
+            <marker date="1472715207338" expanded="true" signature="13435:13561" ph="UPDATE shed " />
+            <marker date="1472715207338" expanded="true" signature="13978:14132" ph="INSERT INTO query... " />
+            <marker date="1472715207338" expanded="true" signature="14489:14508" ph="SELECT *FROM... query" />
+            <marker date="1472715207338" expanded="true" signature="15142:15174" ph="DELETE FROM " />
+            <marker date="1472715207338" expanded="true" signature="15567:15682" ph="INSERT INTO reply... " />
+            <marker date="1472715207338" expanded="true" signature="16020:16065" ph="SELECT *from... reply" />
+            <marker date="1472715207338" expanded="true" signature="16293:16339" ph="SELECT *FROM... reply" />
+            <marker date="1472715207338" expanded="true" signature="16819:16837" ph="SELECT *FROM... user" />
+            <marker date="1472715207338" expanded="true" signature="17616:17647" ph="DELETE FROM " />
+            <marker date="1472715207338" expanded="true" signature="18161:18426" ph="INSERT INTO user... " />
+            <marker date="1472715207338" expanded="true" signature="19183:19207" ph="SELECT *FROM... user" />
+            <marker date="1472715207338" expanded="true" signature="19183:19217" ph="SELECT *FROM... user" />
+            <marker date="1472715207338" expanded="true" signature="19183:19230" ph="SELECT *FROM... user" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/food.php">
+    <entry file="file://$PROJECT_DIR$/views/qa.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="2250">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="218">
+          <caret line="54" column="123" selection-start-line="54" selection-start-column="123" selection-end-line="54" selection-end-column="123" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.546875" vertical-offset="0" max-vertical-offset="975">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <marker date="1469084332991" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332991" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332991" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332991" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.859375" vertical-offset="180" max-vertical-offset="1275">
-          <caret line="50" column="87" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26642984" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/shed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26642984" vertical-offset="0" max-vertical-offset="2505">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <marker date="1469084332975" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1469084332975" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.98579043" vertical-offset="0" max-vertical-offset="3210">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <marker date="1469005627190" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1469005627190" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1469005627190" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/cureHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26041666" vertical-offset="90" max-vertical-offset="1245">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

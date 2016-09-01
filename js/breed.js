@@ -44,6 +44,7 @@ function deleteBreed(id){
 
 function editBreed(id){
 
+    alert(id);
     var mode ='edit';
 
     $.ajax({

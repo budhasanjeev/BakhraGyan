@@ -49,9 +49,10 @@ require('../views/Layout/header.php');
                 $replyList = $objCommon->getReplyList($query['id']);
 
                 foreach ($replyList as $reply){
+                    $reply_from = $objCommon->getUserByEmail($reply['reply_from']);
             ?>
 
-                <?php echo $reply['reply'] ?>? Replied By:-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $reply['reply_from'].' '.$reply['replied_date']?><br>
+                <?php echo $reply['reply'] ?>? :-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $reply_from.' '.$reply['replied_date']?><br>
 
             <?php } ?>
         </div>

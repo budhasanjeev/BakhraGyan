@@ -774,4 +774,21 @@ class Common {
         }
         return implode($pass);
     }
+
+    public function getUserByEmail($email){
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM user WHERE email_address='$email'");
+
+        $data = array();
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data['first_name'] = $row["first_name"];
+            $data['last_name'] = $row["last_name"];
+
+        }
+
+        return $data['first_name'].' '.$data['last_name'];
+    }
 }
