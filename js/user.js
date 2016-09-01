@@ -41,3 +41,45 @@ function deleteUser(id){
     })
 
 }
+
+function editUser(id) {
+
+    var mode ='edit';
+
+    $.ajax({
+        type:"POST",
+        url:'../controller/userHandler.php',
+        data:"mode="+mode+"&id="+id,
+        success:function(data){
+            var data = JSON.parse(data);
+
+            var s_id = data['id'];
+            $("#image").attr('value',data['image']);
+            $("#first_name").val(data['first_name']);
+            $('#last_name').val(data['last_name']);
+            $('#mobile_number').val(data['mobile_number']);
+            $('#email_address').val(data['email_address']);
+            $('#city').val(data['city']);
+            $('#zone').val(data['zone']);
+            $('#district').val(data['district']);
+            $('#role').val(data['role']);
+
+
+            $('#insert-user').modal('show');
+            $('#insert-user .modal-title').html("प्रयोगकर्ता परिमार्जन गर्नुहोस्");
+            $('#insert-user button[type=submit]').html("पेश गर्नुहोस्");
+            $('#user-form').attr('action','../controller/userHandler.php');
+            $('#modes').attr('value','update');
+            $('#user_id').attr('value',s_id);
+
+            $('.modal').on('hidden.bs.modal', function(){
+                $(this).find('form')[0].reset();
+            });
+
+        },error: function (er) {
+            alert("Error while Creating" +er);
+        }
+    });
+
+    return false;
+}

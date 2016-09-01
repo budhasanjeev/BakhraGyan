@@ -791,4 +791,50 @@ class Common {
 
         return $data['first_name'].' '.$data['last_name'];
     }
+
+    public function editUser($id){
+        global $connection;
+
+        $select_query = "SELECT *FROM user WHERE id ='$id'; ";
+
+        $result = mysqli_query($connection,$select_query);
+
+        $data = array();
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data['id'] = $row["id"];
+            $data['first_name'] = $row["first_name"];
+            $data['last_name'] = $row["last_name"];
+            $data['city'] = $row["city"];
+            $data['zone'] = $row["zone"];
+            $data['district'] = $row["district"];
+            $data['mobile_number'] = $row["mobile_number"];
+            $data['email_address'] = $row["email_address"];
+            $data['role'] = $row["role"];
+            $data['image'] = $row["image"];
+        }
+        return $data;
+
+    }
+
+    public function updateUser($firstName, $lastName, $mobileNumber, $emailAddress, $city, $zone, $district, $role, $image,$id){
+
+        global $connection;
+
+        $updated_date = date("Y-m-d");
+
+        $create_user = "INSERT INTO user first_name = '$firstName',last_name='$lastName',city='$city',zone='$zone',district='$district',mobile_number='$mobileNumber',email_address='$emailAddress',role = '$role',image='$image',updated_date='$updated_date' WHERE id = '$id'";
+        $result = mysqli_query($connection,$create_user);
+        $data = array();
+
+        if($result){
+            $data['password']=$password;
+            $data['message']='success';
+        }else{
+            $data['message']='fail';
+        }
+
+        return $data;
+    }
 }

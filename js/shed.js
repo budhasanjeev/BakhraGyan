@@ -60,8 +60,8 @@ function editShed(id){
 
 
             $('#insert-shed').modal('show');
-            $('#insert-shed .modal-title').html("Edit Shed");
-            $('#insert-shed button[type=submit]').html("Save Changes");
+            $('#insert-shed .modal-title').html("खोर परिमार्जन गर्नुहोस्");
+            $('#insert-shed button[type=submit]').html("पेश गर्नुहोस्");
             $('#shed-form').attr('action','../controller/shedHandler.php');
             $('#mode').attr('value','update');
             $('#shed_id').attr('value',s_id);

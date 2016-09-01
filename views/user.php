@@ -101,7 +101,7 @@ require('../views/Layout/footer.php');
             <div class="modal-body">
 
                 <form class="form-horizontal" role="form" id="user-form" method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="mode" id="modes">
                     <input type="hidden" name="user_id" id="user_id">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="first_name">नाम</label>
@@ -151,7 +151,7 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="role">भूमिका</label>
                         <div class="col-sm-8">
-                            <select id="role" name="role" class="form-control">
+                            <select id="role" id='role' name="role" class="form-control">
                                 <option value="#">--- भूमिका रोज्नुहोस् ---</option>
                                 <option value="admin">व्यवस्थापक</option>
                                 <option value="expert">विशेषज्ञ</option>
