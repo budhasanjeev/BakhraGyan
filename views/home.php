@@ -61,7 +61,7 @@ require('Layout/header.php');
             <div class="form-group">
                 <label class="control-label col-sm-4" for="phoneNumber">फोन नम्बर:</label>
                 <div class="col-sm-8">
-                    <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" required="" min="8" max="10">
+                    <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" required="">
                 </div>
             </div>
 

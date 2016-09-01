@@ -118,7 +118,7 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="mobile_number">मोबिल नम्बर</label>
                         <div class="col-sm-8">
-                            <input type="number" class="form-control" id="mobile_number" name="mobileNumber" required="" min="8" max="10">
+                            <input type="number" class="form-control" id="mobile_number" name="mobileNumber" required="">
                         </div>
                     </div>
 
