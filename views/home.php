@@ -54,42 +54,42 @@ require('Layout/header.php');
             <div class="form-group">
                 <label class="control-label col-sm-4" for="fullName">पुरा नाम:</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="fullName" name="fullName">
+                    <input type="text" class="form-control" id="fullName" name="fullName" required="">
                 </div>
             </div>
             
             <div class="form-group">
                 <label class="control-label col-sm-4" for="phoneNumber">फोन नम्बर:</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
+                    <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" required="">
                 </div>
             </div>
 
             <div id="news-img" class="form-group">
                 <label class="control-label col-sm-4" for="email">इमेल:</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="email" name="email" >
+                    <input type="email" class="form-control" id="email" name="email" >
                 </div>
             </div>
 
             <div id="news-img" class="form-group">
                 <label class="control-label col-sm-4">ठेगाना:</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="address" name="address">
+                    <input type="text" class="form-control" id="address" name="address" required="">
                 </div>
             </div>
             
             <div id="news-img" class="form-group">
                 <label class="control-label col-sm-4">प्रश्न:</label>
                 <div class="col-sm-8">
-                    <textarea type="text" class="form-control" id="query" name="query" style="height: 100px"></textarea>
+                    <textarea type="text" class="form-control" required="" id="query" name="query" style="height: 100px"></textarea >
                 </div>
             </div>
             
             <div id="news-img" class="form-group">
                 <label class="control-label col-sm-4"></label>
                 <div class="col-sm-8">
-                    <button class="btn btn-primary">पठाउनुहोस्</button>
+                    <button  class="btn btn-primary">पठाउनुहोस्</button>
                 </div>
             </div>
             

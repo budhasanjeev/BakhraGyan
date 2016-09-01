@@ -92,20 +92,20 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="feedName">खानाको नाम</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="feedName" name="feedName">
+                            <input type="text" class="form-control" id="feedName" name="feedName" required="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="description">विवरण</label>
                         <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
+                            <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px" required=""></textarea>
                         </div>
                     </div>
 
                     <div id="news-img" class="form-group">
                         <label class="control-label col-sm-4" for="image">फोटो</label>
 
-                        <input type="file" id="image" name="image" >
+                        <input type="file" id="image" name="image" required="">
                     </div>
 
                     <div id="news-img" class="form-group">

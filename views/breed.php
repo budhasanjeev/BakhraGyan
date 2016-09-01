@@ -97,32 +97,32 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="breedName">प्रजाति नाम</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="breedName" name="breedName">
+                            <input type="text" class="form-control" id="breedName" name="breedName" required="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="origin_distribution">मूल र वितरण</label>
                         <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="origin_distribution" name="origin_distribution" style="width: 100%;height:100px"></textarea>
+                            <textarea type="text" class="form-control" id="origin_distribution" required="" name="origin_distribution" style="width: 100%;height:100px"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="character">विशेषताहरु</label>
                         <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="character" name="character" style="width: 100%;height:100px"></textarea>
+                            <textarea type="text" class="form-control" id="character" required="" name="character" style="width: 100%;height:100px"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="utility">उपयोगिता</label>
                         <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="utility" name="utility" style="width: 100%;height:100px"></textarea>
+                            <textarea type="text" class="form-control" id="utility" name="utility" required="" style="width: 100%;height:100px"></textarea>
                         </div>
                     </div>
 
                     <div id="news-img" class="form-group">
                         <label class="control-label col-sm-4" for="image">फोटो</label>
 
-                        <input type="file" id="image" name="image" >
+                        <input type="file" id="image" required="" name="image" >
                     </div>
 
                     <div id="news-img" class="form-group">
