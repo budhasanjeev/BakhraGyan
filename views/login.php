@@ -52,7 +52,7 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="email"><span class="glyphicon glyphicon-envelope"/></label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="email" name="email" placeholder="इमेल प्रविष्ट गर्नुहोस्">
+                <input type="email" class="form-control" id="email" name="email" placeholder="इमेल प्रविष्ट गर्नुहोस्"required="">
             </div>
         </div>
         <div class="form-group">

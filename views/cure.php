@@ -92,8 +92,8 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="breedName">रोगको नाम</label>
                         <div class="col-sm-8">
-                            <select class="form-control" id="diseaseName" name="disease_id">
-                                <option value="#">--- रोगको नाम छान्नुहोस् ---</option>
+                            <select class="form-control" id="diseaseName" name="disease_id" >
+                                <option value="#" required="" >--- रोगको नाम छान्नुहोस् ---</option >
                                 <?php
 
                                 $diseaseList = $objCommon->getDisease();
@@ -101,7 +101,7 @@ require('../views/Layout/footer.php');
                                 foreach($diseaseList as $disease){
                                     ?>
 
-                                    <option value="<?php echo $disease['id']?>" ><?php echo $disease['disease_name']?></option>
+                                    <option value="  <?php echo $disease['id']?>" ><?php echo $disease['disease_name']?></option>
 
                                 <?php } ?>
 
@@ -113,7 +113,7 @@ require('../views/Layout/footer.php');
                         <label class="control-label col-sm-4" for="preventive">निवारक हेरविचार</label>
 
                         <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="preventive" name="preventive" style="width: 100%;height:250px"></textarea>
+                            <textarea type="text" class="form-control" id="preventive" name="preventive" style="width: 100%;height:250px" required=""></textarea>
                         </div>
                     </div>
 

@@ -106,47 +106,47 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="first_name">नाम</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="first_name" name="firstName">
+                            <input type="text" class="form-control" id="first_name" name="firstName" required="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="last_name">थर</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="last_name" name="lastName">
+                            <input type="text" class="form-control" id="last_name" name="lastName" required="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="mobile_number">मोबिल नम्बर</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="mobile_number" name="mobileNumber">
+                            <input type="number" class="form-control" id="mobile_number" name="mobileNumber" required="" min="8" max="10">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="email_address">इमेल अड्ड्रेस</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="email_address" name="emailAddress">
+                            <input type="email" class="form-control" id="email_address" name="emailAddress" required="">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="city">टोल</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="city" name="city">
+                            <input type="text" class="form-control" id="city" name="city" required="">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="zone">अंचल</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="zone" name="zone">
+                            <input type="text" class="form-control" id="zone" name="zone" required="">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="city">जिल्ला</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="district" name="district">
-                        </div>
+                            <input type="text" class="form-control" id="district" name="district" required="">
+                    </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="role">भूमिका</label>
@@ -163,7 +163,7 @@ require('../views/Layout/footer.php');
                         <label class="control-label col-sm-4" for="profile-picture">फोटो</label>
 
                         <div class="col-sm-8">
-                            <input type="file" id="profile-picture" name="profileImage">
+                            <input type="file" id="profile-picture" name="profileImage" required="">
                         </div>
                     </div>
 

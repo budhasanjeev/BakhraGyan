@@ -92,7 +92,7 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="shedTitle">शिर्षक</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="shedTitle" name="shedTitle">
+                            <input type="text" class="form-control" id="shedTitle" name="shedTitle" required="">
                         </div>
                     </div>
 
@@ -100,14 +100,14 @@ require('../views/Layout/footer.php');
                         <label class="control-label col-sm-4" for="description"> विवरण </label>
 
                         <div class="col-sm-8">
-                            <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px"></textarea>
+                            <textarea type="text" class="form-control" id="description" name="description" style="width: 100%;height:250px" required=""></textarea>
                         </div>
                     </div>
 
                     <div id="shed-img" class="form-group">
                         <label class="control-label col-sm-4" for="image"> फोटो </label>
 
-                        <input type="file" id="image" name="image" >
+                        <input type="file" id="image" name="image" required="">
                     </div>
 
                     <div class="form-group">
