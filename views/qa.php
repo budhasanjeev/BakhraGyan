@@ -42,7 +42,7 @@ require('../views/Layout/header.php');
     <div class="panel panel-primary">
 
         <div class="panel panel-body">
-            <b><?php echo $query['query'] ?>? </b>&nbsp;&nbsp;Posted By:-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $query['full_name'].' '.$query['created_date']?>
+            <b><?php echo $query['query'] ?>?</b>&nbsp;&nbsp;:-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $query['full_name'].' '.$query['created_date']?>
             <hr>
 
             <?php
