@@ -142,7 +142,7 @@ require('../views/Layout/footer.php');
             "info":true,
             "paging":true,
             "ordering":false,
-            "lengthMenu":[[2,4,6,-1],[2,4,6,"All"]]
+            "lengthMenu":[[3,6,9,-1],[3,6,9,"All"]]
         })
     })
 </script>
