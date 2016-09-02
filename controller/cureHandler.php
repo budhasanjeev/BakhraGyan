@@ -63,4 +63,14 @@ if(isset($_POST['mode'])){
             header("Location:../views/cure.php");
         }
     }
+    
+    else if($_POST['mode']=='details'){
+        
+        $id = $_POST['id'];
+
+        $result = array();
+        $result = $objCommon->getDiseaseById($id);
+
+        echo json_encode($result);
+    }
 }

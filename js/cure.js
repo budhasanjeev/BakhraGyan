@@ -54,9 +54,10 @@ function editCure(id){
         success:function(data){
             var data = JSON.parse(data);
 
+            alert(data['disease_name']);
             var c_id = data['id'];
             $("#preventive").val(data['preventive_care']);
-            $('#diseaseName').val(data['disease_id']);
+            $('#diseaseName').val(data.disease_name);
 
             
             $('#insert-cure').modal('show');
@@ -80,6 +81,37 @@ function editCure(id){
 
 function detail(id){
 
-    alert(id);
+    var mode ='details';
+
+    $.ajax({
+        type:"POST",
+        url:'../controller/cureHandler.php',
+        data:"mode="+mode+"&id="+id,
+        success:function(data){
+            var data = JSON.parse(data);
+
+            alert(data['disease_name']);
+            var c_id = data['id'];
+            $("#preventive").val(data['preventive_care']);
+            $('#diseaseName').val(data.disease_name);
+
+
+            $('#insert-cure').modal('show');
+            $('#insert-cure .modal-title').html("उपचार परिमार्जन गर्नुहोस्");
+            $('#insert-cure button[type=submit]').html("पेश गर्नुहोस्");
+            $('#cure-form').attr('action','../controller/cureHandler.php');
+            $('#mode').attr('value','update');
+            $('#cure_id').attr('value',c_id);
+
+            $('.modal').on('hidden.bs.modal', function(){
+                $(this).find('form')[0].reset();
+            });
+
+        },error: function (er) {
+            alert("Error while Creating" +er);
+        }
+    });
+
+    return false;
 
 }
