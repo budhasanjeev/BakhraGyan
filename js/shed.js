@@ -63,7 +63,7 @@ function editShed(id){
             $('#insert-shed .modal-title').html("खोर परिमार्जन गर्नुहोस्");
             $('#insert-shed button[type=submit]').html("पेश गर्नुहोस्");
             $('#shed-form').attr('action','../controller/shedHandler.php');
-            $('#mode').attr('value','update');
+            $('#modes').attr('value','update');
             $('#shed_id').attr('value',s_id);
 
             $('.modal').on('hidden.bs.modal', function(){

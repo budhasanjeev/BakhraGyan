@@ -87,7 +87,7 @@ require('../views/Layout/footer.php');
             <div class="modal-body">
 
                 <form class="form-horizontal" role="form" id="shed-form" method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="mode" id="modes">
                     <input type="hidden" name="shed_id" id="shed_id">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="shedTitle">शिर्षक</label>
@@ -132,7 +132,7 @@ require('../views/Layout/footer.php');
         $('#insert-shed .modal-title').html("खोर थप्नुहोस");
         $('#insert-shed button[type=submit]').html("पेश गर्नुहोस्");
         $('#shed-form').attr('action','../controller/shedHandler.php');
-        $('#mode').attr('value','add');
+        $('#modes').attr('value','add');
 
     })
 

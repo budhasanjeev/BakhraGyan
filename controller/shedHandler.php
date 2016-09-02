@@ -10,6 +10,7 @@ require('../common/Common.php');
 
 $objCommon = new Common();
 
+
 if(isset($_POST['mode'])){
 
     if($_POST["mode"]=="add"){
@@ -21,6 +22,7 @@ if(isset($_POST['mode'])){
         $shed_title = $_POST['shedTitle'];
         move_uploaded_file($image_tmp,"../images/$image");
 
+        echo $description;
 
         $result = $objCommon->createShed($shed_title,$image,$description);
 
@@ -29,7 +31,6 @@ if(isset($_POST['mode'])){
         } else {
             $_SESSION['add'] ="error";
         }
-
         header('Location:../views/shed.php');
     }
 

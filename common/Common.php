@@ -517,7 +517,7 @@ class Common {
             $data['message']='fail';
         }
 
-        return $create_shed;
+        return $data;
     }
 
     public function deleteShed($id){
@@ -829,12 +829,31 @@ class Common {
         $data = array();
 
         if($result){
-            $data['password']=$password;
             $data['message']='success';
         }else{
             $data['message']='fail';
         }
 
         return $data;
+    }
+
+    public function getDiseaseById($id){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM disease");
+        $data = array();
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['disease_name'] = $row["disease_name"];
+            $data[$i]['description'] = $row["description"];
+            $data[$i]['picture'] = $row["picture"];
+            $i++;
+        }
+        return $data;
+
     }
 }
