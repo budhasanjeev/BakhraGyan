@@ -42,10 +42,10 @@ $cureList = $objCommon->getCure()
 
             $diseaseName = $objCommon->getDiseaseNameById($cure['disease_id'])
             ?>
-            <div class="panel">
+<!--            <div class="panel">-->
 
                 <div class="col-sm-8">
-                    <h3><?php echo $diseaseName['disease_name'] ?></h3>
+                    <h3><?php echo $diseaseName ?></h3>
 
                     <?php
 
@@ -64,7 +64,7 @@ $cureList = $objCommon->getCure()
                     <!--<p><?php /*echo $cure['preventive_care'] */?></p>-->
                 </div>
 
-            </div>
+<!--            </div>-->
 
         <?php }
     }

@@ -406,11 +406,10 @@ class Common {
 
         $result = mysqli_query($connection,"SELECT  *from disease WHERE id = '$id' ");
 
-        $data = array();
-
+        $data = "";
         while($row = mysqli_fetch_assoc($result))
         {
-            $data['disease_name'] = $row["disease_name"];
+            $data = $row["disease_name"];
         }
 
         return $data;
@@ -449,8 +448,26 @@ class Common {
         while($row = mysqli_fetch_assoc($result))
         {
             $data['id'] = $row["id"];
-            $data['disease_id'] = $row["disease_id"];
+            $objCommon = new Common();
+            $data['disease_name'] = $objCommon->getDiseaseName($row["disease_id"]);
             $data['preventive_care'] = $row["preventive_care"];
+        }
+
+        return $data;
+
+    }
+
+    public function getDiseaseName($id){
+
+        global $connection;
+
+        $select_query = "SELECT *FROM disease WHERE id ='$id'; ";
+
+        $result = mysqli_query($connection,$select_query);
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+             $data = $row["disease_name"];
         }
 
         return $data;
@@ -841,16 +858,16 @@ class Common {
 
         global $connection;
 
-        $result = mysqli_query($connection,"SELECT  *FROM disease");
+        $result = mysqli_query($connection,"SELECT  *FROM disease WHERE id='$id'");
         $data = array();
         $i = 0;
 
         while($row = mysqli_fetch_assoc($result))
         {
-            $data[$i]['id'] = $row["id"];
-            $data[$i]['disease_name'] = $row["disease_name"];
-            $data[$i]['description'] = $row["description"];
-            $data[$i]['picture'] = $row["picture"];
+            $data['id'] = $row["id"];
+            $data['disease_name'] = $row["disease_name"];
+            $data['description'] = $row["description"];
+            $data['picture'] = $row["picture"];
             $i++;
         }
         return $data;

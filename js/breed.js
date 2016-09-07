@@ -64,7 +64,7 @@ function editBreed(id){
             $('#insert-breed .modal-title').html("प्रजाति परिमार्जन गनुहोस्");
             $('#insert-breed button[type=submit]').html("पेश गर्नुहोस्");
             $('#breed-form').attr('action','../controller/breedHandler.php');
-            $('#modes').attr('value','update');
+            $('#breed_mode').attr('value','update');
             $('#breed_id').attr('value',b_id);
 
             $('.modal').on('hidden.bs.modal', function(){

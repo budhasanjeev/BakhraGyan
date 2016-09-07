@@ -38,7 +38,7 @@ $foodList = $objCommon->getFood()
     if(count($foodList)>0){
     foreach($foodList as $food){
         ?>
-        <div class="panel">
+<!--        <div class="panel">-->
 
             <div class="col-sm-8">
                 <h3><?php echo $food['title'] ?></h3>
@@ -62,7 +62,7 @@ $foodList = $objCommon->getFood()
                 <img class="img-thumbnail" src="../images/<?php echo $food["image"] ?>" style="height: 200px;width:200px;">
             </div>
 
-        </div>
+<!--        </div>-->
 
     <?php } }
         else{

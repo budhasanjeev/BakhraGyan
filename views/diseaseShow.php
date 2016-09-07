@@ -40,7 +40,7 @@ $diseaseList = $objCommon->getDisease()
 
         foreach ($diseaseList as $disease) {
             ?>
-            <div class="panel">
+<!--            <div class="panel">-->
 
                 <div class="col-sm-8">
 
@@ -66,7 +66,7 @@ $diseaseList = $objCommon->getDisease()
                          style="height: 200px;width:200px;">
                 </div>
 
-            </div>
+<!--            </div>-->
 
 
         <?php }

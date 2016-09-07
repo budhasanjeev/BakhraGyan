@@ -49,19 +49,22 @@ require('Layout/header.php');
             </legend>
         </fieldset>
         <p style="text-align: center;"><b >सबै विवरणहरु अनिवार्य छन् | </b></p>
-        <form class="form-horizontal" role="form" id="query-form" action="../controller/queryHandler.php" method="post">
+        <form class="form-horizontal" role="form" name="form" id="query-form" action="../controller/queryHandler.php" method="post">
             <input type="hidden" value="farmerQuestion" name="mode">
             <div class="form-group">
                 <label class="control-label col-sm-4" for="fullName">पुरा नाम:</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="fullName" name="fullName" required="">
+                    <input type="text" class="form-control" id="fullName" name="fullName" required="" onchange="validateFullName()">
+
+                    <span hidden="true" class="error-fullName"> कृपया वर्ण मात्र  प्रविष्ट गर्नुहोस्      </span>
                 </div>
             </div>
             
             <div class="form-group">
                 <label class="control-label col-sm-4" for="phoneNumber">फोन नम्बर:</label>
                 <div class="col-sm-8">
-                    <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" required="">
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" min="8" max="10" required="" onchange="checkPhoneNumber()">
+                    <span hidden="true" class="error-phoneNumber"> कृपया संख्यात्मक मान मात्र प्रविष्ट गर्नुहोस्    </span>
                 </div>
             </div>
 
@@ -69,6 +72,7 @@ require('Layout/header.php');
                 <label class="control-label col-sm-4" for="email">इमेल:</label>
                 <div class="col-sm-8">
                     <input type="email" class="form-control" id="email" name="email" >
+                    <span hidden="true" class="error-email"> इमेल ठेगाना प्रविष्ट गर्नुहोस्   </span>
                 </div>
             </div>
 
@@ -102,6 +106,42 @@ require('Layout/header.php');
 <?php
 require('Layout/footer.php');
 ?>
+
+
+<script>
+    function validateFullName() {
+        var fullName = $('#fullName').val()
+        var nameFormat = /^[a-zA-Z\s ]+$/;
+
+        if (fullName == " " || fullName == undefined) {
+            $('.error-fullName').attr('hidden', false)
+            return false;
+        } else if (!fullName.match(nameFormat)) {
+            $('.error-fullName').attr('hidden', false)
+            return false
+
+        } else {
+            $('.error-fullName').attr('hidden', true)
+            return true
+        }
+    }
+
+    function checkPhoneNumber(){
+        var phoneNum = $('#phoneNumber').val()
+        var numFormat = /^[0-9]+$/;
+
+        if(phoneNum == ""){
+            $('.error-phoneNumber').attr('hidden',false)
+            return false
+        }else if(!phoneNum.match(numFormat)){
+            $('.error-phoneNumber').attr('hidden',false)
+            return false
+        }else{
+            $('.error-phoneNumber').attr('hidden',true)
+            return true
+        }
+    }
+</script>
 </body>
 
 </html>

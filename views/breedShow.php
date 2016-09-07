@@ -37,7 +37,7 @@ $breedList = $objCommon->getBreed()
 
         foreach($breedList as $breed){
             ?>
-            <div class="panel panel-default">
+<!--            <div class="panel panel-default">-->
                 <div class="col-sm-4">
                     <img  class="img-thumbnail" src="../images/<?php echo $breed["image"] ?>" style="height: 200px;width:200px;">
                 </div>
@@ -48,7 +48,7 @@ $breedList = $objCommon->getBreed()
                     <p><?php echo $breed['character'] ?></p>
                     <p><?php echo $breed['utility'] ?></p>
                 </div>
-            </div>
+<!--            </div>-->
 
             <?php
         }

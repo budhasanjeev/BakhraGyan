@@ -39,7 +39,7 @@ require('../views/Layout/header.php');
     ?>
 
 
-    <table class="table table-striped table-responsive" id="cure_table">
+    <table class="table table-striped table-responsive" id="cure-table">
         <thead>
         <tr>
             <th>रोगको नाम</th>
@@ -56,7 +56,7 @@ require('../views/Layout/header.php');
         ?>
 
             <tr>
-                <td style="vertical-align: middle;"><?php echo $disease['disease_name'] ?><span class="glyphicon glyphicon-info-sign pull-right" onclick="detail(<?php echo $cure['disease_id'] ?>)"></span> </td>
+                <td style="vertical-align: middle;"><?php echo $disease ?><span class="glyphicon glyphicon-info-sign pull-right" onclick="detail(<?php echo $cure['disease_id'] ?>)"></span> </td>
                 <td style="vertical-align: middle;"><?php echo $cure["preventive_care"]?></td>
                 <td style="vertical-align: middle;">
                     <button class="btn btn-danger" onclick="return deleteCure(<?php echo $cure['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
@@ -87,7 +87,7 @@ require('../views/Layout/footer.php');
             <div class="modal-body">
 
                 <form class="form-horizontal" role="form" id="cure-form" method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="mode" id="cure_mode">
                     <input type="hidden" name="cure_id" id="cure_id">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="breedName">रोगको नाम</label>
@@ -132,6 +132,25 @@ require('../views/Layout/footer.php');
     </div>
 </div>
 
+<div class="modal fade" id="cure-details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"></h2>
+            </div>
+
+            <div class="modal-body" id="disease_detail">
+
+            </div>
+
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>
 <script>
     $('#add-cure').on('click',function(){
 
@@ -139,13 +158,12 @@ require('../views/Layout/footer.php');
         $('#insert-cure .modal-title').html("हेरविचार थप्नुहोस");
         $('#insert-cure button[type=submit]').html("पेश गर्नुहोस्");
         $('#cure-form').attr('action','../controller/cureHandler.php');
-        $('#mode').attr('value','add');
+        $('#cure_mode').attr('value','add');
 
     })
 
-
     $(document).ready(function(){
-        $('#cure_table').DataTable({
+        $('#cure-table').DataTable({
             "info":true,
             "paging":true,
             "ordering":false,

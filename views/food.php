@@ -87,7 +87,7 @@ require('../views/Layout/footer.php');
             <div class="modal-body">
 
                 <form class="form-horizontal" role="form" id="food-form" method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="mode" id="food_mode">
                     <input type="hidden" name="food_id" id="food_id">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="feedName">खानाको नाम</label>
@@ -130,7 +130,7 @@ require('../views/Layout/footer.php');
         $('#insert-food .modal-title').html("आहारा थप्नुहोस");
         $('#insert-food button[type=submit]').html("पेश गर्नुहोस्");
         $('#food-form').attr('action','../controller/foodHandler.php');
-        $('#mode').attr('value','add');
+        $('#food_mode').attr('value','add');
 
     });
 

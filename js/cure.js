@@ -54,17 +54,16 @@ function editCure(id){
         success:function(data){
             var data = JSON.parse(data);
 
-            alert(data['disease_name']);
             var c_id = data['id'];
             $("#preventive").val(data['preventive_care']);
-            $('#diseaseName').val(data.disease_name);
+            $('#diseaseName').val(data);
 
             
             $('#insert-cure').modal('show');
-            $('#insert-cure .modal-title').html("उपचार परिमार्जन गर्नुहोस्");
-            $('#insert-cure button[type=submit]').html("पेश गर्नुहोस्");
+            $('#insert-cure .modal-title').html(" उपचार परिमार्जन गर्नुहोस्");
+            $('#insert-cure button[type=submit]').html(" पेश गर्नुहोस्");
             $('#cure-form').attr('action','../controller/cureHandler.php');
-            $('#mode').attr('value','update');
+            $('#cure_mode').attr('value','update');
             $('#cure_id').attr('value',c_id);
 
             $('.modal').on('hidden.bs.modal', function(){
@@ -90,18 +89,12 @@ function detail(id){
         success:function(data){
             var data = JSON.parse(data);
 
-            alert(data['disease_name']);
-            var c_id = data['id'];
-            $("#preventive").val(data['preventive_care']);
+            $("#disease_detail").html(data.description);
             $('#diseaseName').val(data.disease_name);
 
 
-            $('#insert-cure').modal('show');
-            $('#insert-cure .modal-title').html("उपचार परिमार्जन गर्नुहोस्");
-            $('#insert-cure button[type=submit]').html("पेश गर्नुहोस्");
-            $('#cure-form').attr('action','../controller/cureHandler.php');
-            $('#mode').attr('value','update');
-            $('#cure_id').attr('value',c_id);
+            $('#cure-details').modal('show');
+            $('#cure-details .modal-title').html(data.disease_name);
 
             $('.modal').on('hidden.bs.modal', function(){
                 $(this).find('form')[0].reset();

@@ -60,26 +60,26 @@ require('../views/Layout/header.php');
 
         foreach($userList as $user){
 
-        ?>
+            ?>
 
-                    <tr>
-                        <td style="vertical-align: middle"><img class="img-circle" src="../images/<?php echo $user['image'] ?>" style="height: 70px;width:70px;"></td>
-                        <td style="vertical-align: middle;"><?php echo $user['first_name'] ?></td>
-                        <td style="vertical-align: middle;" id="first-name"><?php echo $user['last_name'] ?></td>
-                        <td style="vertical-align: middle;" id="last-name"><?php echo $user['mobile_number'] ?></td>
-                        <td style="vertical-align: middle;" id="mobile-number"><?php echo $user['email_address'] ?></td>
-                        <td style="vertical-align: middle;" id="phone-number"><?php echo $user['city'].', '.$user['district'].','.$user['zone'] ?></td>
-                        <td style="vertical-align: middle;" id="email-address"><?php echo $user['role']?></td>
-                        <td style="vertical-align: middle;">
-                            <button class="btn btn-primary" onclick="return editUser(<?php echo $user['id'] ?>);" title="EDIT"><i class="glyphicon glyphicon-edit"></i></button>
-                            <button class="btn btn-danger" title="DELETE" onclick="return deleteUser(<?php echo $user['id'] ?>)"><i class="glyphicon glyphicon-trash"></i></button>
-                        </td>
-                    </tr>
+            <tr>
+                <td style="vertical-align: middle"><img class="img-circle" src="../images/<?php echo $user['image'] ?>" style="height: 70px;width:70px;"></td>
+                <td style="vertical-align: middle;"><?php echo $user['first_name'] ?></td>
+                <td style="vertical-align: middle;" id="first-name"><?php echo $user['last_name'] ?></td>
+                <td style="vertical-align: middle;" id="last-name"><?php echo $user['mobile_number'] ?></td>
+                <td style="vertical-align: middle;" id="mobile-number"><?php echo $user['email_address'] ?></td>
+                <td style="vertical-align: middle;" id="phone-number"><?php echo $user['city'].', '.$user['district'].','.$user['zone'] ?></td>
+                <td style="vertical-align: middle;" id="email-address"><?php echo $user['role']?></td>
+                <td style="vertical-align: middle;">
+                    <button class="btn btn-primary" onclick="return editUser(<?php echo $user['id'] ?>);" title="EDIT"><i class="glyphicon glyphicon-edit"></i></button>
+                    <button class="btn btn-danger" title="DELETE" onclick="return deleteUser(<?php echo $user['id'] ?>)"><i class="glyphicon glyphicon-trash"></i></button>
+                </td>
+            </tr>
 
-                <?php } ?>
+        <?php } ?>
 
-                    </tbody>
-                </table>
+        </tbody>
+    </table>
 
 </div>
 
@@ -146,7 +146,7 @@ require('../views/Layout/footer.php');
                         <label class="control-label col-sm-4" for="city">जिल्ला</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control" id="district" name="district" required="">
-                    </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="role">भूमिका</label>

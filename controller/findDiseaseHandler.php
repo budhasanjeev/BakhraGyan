@@ -38,7 +38,7 @@ if(isset($_POST['mode'])){
         }
 
         if($flag == 60){
-            $_SESSION['disease']='Rift Valley Fever';
+            $_SESSION['disease']='रिफ्त भ्याली फिभर';
         }
         else if($flag == 35) {
             $_SESSION['disease']='Foot Root';

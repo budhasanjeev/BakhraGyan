@@ -62,7 +62,7 @@ function editDisease(id){
             $('#insert-disease .modal-title').html("रोग परिमार्जन गर्नुहोस्");
             $('#insert-disease button[type=submit]').html("पेश गर्नुहोस्");
             $('#disease-form').attr('action','../controller/diseaseHandler.php');
-            $('#mode').attr('value','update');
+            $('#disease_mode').attr('value','update');
             $('#disease_id').attr('value',d_id);
 
             $('.modal').on('hidden.bs.modal', function(){

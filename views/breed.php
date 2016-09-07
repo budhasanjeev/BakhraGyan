@@ -92,7 +92,7 @@ require('../views/Layout/footer.php');
             <div class="modal-body">
 
                 <form class="form-horizontal" role="form" id="breed-form" method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="mode" id="modes">
+                    <input type="hidden" name="mode" id="breed_mode">
                     <input type="hidden" name="breed_id" id="breed_id">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="breedName">प्रजाति नाम</label>
@@ -147,7 +147,7 @@ require('../views/Layout/footer.php');
         $('#insert-breed .modal-title').html("प्रजाति थप्नुहोस");
         $('#insert-breed button[type=submit]').html("पेश गर्नुहोस्");
         $('#breed-form').attr('action','../controller/breedHandler.php');
-        $('#modes').attr('value','add');
+        $('#breed_mode').attr('value','add');
 
     })
 
@@ -157,7 +157,7 @@ require('../views/Layout/footer.php');
             "info":true,
             "paging":true,
             "ordering":false,
-            "lengthMenu":[[2,4,6,-1],[2,4,6,"All"]]
+            "lengthMenu":[[3,6,9,-1],[3,6,9,"All"]]
         })
     })
 </script>

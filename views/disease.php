@@ -89,7 +89,7 @@ require('../views/Layout/footer.php');
             <div class="modal-body">
 
                 <form class="form-horizontal" role="form" id="disease-form" method="post" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="mode" id="mode">
+                    <input type="hidden" name="mode" id="disease_mode">
                     <input type="hidden" name="disease_id" id="disease_id">
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="diseaseName" >रोगको नाम</label>
@@ -132,7 +132,7 @@ require('../views/Layout/footer.php');
         $('#insert-disease .modal-title').html("रोग थप्नुहोस");
         $('#insert-disease button[type=submit]').html("पेश गर्नुहोस्");
         $('#disease-form').attr('action','../controller/diseaseHandler.php');
-        $('#mode').attr('value','add');
+        $('#disease_mode').attr('value','add');
 
     });
 

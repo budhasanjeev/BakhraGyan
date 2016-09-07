@@ -61,7 +61,7 @@ function editFood(id){
             $('#insert-food .modal-title').html("आहारा परिमार्जन गर्नुहोस्");
             $('#insert-food button[type=submit]').html("पेश गर्नुहोस्");
             $('#food-form').attr('action','../controller/foodHandler.php');
-            $('#mode').attr('value','update');
+            $('#food_mode').attr('value','update');
             $('#food_id').attr('value',f_id);
 
             $('.modal').on('hidden.bs.modal', function(){

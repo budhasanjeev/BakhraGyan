@@ -40,7 +40,7 @@ $shedList = $objCommon->getShed()
 
         foreach ($shedList as $shed) {
             ?>
-            <div class="panel">
+<!--            <div class="panel">-->
 
                 <div class="col-sm-8">
                     <h3><?php echo $shed['title'] ?></h3>
@@ -67,7 +67,7 @@ $shedList = $objCommon->getShed()
                          style="height: 200px;width:200px;">
                 </div>
 
-            </div>
+<!--            </div>-->
 
         <?php }
     }
