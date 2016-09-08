@@ -916,4 +916,24 @@ class Common {
         return $data;
 
     }
+
+    public function resetPassword($id){
+
+        global $connection;
+
+        $password = md5('123');
+
+        $result = mysqli_query($connection,"update user set password = '$password' where id='$id' ");
+
+        $data = array();
+
+        if($result){
+            $data['message'] = 'success';
+        }
+        else{
+            $data['message'] = 'fail';
+        }
+
+        return $data;
+    }
 }

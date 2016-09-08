@@ -84,4 +84,15 @@ if(isset($_POST['mode'])){
             header("Location:../views/user.php");
         }
     }
+    
+    else if(isset($_POST['mode'])=='resetPassword'){
+        
+        $id = $_POST['id'];
+        
+        $result = array();
+        
+        $result = $objCommon->resetPassword($id);
+
+        echo json_encode($result);
+    }
 }

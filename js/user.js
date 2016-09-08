@@ -83,3 +83,28 @@ function editUser(id) {
 
     return false;
 }
+
+function resetPassword(id) {
+
+    var mode = 'resetPassword'
+
+    $.ajax({
+        type:"POST",
+        url:'../controller/userHandler.php',
+        data:"mode="+mode+"&id="+id,
+        success:function(data){
+
+           var data = JSON.parse(data);
+
+            if(data.message=='success'){
+                displayMessage("Password successfully reset","success");
+                customReloadWindow(2000)
+            }
+
+        },error: function (er) {
+            alert("Error while Creating" +er);
+        }
+    });
+
+    return false;
+}
