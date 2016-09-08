@@ -808,7 +808,7 @@ class Common {
         global $connection;
 
         $password = md5($password);
-        
+
         $change_password = "update user set password = '$password' where id = '$user_id'";
 
         $result = mysqli_query($connection,$change_password);
@@ -882,8 +882,10 @@ class Common {
 
         $updated_date = date("Y-m-d");
 
-        $create_user = "INSERT INTO user first_name = '$firstName',last_name='$lastName',city='$city',zone='$zone',district='$district',mobile_number='$mobileNumber',email_address='$emailAddress',role = '$role',image='$image',updated_date='$updated_date' WHERE id = '$id'";
+        $create_user = "update user set first_name = '$firstName',last_name='$lastName',city='$city',zone='$zone',district='$district',mobile_number='$mobileNumber',email_address='$emailAddress',role = '$role',image='$image',updated_date='$updated_date' WHERE id = '$id'";
+
         $result = mysqli_query($connection,$create_user);
+
         $data = array();
 
         if($result){

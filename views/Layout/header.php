@@ -117,20 +117,22 @@
                         <input type="hidden" name="mode" id="mode">
                         <input type="hidden" name="user-email" id="user-email">
                         <div class="form-group">
-                            <label class="control-label col-sm-4" for="newPassword1">नया पसस्वोर्ड</label>
+                            <label class="control-label col-sm-4" for="newPassword1">नया पासवोर्ड्</label>
                             <div class="col-sm-8">
-                                <input type="password" class="form-control" id="newPassword1" name="newPassword1">
+                                <input type="password" class="form-control" id="newPassword1" name="newPassword1" onclick="clearSecond()">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-sm-4" for="newPassword2">नया पसस्वोर्ड पुष्टि गनुहोस्</label>
+                            <label class="control-label col-sm-4" for="newPassword2">नया पासवोर्ड् पुष्टि गनुहोस्</label>
                             <div class="col-sm-8">
-                                <input type="password" class="form-control" id="newPassword2" name="newPassword2">
+                                <input type="password" class="form-control" id="newPassword2" name="newPassword2" onkeyup="checkSecond();">
                             </div>
                         </div>
                         <div id="news-img" class="form-group">
                             <label class="control-label col-sm-4" for="image"></label>
-                            <button type="submit" class="btn btn-default" id="save-breed"></button>
+                            <div class="col-sm-8">
+                                <button type="submit" class="btn btn-default" id="save-breed"></button>
+                            </div>
                         </div>
                     </form>
 
@@ -151,11 +153,34 @@
         var email = document.getElementById('userEmail').value;
 
         $('#change_password_div').modal('show');
-        $('#change_password_div .modal-title').html("पसस्वोर्ड परिवर्तन गर्नुहोस्");
+        $('#change_password_div .modal-title').html("पासवोर्ड् परिवर्तन गर्नुहोस्");
         $('#change_password_div button[type=submit]').html("पेश गर्नुहोस्");
         $('#change-password-form').attr('action','../controller/auth.php');
         $('#mode').attr('value','changePassowrd');
         $('#user-email').attr('value',email);
+
+    }
+
+    function clearSecond() {
+        document.getElementById('newPassword2').value = "";
+        document.getElementById('newPassword2').style.borderColor= 'white';
+
+    }
+
+    function checkSecond() {
+
+        var first_password = document.getElementById('newPassword1').value;
+
+        var second_password = document.getElementById('newPassword2').value;
+
+        if(second_password == first_password){
+            document.getElementById('save-breed').disabled = false;
+            document.getElementById('newPassword2').style.borderColor= 'green';
+        }
+        else {
+            document.getElementById('save-breed').disabled = true;
+            document.getElementById('newPassword2').style.borderColor= 'red';
+        }
 
     }
 </script>
