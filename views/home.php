@@ -93,7 +93,7 @@ require('Layout/header.php');
             <div id="news-img" class="form-group">
                 <label class="control-label col-sm-4"></label>
                 <div class="col-sm-8">
-                    <button  class="btn btn-primary">पठाउनुहोस्</button>
+                    <button  class="btn btn-default">पेश गर्नुहोस्</button>
                 </div>
             </div>
             
