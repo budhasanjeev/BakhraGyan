@@ -155,6 +155,7 @@
         $('#change_password_div').modal('show');
         $('#change_password_div .modal-title').html("पासवोर्ड् परिवर्तन गर्नुहोस्");
         $('#change_password_div button[type=submit]').html("पेश गर्नुहोस्");
+        $('#change_password_div button[type=submit]').attr('disabled',true);
         $('#change-password-form').attr('action','../controller/auth.php');
         $('#mode').attr('value','changePassowrd');
         $('#user-email').attr('value',email);
