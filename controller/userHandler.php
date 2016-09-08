@@ -44,27 +44,7 @@ if(isset($_POST['mode'])){
 
         if($result['message']=='success'){
 
-            $mail = new PHPMailer();
-            $mail->CharSet =  "utf-8";
-            $mail->Username = "BakhraGyan";
-            $mail->Password = "iam@Ktm36";
-            $mail->Host = "smtp.gmail.com";
-            $mail->From='sanjeev.budha@deerwalk.edu.np';
-            $mail->FromName='Bakhra Gyan';
-            $mail->AddAddress($emailAddress);
-            $mail->Subject  =  'Your user credential created';
-            $mail->IsHTML(true);
-            $mail->Body    = 'Hello '.$firstName.',\n Your user credential have been created.\n Username: '.$emailAddress.'\nPassword: '.$result['password'].' <br><br>Kind Regards,<br>Bakhra Gyan';
-            if($mail->Send())
-            {
-                $_SESSION['message']='User credential have been sent to user email address';
-                header("Location:../views/user.php");
-            }
-            else
-            {
-                $_SESSION['message']=$mail->ErrorInfo;
-                echo $mail->ErrorInfo;
-            }
+            header('Location:../views/user.php');
         }
 
     }

@@ -30,6 +30,7 @@ class Common {
                 $data['first_name'] = $row['first_name'];
                 $data['last_name'] = $row['last_name'];
                 $data['role'] = $row['role'];
+                $data['id'] = $row['id'];
             }
 
         }
@@ -786,7 +787,7 @@ class Common {
         global $connection;
 
         $created_date = date("Y-m-d");
-        $password = md5($this->randomPassword());
+        $password = md5('123');
 
         $create_user = "INSERT INTO user(first_name,last_name,city,zone,district,mobile_number,email_address,password,role,image,created_date) VALUES('$firstName','$lastName','$city','$zone','$district','$mobileNumber','$emailAddress','$password','$role','$profilePicture','$created_date')";
 
@@ -801,6 +802,23 @@ class Common {
         }
 
         return $data;
+    }
+
+    public function changePassword($password,$user_id){
+        global $connection;
+
+        $password = md5($password);
+        
+        $change_password = "update user set password = '$password' where id = '$user_id'";
+
+        $result = mysqli_query($connection,$change_password);
+
+        if($result){
+            return true;
+        }
+
+        return false;
+
     }
 
     public function randomPassword(){

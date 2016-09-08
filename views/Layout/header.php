@@ -52,13 +52,12 @@
                                     if($_SESSION['role'] == 'admin'){
                                         $role = 'व्यवस्थापक';
                                     }
-                                    else{
-                                        $role = 'विशेषज्ञ';
-                                    }
                                     ?>
                                     <li><a href="../views/user.php">प्रयोगकर्ता </a></li>
 
-                                <?php } ?>
+                                <?php }else if(isset($_SESSION['role']) && $_SESSION['role'] == 'expert'){
+                                        $role = 'विशेषज्ञ';
+                                } ?>
                             </ul>
 
 <!--                        <div class="dropdown">-->
@@ -117,12 +116,6 @@
                     <form class="form-horizontal" role="form" id="change-password-form" method="post" action="" enctype="multipart/form-data">
                         <input type="hidden" name="mode" id="mode">
                         <input type="hidden" name="user-email" id="user-email">
-                        <div class="form-group">
-                            <label class="control-label col-sm-4" for="oldPassword">पुरानो पसस्वोर्ड</label>
-                            <div class="col-sm-8">
-                                <input type="password" class="form-control" id="oldPassword" name="oldPassword">
-                            </div>
-                        </div>
                         <div class="form-group">
                             <label class="control-label col-sm-4" for="newPassword1">नया पसस्वोर्ड</label>
                             <div class="col-sm-8">

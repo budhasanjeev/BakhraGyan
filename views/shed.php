@@ -31,7 +31,7 @@ require('../views/Layout/header.php');
 
 <div id="container-size">
 
-    <button class="btn btn-primary" id="add-shed"> खोर बारेमा थप्नुहोस  </button>
+    <button class="btn btn-default" id="add-shed"> खोर बारेमा थप्नुहोस  </button>
     <hr>
     <?php
 

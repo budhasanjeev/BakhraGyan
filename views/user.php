@@ -190,7 +190,7 @@ require('../views/Layout/footer.php');
         $('#insert-user .modal-title').html("प्रयोगकर्ता थप्नुहोस");
         $('#insert-user button[type=submit]').html("पेश गर्नुहोस्");
         $('#user-form').attr('action','../Controller/userHandler.php');
-        $('#mode').attr('value','add');
+        $('#modes').attr('value','add');
 
     });
 

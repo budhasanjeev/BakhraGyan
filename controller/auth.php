@@ -8,10 +8,9 @@
 require("../common/Common.php");
 
 session_start();
+$objCommon = new Common();
 
 if(isset($_POST['login'])){
-
-    $objCommon = new Common();
 
     $email = addslashes($_POST['email']);
     $password = addslashes($_POST['password']);
@@ -21,6 +20,7 @@ if(isset($_POST['login'])){
     $result = $objCommon->login($email,$password);
 
     if($result['message']=='success'){
+        $_SESSION['id'] = $result['id'];
         $_SESSION['email']=$email;
         $_SESSION['user_name'] = $result['first_name'].' '.$result['last_name'];
         $_SESSION['role'] = $result['role'];
@@ -32,7 +32,19 @@ if(isset($_POST['login'])){
 
 
 }
-else{
+else if(isset($_POST['mode'])){
 
-    echo "<script>alert('hello')</script>";
+    $password = $_POST['newPassword1'];
+    $user_id = $_SESSION['id'];
+
+    $result = array();
+        
+    $result = $objCommon->changePassword($password,$user_id);
+
+   if($result){
+       header('Location:../views/login.php');
+   }else{
+       header('Location:../views/dashboard.php');
+   }
+    
 }

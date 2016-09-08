@@ -30,7 +30,7 @@ require('../views/Layout/header.php');
 
 <div id="container-size">
 
-    <button class="btn btn-primary" id="add-breed">प्रजाति बारेमा  थप्नुहोस</button>
+    <button class="btn btn-default" id="add-breed">प्रजाति बारेमा  थप्नुहोस</button>
     <hr>
     <?php
 
