@@ -146,6 +146,29 @@ class Common {
         return $data;
     }
 
+    public function checkDuplicateBreed($breed_name){
+        
+        global $connection;
+
+        $breed_name = utf8_encode($breed_name);
+        $breed_name_decode = utf8_decode('à¤¨à¤¾à¤®');
+
+
+        $select_query = "SELECT *FROM breed WHERE breed_name ='$breed_name' ";
+
+        $result = mysqli_query($connection,$select_query);
+
+        $data = array();
+
+        if(mysqli_num_rows($result)){
+            $data['message'] = 'success';
+        }
+        else{
+            $data['message'] = 'fail';
+        }
+
+        return $breed_name;
+    }
 
     public function getFood(){
 

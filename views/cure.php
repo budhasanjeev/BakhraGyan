@@ -59,8 +59,8 @@ require('../views/Layout/header.php');
                 <td style="vertical-align: middle;"><?php echo $disease ?><span class="glyphicon glyphicon-info-sign pull-right" onclick="detail(<?php echo $cure['disease_id'] ?>)"></span> </td>
                 <td style="vertical-align: middle;"><?php echo $cure["preventive_care"]?></td>
                 <td style="vertical-align: middle;">
-                    <button class="btn btn-danger" onclick="return deleteCure(<?php echo $cure['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
-                    <button class="btn btn-success" onclick="return editCure(<?php echo $cure['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
+                    <button class="btn btn-default" onclick="return deleteCure(<?php echo $cure['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button class="btn btn-default" onclick="return editCure(<?php echo $cure['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
                 </td>
             </tr>
         <?php

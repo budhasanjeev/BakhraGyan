@@ -78,3 +78,38 @@ function editBreed(id){
 
     return false;
 }
+
+function checkDuplicate() {
+    var input_text = document.getElementById('breedName').value;
+
+    var mode ='check';
+
+    alert(input_text);
+
+    $.ajax({
+        type:"POST",
+        url:'../controller/breedHandler.php',
+        data:"mode="+mode+"&breed_name="+input_text,
+        success:function(data){
+            alert(data);
+            
+            var data = JSON.parse(data);
+
+            if(data.message){
+                document.getElementById('breedName_span').style.display = 'block';
+                document.getElementById('breedName_span').style.color = 'red';
+
+                $('#insert-breed button[type=submit]').attr('disabled','disabled');
+            }
+            else {
+                alert('dhhhh');
+                document.getElementById('breedName_span').style.display = 'none';
+            }
+
+        },error: function (er) {
+            alert("Error while Creating" +er);
+        }
+    });
+
+    return false;
+}

@@ -35,15 +35,16 @@ require('../views/Layout/header.php');
         $objCommon = new Common();
         $queryList = $objCommon->getQuery();
 
-    if (count($queryList)){
+        if (count($queryList)){
         foreach ($queryList as $query) {
     ?>
 
-    <div class="panel panel-primary">
+    <div class="panel panel-default" style="width: 80%;margin: auto">
 
+        <div class="panel panel-heading">
+            <b><?php echo $query['query'] ?>?</b>&nbsp;&nbsp;:-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $query['full_name']?>
+        </div>
         <div class="panel panel-body">
-            <b><?php echo $query['query'] ?>?</b>&nbsp;&nbsp;:-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $query['full_name'].' '.$query['created_date']?>
-            <hr>
 
             <?php
                 $replyList = $objCommon->getReplyList($query['id']);
@@ -52,12 +53,15 @@ require('../views/Layout/header.php');
                     $reply_from = $objCommon->getUserByEmail($reply['reply_from']);
             ?>
 
-                <?php echo $reply['reply'] ?>? :-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $reply_from.' '.$reply['replied_date']?><br>
+                <?php echo $reply['reply'] ?> :-<span class="glyphicon glyphicon-user"></span>&nbsp;<?php echo $reply_from ?><br>
 
             <?php } ?>
         </div>
     </div>
 
+    <div style="height: 30px">
+
+    </div>
     <?php } }
         else{
     ?>

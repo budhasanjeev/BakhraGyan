@@ -62,9 +62,9 @@ require('../views/Layout/header.php');
                 <td><?php echo $query['address'] ?></td>
                 <td><?php echo $query['query'] ?></td>
                 <td><?php echo $query['created_date'] ?></td>
-                <td><button onclick="reply(<?php echo $query['id']?>)" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span></button>
-                    <button onclick="discard(<?php echo $query['id']?>)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
-                    <button onclick="showReply(<?php echo $query['id'] ?>)" class="btn btn-success"><span class="glyphicon glyphicon-info-sign"></span></button>
+                <td><button onclick="reply(<?php echo $query['id']?>)" class="btn btn-default"><span class="glyphicon glyphicon-send"></span></button>
+                    <button onclick="discard(<?php echo $query['id']?>)" class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button onclick="showReply(<?php echo $query['id'] ?>)" class="btn btn-default"><span class="glyphicon glyphicon-info-sign"></span></button>
                 </td>
             </tr>
 

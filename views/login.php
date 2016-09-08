@@ -70,9 +70,9 @@
 
 </div>
 
-<div style="margin-left: 27%">
+<!--<div style="margin-left: 27%">
     <p class="news-text">पासवर्ड भुल्नु भयो?ठीक छ &nbsp;&nbsp;<button class="btn btn-success">यहाँ पुन: प्राप्त</button></p>
-</div>
+</div>-->
 </fieldset>
 </div>
 <?php

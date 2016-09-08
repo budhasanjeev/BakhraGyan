@@ -37,15 +37,15 @@ $cureList = $objCommon->getCure()
 <div class="container">
 
     <div class="panel panel-primary" style="width: 80%;margin: auto;margin-bottom: 10%;z-index: 99999%">
-        <div class="panel panel-heading">
-            <p>लक्ष्यण टिक लगाउनुहोस</p>
+        <div class="panel panel-default">
+            <h3><b>लक्ष्यण टिक लगाउनुहोस</b></h3>
 
         </div>
 
         <div class="panel panel-body">
             <form method="post" action="../controller/findDiseaseHandler.php">
                 <input type="hidden" name="mode" value="find">
-                <input type="checkbox" name="symptoms[]" value="1">जोरो<br>
+                <input type="checkbox" name="symptoms[]" value="1">&nbsp;ज्वरो<br>
                 <input type="checkbox" name="symptoms[]" value="2">बाख्राले खाना खान छोड्छ<br>
                 <input type="checkbox" name="symptoms[]" value="3"> १०६ देखी १०८ डिग्री फरेन्हाईटसम्मको ज्वरो आउँछ।<br>
                 <input type="checkbox" name="symptoms[]" value="4">बाख्रा छायातिर जान खोज्छ<br>
@@ -60,7 +60,7 @@ $cureList = $objCommon->getCure()
                 <input type="checkbox" name="symptoms[]" value=8>कहिलेकाँही ३-४ हप्तामा यो घाऊ आँफै निको भएर जान्छ। <br>
 
                 <br>
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-default" type="submit">पेश गर्नुहोस्</button>
             </form>
         </div>
 

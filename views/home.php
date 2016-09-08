@@ -48,13 +48,13 @@ require('Layout/header.php');
             <legend style="text-align: center;">आफ्नो बाख्रा सम्बन्धि जिझासा लेख्नुहोस| <br>
             </legend>
         </fieldset>
-        <p style="text-align: center;"><b >सबै विवरणहरु अनिवार्य छन् | </b></p>
+        <p style="text-align: center;"><b >इमेल बाहेक अरु सबै विवरणहरु अनिवार्य छन् | </b></p>
         <form class="form-horizontal" role="form" name="form" id="query-form" action="../controller/queryHandler.php" method="post">
             <input type="hidden" value="farmerQuestion" name="mode">
             <div class="form-group">
                 <label class="control-label col-sm-4" for="fullName">पुरा नाम:</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="fullName" name="fullName" required="" onchange="validateFullName()">
+                    <input type="text" class="form-control" id="fullName" name="fullName" required="" onkeyup="validateFullName()">
 
                     <span hidden="true" class="error-fullName"> कृपया वर्ण मात्र  प्रविष्ट गर्नुहोस्      </span>
                 </div>
@@ -63,7 +63,7 @@ require('Layout/header.php');
             <div class="form-group">
                 <label class="control-label col-sm-4" for="phoneNumber">फोन नम्बर:</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" min="8" max="10" required="" onchange="checkPhoneNumber()">
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" min="8" max="10" required="" onkeyup="checkPhoneNumber()">
                     <span hidden="true" class="error-phoneNumber"> कृपया संख्यात्मक मान मात्र प्रविष्ट गर्नुहोस्    </span>
                 </div>
             </div>
@@ -115,7 +115,7 @@ require('Layout/footer.php');
 
         if (fullName == " " || fullName == undefined) {
             $('.error-fullName').attr('hidden', false)
-            return false;
+            return true;
         } else if (!fullName.match(nameFormat)) {
             $('.error-fullName').attr('hidden', false)
             return false

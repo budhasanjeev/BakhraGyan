@@ -84,4 +84,15 @@ if(isset($_POST['mode'])){
 
         echo json_encode($result);
     }
+
+    else if($_POST['mode']=='check'){
+
+        $breed_name= $_POST['breed_name'];
+
+        $result = array();
+
+        $result = $objCommon->checkDuplicateBreed($breed_name);
+
+        echo json_encode($result);
+    }
 }

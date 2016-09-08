@@ -12,12 +12,6 @@ $objCommon = new Common();
 
 if(isset($_POST['mode'])){
 
-
-
-
-
-
-
     if($_POST['mode'] == 'farmerQuestion'){
         $fullName = $_POST['fullName'];
         $phoneNumber = $_POST['phoneNumber'];
@@ -28,7 +22,15 @@ if(isset($_POST['mode'])){
         $result = array();
         $result = $objCommon->createQuery($fullName,$phoneNumber,$email,$address,$query);
 
-        $_SESSION['farmerQuery']  = $result['message'];
+        if($result['message']=='success'){
+            $_SESSION['farmerQuery']  = $result['message'];
+
+            echo '<script>
+                alert("तपाइको प्रश्न पेश गरिएको छ");
+            </script>';
+        }
+
+
         header("Location:../views/home.php");
     }
 

@@ -64,8 +64,8 @@ require('../views/Layout/header.php');
                 <td style="vertical-align: middle;"><?php echo $breed["character"]?></td>
                 <td style="vertical-align: middle;"><?php echo $breed["utility"]?></td>
                 <td style="vertical-align: middle;">
-                    <button class="btn btn-danger" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
-                    <button class="btn btn-success" onclick="editBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-edit"></span></button>
+                    <button class="btn btn-default" onclick="return deleteBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button class="btn btn-default" onclick="editBreed(<?php echo $breed['id']?>)"><span class="glyphicon glyphicon-edit"></span></button>
                 </td>
             </tr>
         <?php
@@ -97,7 +97,8 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="breedName">प्रजाति नाम</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="breedName" name="breedName" required="">
+                            <input type="text" class="form-control" id="breedName" name="breedName" onchange="checkDuplicate();" required="">
+                            <span id="breedName_span" style="display: none">प्रजातिको नाम पहिला नै राखिएको छ|</span>
                         </div>
                     </div>
                     <div class="form-group">

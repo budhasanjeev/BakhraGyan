@@ -71,8 +71,8 @@ require('../views/Layout/header.php');
                 <td style="vertical-align: middle;" id="phone-number"><?php echo $user['city'].', '.$user['district'].','.$user['zone'] ?></td>
                 <td style="vertical-align: middle;" id="email-address"><?php echo $user['role']?></td>
                 <td style="vertical-align: middle;">
-                    <button class="btn btn-primary" onclick="return editUser(<?php echo $user['id'] ?>);" title="EDIT"><i class="glyphicon glyphicon-edit"></i></button>
-                    <button class="btn btn-danger" title="DELETE" onclick="return deleteUser(<?php echo $user['id'] ?>)"><i class="glyphicon glyphicon-trash"></i></button>
+                    <button class="btn btn-default" onclick="return editUser(<?php echo $user['id'] ?>);" title="EDIT"><i class="glyphicon glyphicon-edit"></i></button>
+                    <button class="btn btn-default" title="DELETE" onclick="return deleteUser(<?php echo $user['id'] ?>)"><i class="glyphicon glyphicon-trash"></i></button>
                 </td>
             </tr>
 

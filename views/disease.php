@@ -60,8 +60,8 @@ require('../views/Layout/header.php');
                 <td style="vertical-align: middle;"><?php echo $disease["disease_name"] ?></td>
                 <td style="vertical-align: middle;"><?php echo $disease["description"] ?></td>
                 <td style="vertical-align: middle;">
-                    <button class="btn btn-danger" onclick="return deleteDisease(<?php echo $disease['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
-                    <button class="btn btn-success" onclick="return editDisease(<?php echo $disease['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
+                    <button class="btn btn-default" onclick="return deleteDisease(<?php echo $disease['id']?>)"><span class="glyphicon glyphicon-trash"></span></button>
+                    <button class="btn btn-default" onclick="return editDisease(<?php echo $disease['id'] ?>)"><span class="glyphicon glyphicon-edit"></span></button>
                 </td>
             </tr>
 
