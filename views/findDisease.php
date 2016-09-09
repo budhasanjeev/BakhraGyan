@@ -38,7 +38,7 @@ $cureList = $objCommon->getCure()
 
     <div class="panel panel-primary" style="width: 80%;margin: auto;margin-bottom: 10%;z-index: 99999%">
         <div class="panel panel-default">
-            <h3><b>लक्ष्यण टिक लगाउनुहोस</b></h3>
+            <h3><b> लक्षण  टिक लगाउनुहोस</b></h3>
 
         </div>
 

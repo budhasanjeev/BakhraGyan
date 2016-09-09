@@ -92,8 +92,10 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="shedTitle">शिर्षक</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="shedTitle" name="shedTitle" required="">
+                            <input type="text" class="form-control" id="shedTitle" name="shedTitle" onchange="checkDuplicate('shedTitle','shedHandler.php','shedTitle_span');" required="">
+                            <span id="shedTitle_span" style="display: none">यो खोर शिर्षक  नाम पहिला नै राखिएको छ|</span>
                         </div>
+                        
                     </div>
 
                     <div class="form-group">
