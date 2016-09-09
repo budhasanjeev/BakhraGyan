@@ -97,7 +97,7 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="breedName">प्रजाति नाम</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="breedName" name="breedName" onchange="checkDuplicate();" required="">
+                            <input type="text" class="form-control" id="breedName" name="breedName" onchange="checkDuplicate('breedName','breedHandler.php','breedName_span');" required="">
                             <span id="breedName_span" style="display: none">प्रजातिको नाम पहिला नै राखिएको छ|</span>
                         </div>
                     </div>

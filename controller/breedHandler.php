@@ -87,12 +87,23 @@ if(isset($_POST['mode'])){
 
     else if($_POST['mode']=='check'){
 
-        $breed_name= $_POST['breed_name'];
-
+        $input_txt= $_POST['input_txt'];
+        $column_name = 'breed_name';
+        $table_name = 'breed';
+        
         $result = array();
 
-        $result = $objCommon->checkDuplicateBreed($breed_name);
+        $result = $objCommon->checkDuplicate($input_txt,$column_name,$table_name);
 
-        echo json_encode($result);
+        $data = array();
+
+        if($result){
+            $data['message'] = 'success';
+        }else{
+            $data['message']  = 'fail';
+        }
+
+        echo json_encode($data);
+
     }
 }

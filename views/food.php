@@ -92,7 +92,8 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="feedName">खानाको नाम</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="feedName" name="feedName" required="">
+                            <input type="text" class="form-control" id="feedName" name="feedName" onchange="checkDuplicate('feedName','foodHandler.php','foodName_span')" required="">
+                            <span id="foodName_span" style="display: none">आहारा पहिला नै राखिसकेको छ</span>
                         </div>
                     </div>
                     <div class="form-group">

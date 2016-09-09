@@ -94,7 +94,8 @@ require('../views/Layout/footer.php');
                     <div class="form-group">
                         <label class="control-label col-sm-4" for="diseaseName" >रोगको नाम</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="diseaseName" name="diseaseName" required="">
+                            <input type="text" class="form-control" id="diseaseName" name="diseaseName" onchange="checkDuplicate('diseaseName','diseaseHandler.php','diseaseName_span')" required="">
+                            <span id="diseaseName_span" style="display: none">रोगको नाम पहिला नै राखिएको छ</span>
                         </div>
                     </div>
                     <div class="form-group">

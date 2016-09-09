@@ -147,28 +147,29 @@ class Common {
         return $data;
     }
 
-    public function checkDuplicateBreed($breed_name){
+    public function checkDuplicate($input_text,$column_name,$table_name){
         
         global $connection;
 
-        $breed_name = utf8_encode($breed_name);
-        $breed_name_decode = utf8_decode('à¤¨à¤¾à¤®');
-
-
-        $select_query = "SELECT *FROM breed WHERE breed_name ='$breed_name' ";
+        $select_query = "SELECT $column_name FROM $table_name";
 
         $result = mysqli_query($connection,$select_query);
 
         $data = array();
 
-        if(mysqli_num_rows($result)){
-            $data['message'] = 'success';
-        }
-        else{
-            $data['message'] = 'fail';
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result)){
+            $data[$i][$column_name] = $row[$column_name];
+            $i++;
         }
 
-        return $breed_name;
+        for($i = 0; $i < mysqli_num_rows($result);$i++){
+            if($input_text == $data[$i][$column_name]){
+                return true;
+            }
+        }
+        return false;
     }
 
     public function getFood(){

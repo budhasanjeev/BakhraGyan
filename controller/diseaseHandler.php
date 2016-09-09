@@ -72,4 +72,26 @@ if(isset($_POST['mode'])){
 
     }
 
+    else if($_POST['mode']=='check'){
+
+        $input_txt= $_POST['input_txt'];
+        $column_name = 'disease_name';
+        $table_name = 'disease';
+
+        $result = array();
+
+        $result = $objCommon->checkDuplicate($input_txt,$column_name,$table_name);
+
+        $data = array();
+
+        if($result){
+            $data['message'] = 'success';
+        }else{
+            $data['message']  = 'fail';
+        }
+
+        echo json_encode($data);
+
+    }
+
 }
