@@ -52,7 +52,7 @@ require('Layout/header.php');
         <form class="form-horizontal" role="form" name="form" id="query-form" action="../controller/queryHandler.php" method="post">
             <input type="hidden" value="farmerQuestion" name="mode">
             <div class="form-group">
-                <label class="control-label col-sm-4" for="fullName">पुरा नाम:</label>
+                <label class="control-label col-sm-4" for="fullName">नाम:</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="fullName" name="fullName" required="" onkeyup="validateFullName()">
 
