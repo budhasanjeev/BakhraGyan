@@ -69,7 +69,18 @@ require('../views/Layout/header.php');
                 <td style="vertical-align: middle;" id="last-name"><?php echo $user['mobile_number'] ?></td>
                 <td style="vertical-align: middle;" id="mobile-number"><?php echo $user['email_address'] ?></td>
                 <td style="vertical-align: middle;" id="phone-number"><?php echo $user['city'].', '.$user['district'].','.$user['zone'] ?></td>
-                <td style="vertical-align: middle;" id="email-address"><?php echo $user['role']?></td>
+                <td style="vertical-align: middle;" id="email-address">
+                    <?php
+                        if($user['role'] == 'admin'){
+                            $role = 'व्यवस्थापक' ;
+                        }
+                        else{
+                            $role = 'बिशेसज्ञ' ;
+                        }
+
+                        echo $role
+                    ?>
+                </td>
                 <td style="vertical-align: middle;">
                     <button class="btn btn-default" title="EDIT" onclick="return editUser(<?php echo $user['id'] ?>);" title="EDIT"><i class="glyphicon glyphicon-edit"></i></button>
                     <button class="btn btn-default" title="DELETE" onclick="return deleteUser(<?php echo $user['id'] ?>)"><i class="glyphicon glyphicon-trash"></i></button>
