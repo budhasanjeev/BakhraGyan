@@ -937,4 +937,37 @@ class Common {
 
         return $data;
     }
+
+    public function getDiseaseList(){
+
+        global $connection;
+
+        $result = mysqli_query($connection,"SELECT  *FROM disease_table");
+
+        $data = array();
+
+        $i = 0;
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $data[$i]['id'] = $row["id"];
+            $data[$i]['s1'] = $row["s1"];
+            $data[$i]['s2'] = $row["s2"];
+            $data[$i]['s3'] = $row["s3"];
+            $data[$i]['s4'] = $row["s4"];
+            $data[$i]['s5'] = $row["s5"];
+            $data[$i]['s6'] = $row["s6"];
+            $data[$i]['s7'] = $row["s7"];
+            $data[$i]['s8'] = $row["s8"];
+            $data[$i]['s9'] = $row["s9"];
+            $data[$i]['s10'] = $row["s10"];
+            $data[$i]['s11'] = $row["s11"];
+            $data[$i]['s12'] = $row["s12"];
+            $data[$i]['s13'] = $row["s13"];
+            $data[$i]['classifier'] = $row["classifier"];
+            $i++;
+            
+        }
+        return $data;
+    }
 }

@@ -63,7 +63,7 @@
 <!--                        <div class="dropdown">-->
                             <ul class="nav navbar-nav pull-right dropdown">
                                      <input type="hidden" id="userEmail" value="<?php echo $_SESSION['email'] ?>">
-                                    <li><a data-toggle="dropdown">स्वागत छ &nbsp;<?php echo $_SESSION["user_name"].' ['.$role.' ]'?> <span class="caret"></span></a>
+                                    <li><a data-toggle="dropdown">स्वागत छ &nbsp;<?php echo $_SESSION["user_name"].' [ '.$role.' ]'?> <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="logout.php">लगआउट</a></li>
                                             <li><a href="javascript:changePassword()">पावोर्ड परिवर्तन गर्नुहोस्</a></li>
