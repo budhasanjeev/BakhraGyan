@@ -63,14 +63,39 @@ $cureList = $objCommon->getCure()
             </form>
         </div>
 
-        <?php if(isset($_SESSION['disease'])){
-            ?>
-            <div class="panel panel-footer" style="width: 80%;margin: auto">
-                <b><?php echo $_SESSION['disease'] ?></b>
-            </div>
-        <?php } ?>
+        <div class="panel panel-footer" style="width: 80%;margin: auto">
+            <?php if(isset($_SESSION['rvf_disease'])){
+                ?>
+
+                <b><?php echo $_SESSION['rvf_disease'] ?></b><br>
+
+            <?php } ?>
+
+            <?php if(isset($_SESSION['ppr_disease'])){
+                ?>
+
+                <b><?php echo $_SESSION['ppr_disease'] ?></b><br>
+
+            <?php } ?>
+
+            <?php if(isset($_SESSION['muaalo_disease'])){
+                ?>
+
+                <b><?php echo $_SESSION['muaalo_disease'] ?></b><br>
+
+            <?php } ?>
+
+            <?php if(isset($_SESSION['disease'])){
+                ?>
+
+                <b><?php echo $_SESSION['disease'] ?></b><br>
+
+            <?php } ?>
+
+        </div>
+
     </div>
-<br><br>
+    <br><br>
 
 </div>
 

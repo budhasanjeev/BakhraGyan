@@ -69,32 +69,32 @@ if(isset($_POST['mode'])){
 
     }
 
-    echo print_r($symptomArray);
-    $rvf_probability = 0;
-    $ppr_probability = 0;
-    $muaalo_probability = 0;
+//    echo print_r($symptomArray);
+    $rvf_probability = '';
+    $ppr_probability = '';
+    $muaalo_probability = '';
 
     /*calculating probability for rvf*/
     if($symptomArray[0] == 1 && $symptomArray[1] == 1 && $symptomArray[3] == 1){
-        $rvf_probability = 99.99;
+        $rvf_probability = '९९.९९';
     }
     else if($symptomArray[0] == 1 && $symptomArray[1] == 1){
-        $rvf_probability = 66.66;
+        $rvf_probability = '६६.६६';
     }
     else if($symptomArray[1] == 1 && $symptomArray[3] == 1){
-        $rvf_probability = 66.66;
+        $rvf_probability = '६६.६६';
     }
     else if($symptomArray[0] == 1 && $symptomArray[3] == 1){
-        $rvf_probability = 66.66;
+        $rvf_probability = '६६.६६';
     }
     else if($symptomArray[0] == 1){
-        $rvf_probability = 33.33;
+        $rvf_probability = '३३.३३';
     }
     else if($symptomArray[1] == 1){
-        $rvf_probability = 33.33;
+        $rvf_probability = '३३.३३';
     }
     else if($symptomArray[3] == 1){
-        $rvf_probability = 33.33;
+        $rvf_probability = '३३.३३';
     }
 
 
@@ -102,24 +102,75 @@ if(isset($_POST['mode'])){
         $ppr_probability = 99.96;
     }
     else if($symptomArray[2] == 1 && $symptomArray[4] == 1 && $symptomArray[5] == 1&& $symptomArray[6] == 1&& $symptomArray[7] == 1){
-        $ppr_probability = 99.96-16.66;
+        $ppr_probability = '८३.३';
     }
+
+    if($symptomArray[9] == 1 && $symptomArray[10] == 1 && $symptomArray[11] == 1 && $symptomArray[12] == 1){
+        $muaalo_probability = '१००';
+    }
+    else if($symptomArray[9] == 1 && $symptomArray[10] == 1 && $symptomArray[11] == 1){
+        $muaalo_probability = '७५';
+    }
+    else if($symptomArray[9] == 1 && $symptomArray[10] == 1 && $symptomArray[12] == 1){
+        $muaalo_probability = '७५';
+    }
+    else if($symptomArray[10] == 1 && $symptomArray[11] == 1 && $symptomArray[12] == 1){
+        $muaalo_probability = '७५';
+    }
+    else if($symptomArray[9] == 1 && $symptomArray[10] == 1){
+        $muaalo_probability = '५०';
+    }
+    else if($symptomArray[9] == 1 && $symptomArray[11] == 1){
+        $muaalo_probability = '५०';
+    }
+    else if($symptomArray[9] == 1 && $symptomArray[12] == 1){
+        $muaalo_probability = '५०';
+    }
+    else if($symptomArray[10] == 1 && $symptomArray[11] == 1){
+        $muaalo_probability = '५०';
+    }
+    else if($symptomArray[10] == 1 && $symptomArray[12] == 1){
+        $muaalo_probability = '५०';
+    }
+    else if($symptomArray[11] == 1 && $symptomArray[12] == 1){
+        $muaalo_probability = '५०';
+    }
+    else if($symptomArray[9] == 1){
+        $muaalo_probability = '२५';
+    }
+    else if($symptomArray[10] == 1){
+        $muaalo_probability = '२५';
+    }
+    else if($symptomArray[11] == 1){
+        $muaalo_probability = '२५';
+    }
+    else if($symptomArray[12] == 1){
+        $muaalo_probability = '२५';
+    }
+
     echo '<br>'.$rvf_probability;
 
 
-    if($flag == 60){
-        $_SESSION['disease']='बाख्रालाई रिफ्त भ्याली फिभर लागेको छ ';
-    }
-    else if($flag == 35) {
-        $_SESSION['disease']='';
-    }
-    else if($flag == 40){
-        $_SESSION['disease']='';
-    }
-    else{
+    $_SESSION['rvf_disease'] = '';
+    $_SESSION['disease']  = '';
+    $_SESSION['ppr_disease'] = '';
+    $_SESSION['muaalo_disease'] = '';
+
+    if($rvf_probability == '' && $ppr_probability == '' && $muaalo_probability == ''){
         $_SESSION['disease']='माफ गर्नुहोला, कुनै पनि रोग पत्ता लगाउन सकिएन|';
     }
-//    }
 
-//    header("Location:../views/findDisease.php");
+    if($rvf_probability != '') {
+        $_SESSION['rvf_disease']= 'बाख्रालाई '.$rvf_probability.'% सम्भावना रिफ्त भ्याली फिभर लागेको हुनसक्छ';
+    }
+
+    if($ppr_probability != ''){
+        $_SESSION['ppr_disease'] = 'बाख्रालाई '.$ppr_probability.'% सम्भावना पीपीर लागेको हुनसक्छ';
+    }
+    
+    if($muaalo_probability != ''){
+        $_SESSION['muaalo_disease'] = 'बाख्रालाई '.$muaalo_probability.'% सम्भावना मुआलो लागेको हुनसक्छ';
+    }
+
+    header("Location:../views/findDisease.php");
 }
