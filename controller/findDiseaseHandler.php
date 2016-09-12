@@ -99,7 +99,7 @@ if(isset($_POST['mode'])){
 
 
     if($symptomArray[2] == 1 && $symptomArray[4] == 1 && $symptomArray[5] == 1&& $symptomArray[6] == 1&& $symptomArray[7] == 1&& $symptomArray[8] == 1){
-        $ppr_probability = 99.96;
+        $ppr_probability ='९९.९६';
     }
     else if($symptomArray[2] == 1 && $symptomArray[4] == 1 && $symptomArray[5] == 1&& $symptomArray[6] == 1&& $symptomArray[7] == 1){
         $ppr_probability = '८३.३';
