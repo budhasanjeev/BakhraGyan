@@ -99,9 +99,21 @@ if(isset($_POST['mode'])){
 
 
     if($symptomArray[2] == 1 && $symptomArray[4] == 1 && $symptomArray[5] == 1&& $symptomArray[6] == 1&& $symptomArray[7] == 1&& $symptomArray[8] == 1){
-        $ppr_probability ='९९.९६';
+        $ppr_probability = '९९.९६';
     }
     else if($symptomArray[2] == 1 && $symptomArray[4] == 1 && $symptomArray[5] == 1&& $symptomArray[6] == 1&& $symptomArray[7] == 1){
+        $ppr_probability = '८३.३';
+    }
+    else if($symptomArray[2] == 1 && $symptomArray[4] == 1 && $symptomArray[5] == 1&& $symptomArray[6] == 1&& $symptomArray[8] == 1){
+        $ppr_probability = '८३.३';
+    }
+    else if($symptomArray[2] == 1 && $symptomArray[4] == 1 && $symptomArray[5] == 1&& $symptomArray[7] == 1&& $symptomArray[8] == 1){
+        $ppr_probability = '८३.३';
+    }
+    else if($symptomArray[2] == 1 && $symptomArray[5] == 1 && $symptomArray[6] == 1&& $symptomArray[7] == 1&& $symptomArray[8] == 1){
+        $ppr_probability = '८३.३';
+    }
+    else if($symptomArray[4] == 1 && $symptomArray[5] == 1 && $symptomArray[6] == 1&& $symptomArray[7] == 1&& $symptomArray[8] == 1){
         $ppr_probability = '८३.३';
     }
 
